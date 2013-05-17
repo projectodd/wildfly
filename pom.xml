@@ -979,12 +979,6 @@
 
             <dependency>
                 <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-sar</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-server</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -5122,7 +5116,6 @@
                 <module>pojo</module>
                 <module>remoting-test</module>
                 <module>system-jmx</module>
-                <module>sar</module>
                 <module>security</module>
                 <module>spec-api</module>
                 <module>transactions</module>

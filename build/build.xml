@@ -853,10 +853,6 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-naming"/>
         </module-def>
 
-        <module-def name="org.jboss.as.sar">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-sar"/>
-        </module-def>
-
         <module-def name="org.jboss.as.security">
             <maven-resource group="org.jboss.as" artifact="jboss-as-security"/>
         </module-def>

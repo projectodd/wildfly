@@ -964,11 +964,6 @@
 
                 <dependency>
                     <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-sar</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
                     <artifactId>jboss-as-security</artifactId>
                 </dependency>
 
@@ -2302,10 +2297,6 @@
                                         <group>
                                             <title>Module org.jboss.as.naming</title>
                                             <packages>org.jboss.as.naming:org.jboss.as.naming.context:org.jboss.as.naming.deployment:org.jboss.as.naming.interfaces.java:org.jboss.as.naming.management:org.jboss.as.naming.remote:org.jboss.as.naming.service:org.jboss.as.naming.subsystem:org.jboss.as.naming.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.as.sar</title>
-                                            <packages>org.jboss.as.service:org.jboss.as.service.descriptor</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.as.security</title>
