@@ -244,11 +244,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>com.sun.faces</groupId>
-                    <artifactId>jsf-impl</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>com.sun.istack</groupId>
                     <artifactId>istack-commons-runtime</artifactId>
                 </dependency>
@@ -341,16 +336,6 @@
                 <dependency>
                     <groupId>javax.enterprise</groupId>
                     <artifactId>cdi-api</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>javax.faces</groupId>
-                    <artifactId>jsf-api</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>javax.faces</groupId>
-                    <artifactId>jsf-impl</artifactId>
                 </dependency>
 
                 <dependency>
@@ -744,16 +729,6 @@
 
                 <dependency>
                     <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-jsf</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-jsf-injection</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
                     <artifactId>jboss-as-host-controller</artifactId>
                 </dependency>
 
@@ -1067,11 +1042,6 @@
                 <dependency>
                     <groupId>org.jboss.spec.javax.enterprise.deploy</groupId>
                     <artifactId>jboss-jad-api_1.2_spec</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.spec.javax.faces</groupId>
-                    <artifactId>jboss-jsf-api_2.1_spec</artifactId>
                 </dependency>
 
                 <dependency>
@@ -1390,7 +1360,6 @@
                                         <include>dom4j:dom4j</include>
                                         <include>javax.activation:activation</include>
                                         <include>javax.enterprise:cdi-api</include>
-                                        <include>javax.faces:jsf-api</include>
                                         <include>javax.inject:javax.inject</include>
                                         <include>javax.jws:jsr181-api</include>
                                         <include>javax.mail:mail</include>
@@ -1442,7 +1411,6 @@
                                         <include>org.jboss.spec.javax.annotation:jboss-annotations-api_1.1_spec</include>
                                         <include>org.jboss.spec.javax.el:jboss-el-api_2.2_spec</include>
                                         <include>org.jboss.spec.javax.enterprise.deploy:jboss-jad-api_1.2_spec</include>
-                                        <include>org.jboss.spec.javax.faces:jboss-jsf-api_2.1_spec</include>
                                         <include>org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.1_spec</include>
                                         <include>org.jboss.spec.javax.jms:jboss-jms-api_1.1_spec</include>
                                         <include>org.jboss.spec.javax.management.j2ee:jboss-j2eemgmt-api_1.1_spec</include>
@@ -1661,10 +1629,6 @@
                                             <packages>com.sun.istack:com.sun.istack.localization:com.sun.istack.logging:com.sun.istack.tools</packages>
                                         </group>
                                         <group>
-                                            <title>Module com.sun.jsf-impl</title>
-                                            <packages>com.sun.faces:com.sun.faces.application:com.sun.faces.application.annotation:com.sun.faces.application.resource:com.sun.faces.application.view:com.sun.faces.component:com.sun.faces.component.behavior:com.sun.faces.component.validator:com.sun.faces.component.visit:com.sun.faces.config:com.sun.faces.config.configprovider:com.sun.faces.config.processor:com.sun.faces.context:com.sun.faces.context.flash:com.sun.faces.el:com.sun.faces.ext.component:com.sun.faces.ext.render:com.sun.faces.ext.taglib:com.sun.faces.ext.validator:com.sun.faces.facelets:com.sun.faces.facelets.compiler:com.sun.faces.facelets.component:com.sun.faces.facelets.el:com.sun.faces.facelets.impl:com.sun.faces.facelets.tag:com.sun.faces.facelets.tag.composite:com.sun.faces.facelets.tag.jsf:com.sun.faces.facelets.tag.jsf.core:com.sun.faces.facelets.tag.jsf.html:com.sun.faces.facelets.tag.jstl.core:com.sun.faces.facelets.tag.jstl.fn:com.sun.faces.facelets.tag.ui:com.sun.faces.facelets.util:com.sun.faces.io:com.sun.faces.lifecycle:com.sun.faces.mgbean:com.sun.faces.renderkit:com.sun.faces.renderkit.html_basic:com.sun.faces.scripting:com.sun.faces.scripting.groovy:com.sun.faces.spi:com.sun.faces.taglib:com.sun.faces.taglib.html_basic:com.sun.faces.taglib.jsf_core:com.sun.faces.util:com.sun.faces.vendor</packages>
-                                        </group>
-                                        <group>
                                             <title>Module com.sun.xml.bind</title>
                                             <packages>com.sun.tools.jxc:com.sun.tools.jxc.ap:com.sun.tools.jxc.gen.config:com.sun.tools.jxc.model.nav:com.sun.tools.xjc:com.sun.tools.xjc.addon.accessors:com.sun.tools.xjc.addon.at_generated:com.sun.tools.xjc.addon.code_injector:com.sun.tools.xjc.addon.episode:com.sun.tools.xjc.addon.locator:com.sun.tools.xjc.addon.sync:com.sun.tools.xjc.api:com.sun.tools.xjc.api.impl.j2s:com.sun.tools.xjc.api.impl.s2j:com.sun.tools.xjc.api.util:com.sun.tools.xjc.generator:com.sun.tools.xjc.generator.annotation.ri:com.sun.tools.xjc.generator.annotation.spec:com.sun.tools.xjc.generator.bean:com.sun.tools.xjc.generator.bean.field:com.sun.tools.xjc.generator.util:com.sun.tools.xjc.model:com.sun.tools.xjc.model.nav:com.sun.tools.xjc.outline:com.sun.tools.xjc.reader:com.sun.tools.xjc.reader.dtd:com.sun.tools.xjc.reader.dtd.bindinfo:com.sun.tools.xjc.reader.gbind:com.sun.tools.xjc.reader.internalizer:com.sun.tools.xjc.reader.relaxng:com.sun.tools.xjc.reader.xmlschema:com.sun.tools.xjc.reader.xmlschema.bindinfo:com.sun.tools.xjc.reader.xmlschema.ct:com.sun.tools.xjc.reader.xmlschema.parser:com.sun.tools.xjc.runtime:com.sun.tools.xjc.util:com.sun.tools.xjc.writer:com.sun.xml.bind:com.sun.xml.bind.annotation:com.sun.xml.bind.api:com.sun.xml.bind.api.impl:com.sun.xml.bind.marshaller:com.sun.xml.bind.unmarshaller:com.sun.xml.bind.util:com.sun.xml.bind.v2:com.sun.xml.bind.v2.bytecode:com.sun.xml.bind.v2.model.annotation:com.sun.xml.bind.v2.model.core:com.sun.xml.bind.v2.model.impl:com.sun.xml.bind.v2.model.nav:com.sun.xml.bind.v2.model.runtime:com.sun.xml.bind.v2.runtime:com.sun.xml.bind.v2.runtime.output:com.sun.xml.bind.v2.runtime.property:com.sun.xml.bind.v2.runtime.reflect:com.sun.xml.bind.v2.runtime.reflect.opt:com.sun.xml.bind.v2.runtime.unmarshaller:com.sun.xml.bind.v2.schemagen:com.sun.xml.bind.v2.schemagen.episode:com.sun.xml.bind.v2.schemagen.xmlschema:com.sun.xml.bind.v2.util</packages>
                                         </group>
@@ -1707,10 +1671,6 @@
                                         <group>
                                             <title>Module javax.enterprise.deploy.api</title>
                                             <packages>javax.enterprise.deploy.model:javax.enterprise.deploy.model.exceptions:javax.enterprise.deploy.shared:javax.enterprise.deploy.shared.factories:javax.enterprise.deploy.spi:javax.enterprise.deploy.spi.exceptions:javax.enterprise.deploy.spi.factories:javax.enterprise.deploy.spi.status</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module javax.faces.api</title>
-                                            <packages>javax.faces:javax.faces.application:javax.faces.bean:javax.faces.component:javax.faces.component.behavior:javax.faces.component.html:javax.faces.component.visit:javax.faces.context:javax.faces.convert:javax.faces.el:javax.faces.event:javax.faces.lifecycle:javax.faces.model:javax.faces.render:javax.faces.validator:javax.faces.view:javax.faces.view.facelets:javax.faces.webapp</packages>
                                         </group>
                                         <group>
                                             <title>Module javax.inject.api</title>
@@ -2027,10 +1987,6 @@
                                         <group>
                                             <title>Module org.jboss.as.host-controller</title>
                                             <packages>org.jboss.as.domain.controller:org.jboss.as.domain.controller.descriptions:org.jboss.as.domain.controller.operations:org.jboss.as.domain.controller.operations.coordination:org.jboss.as.domain.controller.operations.deployment:org.jboss.as.domain.controller.plan:org.jboss.as.domain.controller.resource:org.jboss.as.host.controller:org.jboss.as.host.controller.descriptions:org.jboss.as.host.controller.ignored:org.jboss.as.host.controller.jmx:org.jboss.as.host.controller.mgmt:org.jboss.as.host.controller.model.jvm:org.jboss.as.host.controller.operations:org.jboss.as.host.controller.parsing:org.jboss.as.host.controller.resources</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.as.jsf</title>
-                                            <packages>org.jboss.as.jsf.deployment</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.as.jdr</title>

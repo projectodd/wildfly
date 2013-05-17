@@ -1115,12 +1115,6 @@
             </dependency>
 
             <dependency>
-                <groupId>com.sun.faces</groupId>
-                <artifactId>jsf-impl</artifactId>
-                <version>${version.com.sun.faces}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>com.sun.istack</groupId>
                 <artifactId>istack-commons-runtime</artifactId>
                 <version>${version.com.sun.istack}</version>
@@ -1332,18 +1326,6 @@
                         <artifactId>jsr250-api</artifactId>
                     </exclusion>
                 </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>javax.faces</groupId>
-                <artifactId>jsf-api</artifactId>
-                <version>${version.javax.faces}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>javax.faces</groupId>
-                <artifactId>jsf-impl</artifactId>
-                <version>${version.javax.faces}</version>
             </dependency>
 
             <dependency>
@@ -1726,46 +1708,6 @@
                 <groupId>org.apache.maven.wagon</groupId>
                 <artifactId>wagon-provider-api</artifactId>
                 <version>${version.org.apache.maven.wagon}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.myfaces.core</groupId>
-                <artifactId>myfaces-impl</artifactId>
-                <version>${version.org.apache.myfaces.core}</version>
-                <exclusions>
-                   <exclusion>
-                       <groupId>commons-logging</groupId>
-                       <artifactId>commons-logging</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>commons-collections</groupId>
-                       <artifactId>commons-logging</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>commons-collections</groupId>
-                       <artifactId>commons-collections</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>commons-codec</groupId>
-                       <artifactId>commons-codec</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>commons-beanutils</groupId>
-                       <artifactId>commons-beanutils</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>commons-digester</groupId>
-                       <artifactId>commons-digester</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.apache.myfaces.core</groupId>
-                       <artifactId>myfaces-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>javax.servlet</groupId>
-                       <artifactId>servlet-api</artifactId>
-                   </exclusion>
-                </exclusions>
             </dependency>
 
             <dependency>
@@ -2594,18 +2536,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-jsf</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-jsf-injection</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
               <groupId>org.jboss.jbossts</groupId>
               <artifactId>jbossjta</artifactId>
               <version>${version.org.jboss.jbossts.jbossjta}</version>
@@ -2615,18 +2545,6 @@
               <groupId>org.jboss.jbossts</groupId>
               <artifactId>jbossjta-integration</artifactId>
               <version>${version.org.jboss.jbossts.jbossjta}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.jsfunit</groupId>
-                <artifactId>jboss-jsfunit-core</artifactId>
-                <version>${version.org.jboss.jsfunit}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>xml-apis</groupId>
-                        <artifactId>xml-apis</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <dependency>
@@ -2886,12 +2804,6 @@
                 <groupId>org.jboss.spec.javax.el</groupId>
                 <artifactId>jboss-el-api_2.2_spec</artifactId>
                 <version>${version.org.jboss.spec.javax.el.jboss-el-api_2.2_spec}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.spec.javax.faces</groupId>
-                <artifactId>jboss-jsf-api_2.1_spec</artifactId>
-                <version>${version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec}</version>
             </dependency>
 
             <dependency>
@@ -3591,7 +3503,6 @@
                 <module>host-controller</module>
                 <module>jdr</module>
                 <module>jpa</module>
-                <module>jsf</module>
                 <module>logging</module>
                 <module>mail</module>
                 <module>messaging</module>

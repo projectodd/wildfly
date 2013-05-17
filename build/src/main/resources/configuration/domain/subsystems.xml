@@ -11,7 +11,6 @@
       <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
       <subsystem>configuration/subsystems/jpa.xml</subsystem>
-      <subsystem>configuration/subsystems/jsf.xml</subsystem>
       <subsystem>configuration/subsystems/mail.xml</subsystem>
       <subsystem>configuration/subsystems/naming.xml</subsystem>
       <subsystem>configuration/subsystems/pojo.xml</subsystem>
@@ -34,7 +33,6 @@
       <subsystem>configuration/subsystems/jgroups.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
       <subsystem>configuration/subsystems/jpa.xml</subsystem>
-      <subsystem>configuration/subsystems/jsf.xml</subsystem>
       <subsystem>configuration/subsystems/mail.xml</subsystem>
       <subsystem>configuration/subsystems/modcluster.xml</subsystem>
       <subsystem>configuration/subsystems/naming.xml</subsystem>
@@ -57,7 +55,6 @@
       <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
       <subsystem>configuration/subsystems/jpa.xml</subsystem>
-      <subsystem>configuration/subsystems/jsf.xml</subsystem>
       <subsystem>configuration/subsystems/mail.xml</subsystem>
       <subsystem>configuration/subsystems/messaging.xml</subsystem>
       <subsystem>configuration/subsystems/naming.xml</subsystem>
@@ -81,7 +78,6 @@
       <subsystem>configuration/subsystems/jgroups.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
       <subsystem>configuration/subsystems/jpa.xml</subsystem>
-      <subsystem>configuration/subsystems/jsf.xml</subsystem>
       <subsystem>configuration/subsystems/mail.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/messaging.xml</subsystem>
       <subsystem>configuration/subsystems/modcluster.xml</subsystem>
