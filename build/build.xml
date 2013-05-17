@@ -93,23 +93,6 @@
         <mkdir dir="${output.dir}/modules/system/layers/base/org/jboss/integration/ext-content/main/bundled"/>
         <copy file="${org.jboss.seam.integration:jboss-seam-int-jbossas:jar}" tofile="${output.dir}/modules/system/layers/base/org/jboss/integration/ext-content/main/bundled/jboss-seam-int.jar"/>
 
-        <!-- Copy the EJB specific schemas to the JBOSS_HOME/docs/schema folder -->
-        <unzip src="${org.jboss.metadata:jboss-metadata-ejb:jar}" dest="${output.dir}/docs/schema/">
-            <patternset>
-                <include name="schema/*.xsd"/>
-                <include name="dtd/ejb-jar*.dtd"/>
-            </patternset>
-            <mapper type="flatten"/>
-        </unzip>
-
-        <!-- Copy the jboss-metadata-appclient specific schemas to the JBOSS_HOME/docs/schema folder -->
-        <unzip src="${org.jboss.metadata:jboss-metadata-appclient:jar}" dest="${output.dir}/docs/schema/">
-            <patternset>
-                <include name="schema/*.xsd"/>
-            </patternset>
-            <mapper type="flatten"/>
-        </unzip>
-
         <!-- Copy the jboss-metadata-ear specific schemas to the JBOSS_HOME/docs/schema folder -->
         <unzip src="${org.jboss.metadata:jboss-metadata-ear:jar}" dest="${output.dir}/docs/schema/">
             <patternset>
@@ -141,13 +124,6 @@
             <mapper type="flatten"/>
         </unzip>
 
-        <!-- Copy the JBoss AS7 EJB specific schemas to the JBOSS_HOME/docs/schema folder -->
-        <unzip src="${org.jboss.as:jboss-as-ejb3:jar}" dest="${output.dir}/docs/schema/">
-            <patternset>
-                <include name="*.xsd"/>
-            </patternset>
-            <mapper type="flatten"/>
-        </unzip>
         <!-- Copy the JBoss Modules specific schemas to the JBOSS_HOME/docs/schema folder -->
         <unzip src="${org.jboss.modules:jboss-modules:jar}" dest="${output.dir}/docs/schema/">
             <patternset>
@@ -207,10 +183,6 @@
 
         <module-def name="org.jboss.as.domain-management">
             <maven-resource group="org.jboss.as" artifact="jboss-as-domain-management"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.embedded">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-embedded"/>
         </module-def>
 
         <module-def name="org.jboss.as.jmx">
@@ -423,10 +395,6 @@
             <maven-resource group="org.jboss.spec.javax.annotation" artifact="jboss-annotations-api_1.1_spec"/>
         </module-def>
 
-        <module-def name="javax.ejb.api">
-            <maven-resource group="org.jboss.spec.javax.ejb" artifact="jboss-ejb-api_3.1_spec"/>
-        </module-def>
-
         <module-def name="javax.el.api">
             <maven-resource group="org.jboss.spec.javax.el" artifact="jboss-el-api_2.2_spec"/>
         </module-def>
@@ -509,10 +477,6 @@
 
         <module-def name="javax.validation.api">
             <maven-resource group="javax.validation" artifact="validation-api"/>
-        </module-def>
-
-        <module-def name="javax.ws.rs.api">
-            <maven-resource group="org.jboss.spec.javax.ws.rs" artifact="jboss-jaxrs-api_1.1_spec"/>
         </module-def>
 
         <module-def name="javax.xml.bind.api">
@@ -683,10 +647,6 @@
             <maven-resource group="org.codehaus.jackson" artifact="jackson-core-asl" />
         </module-def>
 
-        <module-def name="org.codehaus.jackson.jackson-jaxrs">
-            <maven-resource group="org.codehaus.jackson" artifact="jackson-jaxrs" />
-        </module-def>
-
         <module-def name="org.codehaus.jackson.jackson-mapper-asl">
             <maven-resource group="org.codehaus.jackson" artifact="jackson-mapper-asl" />
         </module-def>
@@ -763,10 +723,6 @@
 
         <module-def name="org.jboss.as.aggregate" />
 
-        <module-def name="org.jboss.as.appclient">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-appclient"/>
-        </module-def>
-
         <module-def name="org.jboss.as.console">
             <maven-resource-with-classifier group="org.jboss.as" artifact="jboss-as-console" classifier="resources"/>
         </module-def>
@@ -781,10 +737,6 @@
 
         <module-def name="org.jboss.as.clustering.common">
             <maven-resource group="org.jboss.as" artifact="jboss-as-clustering-common"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.clustering.ejb3.infinispan">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-clustering-ejb3-infinispan"/>
         </module-def>
 
         <module-def name="org.jboss.as.clustering.impl">
@@ -819,10 +771,6 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-clustering-web-spi"/>
         </module-def>
 
-        <module-def name="org.jboss.as.cmp">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-cmp"/>
-        </module-def>
-
         <module-def name="org.jboss.as.connector">
             <maven-resource group="org.jboss.as" artifact="jboss-as-connector"/>
         </module-def>
@@ -841,16 +789,8 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-ee-deployment"/>
         </module-def>
 
-        <module-def name="org.jboss.as.ejb3">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-ejb3"/>
-        </module-def>
-
         <module-def name="org.jboss.as.host-controller">
             <maven-resource group="org.jboss.as" artifact="jboss-as-host-controller"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.jsr77">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-jsr77"/>
         </module-def>
 
         <module-def name="org.jboss.as.jacorb">
@@ -859,10 +799,6 @@
 
         <module-def name="org.jboss.as.jaxr">
             <maven-resource group="org.jboss.as" artifact="jboss-as-jaxr"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.jaxrs">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-jaxrs"/>
         </module-def>
 
         <module-def name="org.jboss.as.jdr">
@@ -966,38 +902,12 @@
             <!-- <extract-native-jar group="org.jboss.as" artifact="jbossweb-native"/> -->
         </module-def>
 
-        <module-def name="org.jboss.as.webservices">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-webservices-server-integration"/>
-            <maven-resource-with-classifier group="org.jboss.ws.cxf" artifact="jbossws-cxf-resources" classifier="jboss711"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.webservices.server.integration">
-            <!-- this is a dependencies only wrapper module - to support multiple JBossWS SOAP stacks -->
-        </module-def>
-
-        <module-def name="org.jboss.as.webservices.server.jaxrpc-integration">
-            <!-- this is a dependencies only module for JAXRPC functionalities provided by JBossWS Native stack -->
-        </module-def>
-
         <module-def name="org.jboss.as.weld">
             <maven-resource group="org.jboss.as" artifact="jboss-as-weld"/>
-        </module-def>
-        <module-def name="org.jboss.as.xts">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-xts"/>
         </module-def>
 
         <module-def name="org.jboss.classfilewriter">
             <maven-resource group="org.jboss.classfilewriter" artifact="jboss-classfilewriter"/>
-        </module-def>
-
-        <module-def name="org.jboss.ejb-client">
-            <maven-resource group="org.jboss" artifact="jboss-ejb-client"/>
-        </module-def>
-
-        <module-def name="org.jboss.ejb3">
-
-            <!-- TODO: this is not the final API -->
-            <maven-resource group="org.jboss.ejb3" artifact="jboss-ejb3-ext-api"/>
         </module-def>
 
         <module-def name="org.jboss.integration.ext-content">
@@ -1043,8 +953,6 @@
 
         <module-def name="org.jboss.metadata">
             <maven-resource group="org.jboss.metadata" artifact="jboss-metadata-common"/>
-            <maven-resource group="org.jboss.metadata" artifact="jboss-metadata-appclient"/>
-            <maven-resource group="org.jboss.metadata" artifact="jboss-metadata-ejb"/>
             <maven-resource group="org.jboss.metadata" artifact="jboss-metadata-web"/>
             <maven-resource group="org.jboss.metadata" artifact="jboss-metadata-ear"/>
         </module-def>
@@ -1062,47 +970,6 @@
 
         <module-def name="org.jboss.remoting-jmx">
             <maven-resource group="org.jboss.remotingjmx" artifact="remoting-jmx"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-atom-provider">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-atom-provider"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-cdi">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-cdi"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-hibernatevalidator-provider">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-hibernatevalidator-provider"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-jackson-provider">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-jackson-provider"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-jaxb-provider">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-jaxb-provider"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-jettison-provider">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-jettison-provider"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-jaxrs">
-            <maven-resource group="org.jboss.resteasy" artifact="async-http-servlet-3.0"/>
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-jaxrs"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-jsapi">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-jsapi"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-multipart-provider">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-multipart-provider"/>
-        </module-def>
-
-        <module-def name="org.jboss.resteasy.resteasy-yaml-provider">
-            <maven-resource group="org.jboss.resteasy" artifact="resteasy-yaml-provider"/>
         </module-def>
 
         <module-def name="org.jboss.security.negotiation">
@@ -1198,11 +1065,6 @@
 
         <module-def name="org.jboss.xb">
             <maven-resource group="org.jboss" artifact="jbossxb"/>
-        </module-def>
-
-        <module-def name="org.jboss.xts">
-            <maven-resource group="org.jboss.jbossts.xts" artifact="jbossxts"/>
-            <maven-resource group="org.jboss.jbossts" artifact="jbosstxbridge"/>
         </module-def>
 
         <module-def name="org.jgroups">

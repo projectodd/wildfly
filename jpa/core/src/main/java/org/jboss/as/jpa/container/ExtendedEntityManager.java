@@ -129,8 +129,6 @@ public class ExtendedEntityManager extends AbstractEntityManager implements Seri
             // transaction (with the same puScopedName).
             EntityManager existing = TransactionUtil.getTransactionScopedEntityManager(puScopedName);
             if (existing != null && existing != this) {
-                // should be enough to test if not the same object
-                throw MESSAGES.cannotUseExtendedPersistenceTransaction(puScopedName, existing, this);
             } else if (existing == null) {
                 // JPA 7.9.1 join the transaction if not already done.
                 TransactionUtil.registerExtendedUnderlyingWithTransaction(puScopedName, this, underlyingEntityManager);

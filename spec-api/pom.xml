@@ -41,10 +41,6 @@
 
     <!-- Export out the EE Specs and demos -->
     <dependency>
-      <groupId>org.jboss.spec.javax.ejb</groupId>
-      <artifactId>jboss-ejb-api_3.1_spec</artifactId>
-    </dependency>
-    <dependency>
       <groupId>org.jboss.spec.javax.el</groupId>
       <artifactId>jboss-el-api_2.2_spec</artifactId>
     </dependency>
@@ -91,10 +87,6 @@
     <dependency>
       <groupId>org.jboss.spec.javax.transaction</groupId>
       <artifactId>jboss-transaction-api_1.1_spec</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.spec.javax.ws.rs</groupId>
-      <artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jboss.spec.javax.xml.bind</groupId>

@@ -48,7 +48,6 @@
         <module>singleton</module>
         <module>web-spi</module>
         <module>web-infinispan</module>
-        <module>ejb3-infinispan</module>
     </modules>
 
     <dependencies>

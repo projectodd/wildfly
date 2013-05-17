@@ -31,8 +31,6 @@ import org.jboss.weld.injection.spi.ResourceInjectionServices;
 import org.jboss.weld.injection.spi.helpers.AbstractResourceServices;
 
 import javax.annotation.Resource;
-import javax.ejb.TimerService;
-import javax.ejb.spi.HandleDelegate;
 import javax.enterprise.inject.spi.InjectionPoint;
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -45,8 +43,6 @@ public class WeldResourceInjectionServices extends AbstractResourceServices impl
 
     private static final String USER_TRANSACTION_LOCATION = "java:comp/UserTransaction";
     private static final String USER_TRANSACTION_CLASS_NAME = "javax.transaction.UserTransaction";
-    private static final String HANDLE_DELEGATE_CLASS_NAME = "javax.ejb.spi.HandleDelegate";
-    private static final String TIMER_SERVICE_CLASS_NAME = "javax.ejb.TimerService";
     private static final String ORB_CLASS_NAME = "org.omg.CORBA.ORB";
 
     private final Context context;
@@ -62,25 +58,6 @@ public class WeldResourceInjectionServices extends AbstractResourceServices impl
     @Override
     public WeldResourceInjectionServices getValue() throws IllegalStateException, IllegalArgumentException {
         return this;
-    }
-
-    protected static String getEJBResourceName(InjectionPoint injectionPoint, String proposedName) {
-        if (injectionPoint.getType() instanceof Class<?>) {
-            Class<?> type = (Class<?>) injectionPoint.getType();
-            if (USER_TRANSACTION_CLASS_NAME.equals(type.getName())) {
-                return USER_TRANSACTION_LOCATION;
-            } else if (HANDLE_DELEGATE_CLASS_NAME.equals(type.getName())) {
-                WeldLogger.ROOT_LOGGER.injectionTypeNotValue(HandleDelegate.class, injectionPoint.getMember());
-                return proposedName;
-            } else if (ORB_CLASS_NAME.equals(type.getName())) {
-                WeldLogger.ROOT_LOGGER.injectionTypeNotValue(org.omg.CORBA.ORB.class, injectionPoint.getMember());
-                return proposedName;
-            } else if (TIMER_SERVICE_CLASS_NAME.equals(type.getName())) {
-                WeldLogger.ROOT_LOGGER.injectionTypeNotValue(TimerService.class, injectionPoint.getMember());
-                return proposedName;
-            }
-        }
-        return proposedName;
     }
 
 
@@ -109,7 +86,7 @@ public class WeldResourceInjectionServices extends AbstractResourceServices impl
             return mappedName;
         }
         String proposedName = super.getResourceName(injectionPoint);
-        return getEJBResourceName(injectionPoint, proposedName);
+        return proposedName;
     }
 
     @Override

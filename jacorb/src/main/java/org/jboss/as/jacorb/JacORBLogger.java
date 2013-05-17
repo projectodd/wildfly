@@ -34,7 +34,6 @@ import org.jboss.logging.annotations.LogMessage;
 import org.jboss.logging.Logger;
 import org.jboss.logging.annotations.Message;
 import org.jboss.logging.annotations.MessageLogger;
-import org.jboss.metadata.ejb.jboss.IORSecurityConfigMetaData;
 import org.omg.CORBA.ORB;
 
 /**
@@ -53,10 +52,6 @@ public interface JacORBLogger extends BasicLogger {
     @LogMessage(level = INFO)
     @Message(id = 16300, value = "Activating JacORB Subsystem")
     void activatingSubsystem();
-
-    @LogMessage(level = DEBUG)
-    @Message(id = 16301, value = "IOR security config metadata: %s")
-    void debugIORSecurityConfigMetaData(IORSecurityConfigMetaData metaData);
 
     @LogMessage(level = DEBUG)
     @Message(id = 16302, value = "CSIv2Policy not found in IORInfo")

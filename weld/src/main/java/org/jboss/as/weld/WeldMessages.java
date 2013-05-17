@@ -29,9 +29,6 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.util.Set;
 
-import javax.ejb.EJB;
-import javax.ejb.NoSuchEJBException;
-
 import org.jboss.as.ee.component.ViewDescription;
 import org.jboss.as.server.deployment.DeploymentUnitProcessingException;
 import org.jboss.logging.annotations.Cause;
@@ -65,12 +62,6 @@ public interface WeldMessages {
     @Message(id=16053, value = "Service class %s didn't implement the javax.enterprise.inject.spi.Extension interface")
     DeploymentUnitProcessingException extensionDoesNotImplementExtension(String className, @Cause Throwable throwable);
 
-    @Message(id = 16054, value = "View of type %s not found on EJB %s")
-    IllegalArgumentException viewNotFoundOnEJB(String viewType, String ejb);
-
-    @Message(id = 16055, value = "EJB has been removed")
-    NoSuchEJBException ejbHashBeenRemoved();
-
     @Message(id = 16056, value = "Failed to perform CDI injection of field: %s on %s")
     RuntimeException couldNotInjectField(Field field, Class<?> beanClass, @Cause Throwable cause);
 
@@ -100,12 +91,6 @@ public interface WeldMessages {
 
     @Message(id = 16065, value = "%s annotation not found on %s")
     IllegalArgumentException annotationNotFound(Class<? extends Annotation> type,  Member member);
-
-    @Message(id = 16066, value = "Could not resolve @EJB injection for %s on %s")
-    IllegalArgumentException ejbNotResolved(EJB ejb, Member member);
-
-    @Message(id = 16067, value = "Resolved more than one EJB for @EJB injection of %s on %s. Found %s")
-    IllegalArgumentException moreThanOneEjbResolved(EJB ejb, Member member, final Set<ViewDescription> viewService);
 
     @Message(id = 16068, value = "Could not determine bean class from injection point type of %s")
     IllegalArgumentException couldNotDetermineUnderlyingType(Type type);

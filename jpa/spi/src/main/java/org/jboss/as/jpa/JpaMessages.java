@@ -25,7 +25,6 @@ package org.jboss.as.jpa;
 import java.io.File;
 import java.net.URLConnection;
 
-import javax.ejb.EJBException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceException;
 import javax.persistence.TransactionRequiredException;
@@ -233,21 +232,6 @@ public interface JpaMessages {
      */
     @Message(id = 11436, value = "Cannot specify both %s (%s) and %s (%s) in %s for %s")
     DeploymentUnitProcessingException cannotSpecifyBoth(String key1, Object value1, String key2, Object value2, String parentTag, Object object);
-
-    /**
-     * Creates an exception indicating the extended persistence context for the SFSB already exists.
-     *
-     * @param puScopedName          the persistence unit name.
-     * @param existingEntityManager the existing transactional entity manager.
-     * @param self                  the entity manager attempting to be created.
-     * @return an {@link javax.ejb.EJBException} for the error.
-     */
-    @Message(id = 11437, value = "Found extended persistence context in SFSB invocation call stack but that cannot be used " +
-            "because the transaction already has a transactional context associated with it.  " +
-            "This can be avoided by changing application code, either eliminate the extended " +
-            "persistence context or the transactional context.  See JPA spec 2.0 section 7.6.3.1.  " +
-            "Scoped persistence unit name=%s, persistence context already in transaction =%s, extended persistence context =%s.")
-    EJBException cannotUseExtendedPersistenceTransaction(String puScopedName, EntityManager existingEntityManager, EntityManager self);
 
     /**
      * Creates an exception indicating the child could not be found on the parent.

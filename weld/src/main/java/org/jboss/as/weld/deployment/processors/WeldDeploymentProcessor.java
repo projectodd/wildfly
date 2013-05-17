@@ -67,8 +67,6 @@ import org.jboss.as.weld.deployment.CdiAnnotationMarker;
 import org.jboss.as.weld.deployment.WeldAttachments;
 import org.jboss.as.weld.deployment.WeldDeployment;
 import org.jboss.as.weld.services.TCCLSingletonService;
-import org.jboss.as.weld.services.bootstrap.WeldEjbInjectionServices;
-import org.jboss.as.weld.services.bootstrap.WeldEjbServices;
 import org.jboss.as.weld.services.bootstrap.WeldJpaInjectionServices;
 import org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices;
 import org.jboss.as.weld.services.bootstrap.WeldSecurityServices;
@@ -83,7 +81,6 @@ import org.jboss.msc.service.ServiceTarget;
 import org.jboss.weld.bootstrap.api.Environments;
 import org.jboss.weld.bootstrap.spi.Metadata;
 import org.jboss.weld.ejb.spi.EjbServices;
-import org.jboss.weld.injection.spi.EjbInjectionServices;
 import org.jboss.weld.injection.spi.JpaInjectionServices;
 import org.jboss.weld.validation.spi.ValidationServices;
 
@@ -177,12 +174,6 @@ public class WeldDeploymentProcessor implements DeploymentUnitProcessor {
 
             //we have to do this here as the aggregate components are not available in earlier phases
             final ResourceRoot subDeploymentRoot = subDeployment.getAttachment(Attachments.DEPLOYMENT_ROOT);
-            final EjbInjectionServices ejbInjectionServices = new WeldEjbInjectionServices(deploymentUnit.getServiceRegistry(), eeModuleDescription, eeApplicationDescription, subDeploymentRoot.getRoot());
-            bdm.addService(EjbInjectionServices.class, ejbInjectionServices);
-            for(final BeanDeploymentModule additional : additionalModules) {
-                additional.addBeanDeploymentModule(bdm);
-                bdm.addBeanDeploymentModule(additional);bdm.addService(EjbInjectionServices.class, ejbInjectionServices);
-            }
 
         }
 
@@ -200,13 +191,8 @@ public class WeldDeploymentProcessor implements DeploymentUnitProcessor {
             }
         }
 
-        final EjbInjectionServices ejbInjectionServices = new WeldEjbInjectionServices(deploymentUnit.getServiceRegistry(), eeModuleDescription, eeApplicationDescription, deploymentRoot.getRoot());
-
-        rootBeanDeploymentModule.addService(EjbInjectionServices.class, ejbInjectionServices);
-
         for(final BeanDeploymentModule additional : deploymentUnit.getAttachmentList(WeldAttachments.ADDITIONAL_BEAN_DEPLOYMENT_MODULES)) {
             beanDeploymentArchives.addAll(additional.getBeanDeploymentArchives());
-            additional.addService(EjbInjectionServices.class, ejbInjectionServices);
         }
 
         final List<Metadata<Extension>> extensions = deploymentUnit.getAttachmentList(WeldAttachments.PORTABLE_EXTENSIONS);
@@ -218,9 +204,6 @@ public class WeldDeploymentProcessor implements DeploymentUnitProcessor {
         //TODO: we need to change weld so this is a per-BDA service
         final ValidatorFactory factory = deploymentUnit.getAttachment(BeanValidationAttachments.VALIDATOR_FACTORY);
         weldBootstrapService.addWeldService(ValidationServices.class, new WeldValidationServices(factory));
-        weldBootstrapService.addWeldService(EjbInjectionServices.class, ejbInjectionServices);
-
-        weldBootstrapService.addWeldService(EjbServices.class, new WeldEjbServices(deploymentUnit.getServiceRegistry()));
 
 
         final JpaInjectionServices rootJpaInjectionServices = new WeldJpaInjectionServices(deploymentUnit, deploymentUnit.getServiceRegistry());
