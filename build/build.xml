@@ -485,14 +485,6 @@
 
         <module-def name="javax.xml.jaxp-provider"/>
 
-        <module-def name="javax.xml.registry.api">
-            <maven-resource group="org.jboss.spec.javax.xml.registry" artifact="jboss-jaxr-api_1.0_spec"/>
-        </module-def>
-
-        <module-def name="javax.xml.rpc.api">
-            <maven-resource group="org.jboss.spec.javax.xml.rpc" artifact="jboss-jaxrpc-api_1.1_spec"/>
-        </module-def>
-
         <module-def name="javax.xml.soap.api">
             <maven-resource group="org.jboss.spec.javax.xml.soap" artifact="jboss-saaj-api_1.3_spec"/>
         </module-def>
@@ -795,10 +787,6 @@
 
         <module-def name="org.jboss.as.jacorb">
             <maven-resource group="org.jboss.as" artifact="jboss-as-jacorb"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.jaxr">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-jaxr"/>
         </module-def>
 
         <module-def name="org.jboss.as.jdr">

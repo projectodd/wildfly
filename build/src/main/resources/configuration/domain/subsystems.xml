@@ -7,7 +7,6 @@
       <subsystem>configuration/subsystems/datasources.xml</subsystem>
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem>configuration/subsystems/infinispan.xml</subsystem>
-      <subsystem>configuration/subsystems/jaxrs.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
       <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
@@ -23,7 +22,6 @@
       <subsystem>configuration/subsystems/threads.xml</subsystem>
       <subsystem>configuration/subsystems/transactions.xml</subsystem>
       <subsystem>configuration/subsystems/web.xml</subsystem>
-      <subsystem>configuration/subsystems/webservices.xml</subsystem>
       <subsystem>configuration/subsystems/weld.xml</subsystem>
    </subsystems>
    <subsystems name="ha">
@@ -32,7 +30,6 @@
       <subsystem>configuration/subsystems/datasources.xml</subsystem>
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/infinispan.xml</subsystem>
-      <subsystem>configuration/subsystems/jaxrs.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
       <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem>configuration/subsystems/jgroups.xml</subsystem>
@@ -50,7 +47,6 @@
       <subsystem>configuration/subsystems/threads.xml</subsystem>
       <subsystem>configuration/subsystems/transactions.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/web.xml</subsystem>
-      <subsystem>configuration/subsystems/webservices.xml</subsystem>
       <subsystem>configuration/subsystems/weld.xml</subsystem>
    </subsystems>
    <subsystems name="full">
@@ -61,8 +57,6 @@
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem>configuration/subsystems/infinispan.xml</subsystem>
       <subsystem>configuration/subsystems/jacorb.xml</subsystem>
-      <subsystem>configuration/subsystems/jaxr.xml</subsystem>
-      <subsystem>configuration/subsystems/jaxrs.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
       <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
@@ -89,8 +83,6 @@
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/infinispan.xml</subsystem>
       <subsystem>configuration/subsystems/jacorb.xml</subsystem>
-      <subsystem>configuration/subsystems/jaxr.xml</subsystem>
-      <subsystem>configuration/subsystems/jaxrs.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
       <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem>configuration/subsystems/jgroups.xml</subsystem>

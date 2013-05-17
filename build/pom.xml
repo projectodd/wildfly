@@ -889,11 +889,6 @@
 
                 <dependency>
                     <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-jaxr</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
                     <artifactId>jboss-as-jdr</artifactId>
                 </dependency>
 
@@ -1320,16 +1315,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.jboss.spec.javax.xml.registry</groupId>
-                    <artifactId>jboss-jaxr-api_1.0_spec</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.spec.javax.xml.rpc</groupId>
-                    <artifactId>jboss-jaxrpc-api_1.1_spec</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.jboss.spec.javax.xml.soap</groupId>
                     <artifactId>jboss-saaj-api_1.3_spec</artifactId>
                 </dependency>
@@ -1707,8 +1692,6 @@
                                         <include>org.jboss.spec.javax.servlet.jstl:jboss-jstl-api_1.2_spec</include>
                                         <include>org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec</include>
                                         <include>org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.2_spec</include>
-                                        <include>org.jboss.spec.javax.xml.registry:jboss-jaxr-api_1.0_spec</include>
-                                        <include>org.jboss.spec.javax.xml.rpc:jboss-jaxrpc-api_1.1_spec</include>
                                         <include>org.jboss.spec.javax.xml.soap:jboss-saaj-api_1.3_spec</include>
                                         <include>org.jboss.spec.javax.xml.ws:jboss-jaxws-api_2.2_spec</include>
 
@@ -2304,10 +2287,6 @@
                                         <group>
                                             <title>Module org.jboss.as.jacorb</title>
                                             <packages>org.jboss.as.jacorb:org.jboss.as.jacorb.csiv2:org.jboss.as.jacorb.csiv2.idl:org.jboss.as.jacorb.deployment:org.jboss.as.jacorb.naming:org.jboss.as.jacorb.naming.jndi:org.jboss.as.jacorb.rmi:org.jboss.as.jacorb.rmi.ir:org.jboss.as.jacorb.rmi.marshal:org.jboss.as.jacorb.rmi.marshal.strategy:org.jboss.as.jacorb.security:org.jboss.as.jacorb.service:org.jboss.as.jacorb.tm</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.as.jaxr</title>
-                                            <packages>org.jboss.as.jaxr:org.jboss.as.jaxr.extension:org.jboss.as.jaxr.service</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.as.jdr</title>
