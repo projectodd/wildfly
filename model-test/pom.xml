@@ -78,18 +78,6 @@
             <artifactId>jboss-as-controller</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.jboss.shrinkwrap</groupId>
-            <artifactId>shrinkwrap-api</artifactId>
-            <scope>test</scope>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.jboss.shrinkwrap</groupId>
-            <artifactId>shrinkwrap-impl-base</artifactId>
-            <scope>test</scope>
-        </dependency>
-
 	     <dependency>
 	         <groupId>org.sonatype.aether</groupId>
 	         <artifactId>aether-api</artifactId>

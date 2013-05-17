@@ -1010,21 +1010,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.jboss.shrinkwrap</groupId>
-                    <artifactId>shrinkwrap-api</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.shrinkwrap</groupId>
-                    <artifactId>shrinkwrap-impl-base</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.shrinkwrap</groupId>
-                    <artifactId>shrinkwrap-spi</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.jboss.slf4j</groupId>
                     <artifactId>slf4j-jboss-logmanager</artifactId>
                 </dependency>
@@ -2131,10 +2116,6 @@
                                         <group>
                                             <title>Module org.jboss.security.xacml</title>
                                             <packages>org.jboss.security.xacml.bridge:org.jboss.security.xacml.core:org.jboss.security.xacml.core.ext:org.jboss.security.xacml.core.model.context:org.jboss.security.xacml.core.model.policy:org.jboss.security.xacml.factories:org.jboss.security.xacml.interfaces:org.jboss.security.xacml.jaxb:org.jboss.security.xacml.locators:org.jboss.security.xacml.locators.attrib:org.jboss.security.xacml.locators.cache:org.jboss.security.xacml.locators.policy:org.jboss.security.xacml.sunxacml:org.jboss.security.xacml.sunxacml.attr:org.jboss.security.xacml.sunxacml.attr.proxy:org.jboss.security.xacml.sunxacml.combine:org.jboss.security.xacml.sunxacml.cond:org.jboss.security.xacml.sunxacml.cond.cluster:org.jboss.security.xacml.sunxacml.ctx:org.jboss.security.xacml.sunxacml.finder:org.jboss.security.xacml.sunxacml.finder.impl:org.jboss.security.xacml.sunxacml.support:org.jboss.security.xacml.sunxacml.support.finder:org.jboss.security.xacml.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.shrinkwrap.core</title>
-                                            <packages>org.jboss.shrinkwrap.spi:org.jboss.shrinkwrap.api:org.jboss.shrinkwrap.api.asset:org.jboss.shrinkwrap.impl.base:org.jboss.shrinkwrap.impl.base.asset:org.jboss.shrinkwrap.impl.base.container:org.jboss.shrinkwrap.impl.base.exporter:org.jboss.shrinkwrap.impl.base.exporter.tar:org.jboss.shrinkwrap.impl.base.exporter.zip:org.jboss.shrinkwrap.impl.base.filter:org.jboss.shrinkwrap.impl.base.importer:org.jboss.shrinkwrap.impl.base.importer.tar:org.jboss.shrinkwrap.impl.base.importer.zip:org.jboss.shrinkwrap.impl.base.io:org.jboss.shrinkwrap.impl.base.io.tar:org.jboss.shrinkwrap.impl.base.path:org.jboss.shrinkwrap.impl.base.serialization:org.jboss.shrinkwrap.impl.base.spec:org.jboss.shrinkwrap.api.classloader:org.jboss.shrinkwrap.api.classloader.:org.jboss.shrinkwrap.api.container:org.jboss.shrinkwrap.api.exporter:org.jboss.shrinkwrap.api.formatter:org.jboss.shrinkwrap.api.importer:org.jboss.shrinkwrap.api.serialization:org.jboss.shrinkwrap.api.spec</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.weld.core</title>
