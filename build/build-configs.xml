@@ -64,13 +64,6 @@
            paramTemplateFile="configuration/domain/template.xml" 
            paramSubsystemsFile="configuration/domain/subsystems.xml"
            paramOutputFile="${generated.configs.domain}/domain.xml"/>
-
-      <!-- Example configs -->
-      <generate-server-config 
-           paramTemplateFile="configuration/standalone/template.xml" 
-           paramSubsystemsFile="configuration/examples/subsystems-hornetq-colocated.xml"
-           paramOutputFile="${generated.configs.examples}/standalone-hornetq-colocated.xml"/>
-    		
     </target>
 
 
