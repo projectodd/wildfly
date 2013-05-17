@@ -569,16 +569,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.apache.felix</groupId>
-                    <artifactId>org.apache.felix.configadmin</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.apache.felix</groupId>
-                    <artifactId>org.apache.felix.log</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.apache.httpcomponents</groupId>
                     <artifactId>httpclient</artifactId>
                 </dependency>
@@ -868,11 +858,6 @@
 
                 <dependency>
                     <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-configadmin</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
                     <artifactId>jboss-as-console</artifactId>
                     <classifier>resources</classifier>
                 </dependency>
@@ -1005,46 +990,6 @@
                 <dependency>
                     <groupId>org.jboss.as</groupId>
                     <artifactId>jboss-as-network</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-osgi-configadmin</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-osgi-http</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-osgi-jmx</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-osgi-jpa</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-osgi-jta</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-osgi-naming</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-osgi-service</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-osgi-web</artifactId>
                 </dependency>
 
                 <dependency>
@@ -1293,56 +1238,6 @@
                 <dependency>
                     <groupId>io.netty</groupId>
                     <artifactId>netty</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.framework</groupId>
-                    <artifactId>jbosgi-framework-core</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.logging</groupId>
-                    <artifactId>jboss-osgi-logging</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.metadata</groupId>
-                    <artifactId>jbosgi-metadata</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.repository</groupId>
-                    <artifactId>jbosgi-repository-api</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.repository</groupId>
-                    <artifactId>jbosgi-repository-core</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.resolver</groupId>
-                    <artifactId>jbosgi-resolver-api</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.resolver</groupId>
-                    <artifactId>jbosgi-resolver-felix</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.spi</groupId>
-                    <artifactId>jbosgi-spi</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.vfs</groupId>
-                    <artifactId>jbosgi-vfs</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.osgi.vfs</groupId>
-                    <artifactId>jbosgi-vfs30</artifactId>
                 </dependency>
 
                 <dependency>
@@ -1717,16 +1612,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.osgi</groupId>
-                    <artifactId>org.osgi.core</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.osgi</groupId>
-                    <artifactId>org.osgi.enterprise</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.picketlink</groupId>
                     <artifactId>picketlink-core</artifactId>
                 </dependency>
@@ -1984,7 +1869,6 @@
                                         <include>org.jboss.xnio:xnio-api</include>
                                         <include>org.jdom:jdom</include>
                                         <include>org.jgroups:jgroups</include>
-                                        <include>org.osgi:org.osgi.core</include>
                                         <include>org.picketbox:picketbox</include>
                                         <!--
                                         <include>org.picketbox:picketbox-commons</include>
@@ -2563,10 +2447,6 @@
                                             <packages>org.jboss.as.clustering.web:org.jboss.as.clustering.web.impl:org.jboss.as.clustering.web.sso</packages>
                                         </group>
                                         <group>
-                                            <title>Module org.jboss.as.configadmin</title>
-                                            <packages>org.jboss.as.configadmin:org.jboss.as.configadmin.parser:org.jboss.as.configadmin.service</packages>
-                                        </group>
-                                        <group>
                                             <title>Module org.jboss.as.cmp</title>
                                             <packages>org.jboss.as.cmp:org.jboss.as.cmp.bridge:org.jboss.as.cmp.component:org.jboss.as.cmp.component.interceptors:org.jboss.as.cmp.context:org.jboss.as.cmp.ejbql:org.jboss.as.cmp.jdbc:org.jboss.as.cmp.jdbc2:org.jboss.as.cmp.jdbc2.bridge:org.jboss.as.cmp.jdbc2.keygen:org.jboss.as.cmp.jdbc2.schema:org.jboss.as.cmp.jdbc.bridge:org.jboss.as.cmp.jdbc.keygen:org.jboss.as.cmp.jdbc.metadata:org.jboss.as.cmp.jdbc.metadata.parser:org.jboss.as.cmp.keygenerator:org.jboss.as.cmp.keygenerator.hilo:org.jboss.as.cmp.keygenerator.uuid:org.jboss.as.cmp.processors:org.jboss.as.cmp.service:org.jboss.as.cmp.subsystem</packages>
                                         </group>
@@ -2663,10 +2543,6 @@
                                             <packages>org.jboss.as.naming:org.jboss.as.naming.context:org.jboss.as.naming.deployment:org.jboss.as.naming.interfaces.java:org.jboss.as.naming.management:org.jboss.as.naming.remote:org.jboss.as.naming.service:org.jboss.as.naming.subsystem:org.jboss.as.naming.util</packages>
                                         </group>
                                         <group>
-                                            <title>Module org.jboss.as.osgi</title>
-                                            <packages>org.jboss.as.osgi:org.jboss.as.osgi.deployment:org.jboss.as.osgi.management:org.jboss.as.osgi.parser:org.jboss.as.osgi.service</packages>
-                                        </group>
-                                        <group>
                                             <title>Module org.jboss.as.sar</title>
                                             <packages>org.jboss.as.service:org.jboss.as.service.descriptor</packages>
                                         </group>
@@ -2749,30 +2625,6 @@
                                         <group>
                                             <title>Module org.jboss.netty</title>
                                             <packages>org.jboss.netty.bootstrap:org.jboss.netty.buffer:org.jboss.netty.channel:org.jboss.netty.channel.group:org.jboss.netty.channel.local:org.jboss.netty.channel.socket:org.jboss.netty.channel.socket.http:org.jboss.netty.channel.socket.nio:org.jboss.netty.channel.socket.oio:org.jboss.netty.container.microcontainer:org.jboss.netty.container.osgi:org.jboss.netty.container.spring:org.jboss.netty.handler.codec.base64:org.jboss.netty.handler.codec.compression:org.jboss.netty.handler.codec.embedder:org.jboss.netty.handler.codec.frame:org.jboss.netty.handler.codec.http:org.jboss.netty.handler.codec.http.websocket:org.jboss.netty.handler.codec.oneone:org.jboss.netty.handler.codec.protobuf:org.jboss.netty.handler.codec.replay:org.jboss.netty.handler.codec.rtsp:org.jboss.netty.handler.codec.serialization:org.jboss.netty.handler.codec.string:org.jboss.netty.handler.execution:org.jboss.netty.handler.logging:org.jboss.netty.handler.queue:org.jboss.netty.handler.ssl:org.jboss.netty.handler.stream:org.jboss.netty.handler.timeout:org.jboss.netty.logging:org.jboss.netty.util:org.jboss.netty.util.internal:org.jboss.netty.util.internal.jzlib</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.osgi.framework</title>
-                                            <packages>org.jboss.osgi.framework:org.jboss.osgi.framework.internal:org.jboss.osgi.framework.util:org.jboss.osgi.modules:org.osgi.util.tracker:org.osgi.util.xml:org.jboss.osgi.deployment:org.jboss.osgi.deployment.deployer:org.jboss.osgi.deployment.interceptor:org.jboss.osgi.deployment.internal</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.osgi.repository</title>
-                                            <packages>org.jboss.osgi.repository:org.jboss.osgi.repository.spi:org.osgi.service.repository:org.jboss.osgi.repository.core</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.osgi.resolver</title>
-                                            <packages>org.apache.felix.resolver:org.apache.felix.resolver.impl:org.jboss.osgi.resolver.felix:org.jboss.osgi.resolver:org.jboss.osgi.resolver.internal:org.jboss.osgi.resolver.spi:org.osgi.framework.namespace:org.osgi.framework.wiring:org.osgi.resource:org.osgi.service.resolver</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.osgi.metadata</title>
-                                            <packages>org.jboss.osgi.metadata:org.jboss.osgi.metadata.internal</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.osgi.spi</title>
-                                            <packages>org.jboss.osgi.spi:org.jboss.osgi.spi.framework:org.jboss.osgi.spi.internal:org.jboss.osgi.spi.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.osgi.vfs</title>
-                                            <packages>org.jboss.osgi.vfs:org.jboss.osgi.vfs.internal:org.jboss.osgi.vfs30</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.remote-naming</title>
@@ -2888,10 +2740,6 @@
                                             <packages>org.kohsuke.rngom.ast.builder:org.kohsuke.rngom.ast.om:org.kohsuke.rngom.ast.util:org.kohsuke.rngom.binary:org.kohsuke.rngom.binary.visitor:org.kohsuke.rngom.digested:org.kohsuke.rngom.dt:org.kohsuke.rngom.dt.builtin:org.kohsuke.rngom.nc:org.kohsuke.rngom.parse:org.kohsuke.rngom.parse.compact:org.kohsuke.rngom.parse.host:org.kohsuke.rngom.parse.xml:org.kohsuke.rngom.util:org.kohsuke.rngom.xml.sax:org.kohsuke.rngom.xml.util</packages>
                                         </group>
                                         -->
-                                        <group>
-                                            <title>Module org.osgi.core</title>
-                                            <packages>org.osgi.framework:org.osgi.framework.hooks.service:org.osgi.framework.launch:org.osgi.service.condpermadmin:org.osgi.service.packageadmin:org.osgi.service.permissionadmin:org.osgi.service.startlevel:org.osgi.service.url</packages>
-                                        </group>
                                         <group>
                                             <title>Module org.picketlink</title>
                                             <packages>org.picketlink.identity.federation:org.picketlink.identity.federation.api.saml.v2.metadata:org.picketlink.identity.federation.api.saml.v2.request:org.picketlink.identity.federation.api.saml.v2.response:org.picketlink.identity.federation.api.saml.v2.sig:org.picketlink.identity.federation.api.soap:org.picketlink.identity.federation.api.util:org.picketlink.identity.federation.api.w3.xmldsig:org.picketlink.identity.federation.api.wstrust:org.picketlink.identity.federation.core:org.picketlink.identity.federation.core.audit:org.picketlink.identity.federation.core.config:org.picketlink.identity.federation.core.constants:org.picketlink.identity.federation.core.exceptions:org.picketlink.identity.federation.core.factories:org.picketlink.identity.federation.core.handler.config:org.picketlink.identity.federation.core.impl:org.picketlink.identity.federation.core.interfaces:org.picketlink.identity.federation.core.parsers:org.picketlink.identity.federation.core.parsers.config:org.picketlink.identity.federation.core.parsers.saml:org.picketlink.identity.federation.core.parsers.saml.metadata:org.picketlink.identity.federation.core.parsers.saml.xacml:org.picketlink.identity.federation.core.parsers.sts:org.picketlink.identity.federation.core.parsers.util:org.picketlink.identity.federation.core.parsers.wsa:org.picketlink.identity.federation.core.parsers.wsp:org.picketlink.identity.federation.core.parsers.wsse:org.picketlink.identity.federation.core.parsers.wst:org.picketlink.identity.federation.core.pdp:org.picketlink.identity.federation.core.saml.md.providers:org.picketlink.identity.federation.core.saml.v1:org.picketlink.identity.federation.core.saml.v1.providers:org.picketlink.identity.federation.core.saml.v1.writers:org.picketlink.identity.federation.core.saml.v2.common:org.picketlink.identity.federation.core.saml.v2.constants:org.picketlink.identity.federation.core.saml.v2.exceptions:org.picketlink.identity.federation.core.saml.v2.factories:org.picketlink.identity.federation.core.saml.v2.holders:org.picketlink.identity.federation.core.saml.v2.impl:org.picketlink.identity.federation.core.saml.v2.interfaces:org.picketlink.identity.federation.core.saml.v2.metadata.store:org.picketlink.identity.federation.core.saml.v2.providers:org.picketlink.identity.federation.core.saml.v2.util:org.picketlink.identity.federation.core.saml.v2.writers:org.picketlink.identity.federation.core.sts:org.picketlink.identity.federation.core.sts.registry:org.picketlink.identity.federation.core.transfer:org.picketlink.identity.federation.core.util:org.picketlink.identity.federation.core.wsa:org.picketlink.identity.federation.core.wspolicy:org.picketlink.identity.federation.core.wsse:org.picketlink.identity.federation.core.wstrust:org.picketlink.identity.federation.core.wstrust.auth:org.picketlink.identity.federation.core.wstrust.exceptions:org.picketlink.identity.federation.core.wstrust.handlers:org.picketlink.identity.federation.core.wstrust.plugins.saml:org.picketlink.identity.federation.core.wstrust.wrappers:org.picketlink.identity.federation.core.wstrust.writers:org.picketlink.identity.federation.saml.common:org.picketlink.identity.federation.saml.v1.assertion:org.picketlink.identity.federation.saml.v1.protocol:org.picketlink.identity.federation.saml.v2:org.picketlink.identity.federation.saml.v2.ac:org.picketlink.identity.federation.saml.v2.ac.classes:org.picketlink.identity.federation.saml.v2.ac.classes.:org.picketlink.identity.federation.saml.v2.assertion:org.picketlink.identity.federation.saml.v2.metadata:org.picketlink.identity.federation.saml.v2.profiles.attribute.dce:org.picketlink.identity.federation.saml.v2.profiles.sso.ecp:org.picketlink.identity.federation.saml.v2.profiles.xacml.assertion:org.picketlink.identity.federation.saml.v2.protocol:org.picketlink.identity.federation.web.config:org.picketlink.identity.federation.web.constants:org.picketlink.identity.federation.web.core:org.picketlink.identity.federation.web.filters:org.picketlink.identity.federation.web.handlers:org.picketlink.identity.federation.web.handlers.saml2:org.picketlink.identity.federation.web.interfaces:org.picketlink.identity.federation.web.listeners:org.picketlink.identity.federation.web.managers:org.picketlink.identity.federation.web.process:org.picketlink.identity.federation.web.roles:org.picketlink.identity.federation.web.servlets:org.picketlink.identity.federation.web.servlets.saml:org.picketlink.identity.federation.web.util:org.picketlink.identity.federation.ws.addressing:org.picketlink.identity.federation.ws.policy:org.picketlink.identity.federation.ws.trust:org.picketlink.identity.federation.ws.wss.secext:org.picketlink.identity.federation.ws.wss.utility:org.picketlink.identity.xmlsec.w3.xmldsig:org.picketlink.identity.xmlsec.w3.xmlenc:org.picketlink.identity.federation.bindings.jboss.attribute:org.picketlink.identity.federation.bindings.jboss.auth:org.picketlink.identity.federation.bindings.jboss.auth.mapping:org.picketlink.identity.federation.bindings.jboss.subject:org.picketlink.identity.federation.bindings.servlets:org.picketlink.identity.federation.bindings.tomcat:org.picketlink.identity.federation.bindings.tomcat.idp:org.picketlink.identity.federation.bindings.tomcat.sp:org.picketlink.identity.federation.bindings.tomcat.sp.holder:org.picketlink.identity.federation.bindings.util</packages>

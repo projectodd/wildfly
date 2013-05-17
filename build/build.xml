@@ -819,10 +819,6 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-clustering-web-spi"/>
         </module-def>
 
-        <module-def name="org.jboss.as.configadmin">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-configadmin"/>
-        </module-def>
-
         <module-def name="org.jboss.as.cmp">
             <maven-resource group="org.jboss.as" artifact="jboss-as-cmp"/>
         </module-def>
@@ -941,34 +937,6 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-naming"/>
         </module-def>
 
-     	<module-def name="org.jboss.as.osgi">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-osgi-service"/>
-        </module-def>
-
-     	<module-def name="org.jboss.as.osgi.http">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-osgi-http"/>
-        </module-def>
-
-     	<module-def name="org.jboss.as.osgi.jmx">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-osgi-jmx"/>
-        </module-def>
-
-     	<module-def name="org.jboss.as.osgi.jpa">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-osgi-jpa"/>
-        </module-def>
-
-     	<module-def name="org.jboss.as.osgi.jta">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-osgi-jta"/>
-        </module-def>
-
-     	<module-def name="org.jboss.as.osgi.naming">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-osgi-naming"/>
-        </module-def>
-
-     	<module-def name="org.jboss.as.osgi.web">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-osgi-web"/>
-        </module-def>
-
         <module-def name="org.jboss.as.sar">
             <maven-resource group="org.jboss.as" artifact="jboss-as-sar"/>
         </module-def>
@@ -995,7 +963,7 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-web"/>
             <maven-resource group="org.eclipse.jdt.core.compiler" artifact="ecj"/>
             <maven-resource group="org.jboss.web" artifact="jbossweb"/>
-            <extract-native-jar group="org.jboss.as" artifact="jbossweb-native"/>
+            <!-- <extract-native-jar group="org.jboss.as" artifact="jbossweb-native"/> -->
         </module-def>
 
         <module-def name="org.jboss.as.webservices">
@@ -1086,37 +1054,6 @@
         -->
         <module-def name="org.jboss.netty">
             <maven-resource group="io.netty" artifact="netty"/>
-        </module-def>
-
-        <module-def name="org.jboss.osgi.deployment">
-            <maven-resource group="org.jboss.osgi.deployment" artifact="jbosgi-deployment"/>
-        </module-def>
-
-        <module-def name="org.jboss.osgi.framework">
-            <maven-resource group="org.jboss.osgi.framework" artifact="jbosgi-framework-core"/>
-        </module-def>
-
-        <module-def name="org.jboss.osgi.repository">
-            <maven-resource group="org.jboss.osgi.repository" artifact="jbosgi-repository-api"/>
-            <maven-resource group="org.jboss.osgi.repository" artifact="jbosgi-repository-core"/>
-        </module-def>
-
-        <module-def name="org.jboss.osgi.resolver">
-            <maven-resource group="org.jboss.osgi.resolver" artifact="jbosgi-resolver-api"/>
-            <maven-resource group="org.jboss.osgi.resolver" artifact="jbosgi-resolver-felix"/>
-        </module-def>
-
-        <module-def name="org.jboss.osgi.metadata">
-            <maven-resource group="org.jboss.osgi.metadata" artifact="jbosgi-metadata"/>
-        </module-def>
-
-        <module-def name="org.jboss.osgi.spi">
-            <maven-resource group="org.jboss.osgi.spi" artifact="jbosgi-spi"/>
-        </module-def>
-
-        <module-def name="org.jboss.osgi.vfs">
-            <maven-resource group="org.jboss.osgi.vfs" artifact="jbosgi-vfs"/>
-            <maven-resource group="org.jboss.osgi.vfs" artifact="jbosgi-vfs30"/>
         </module-def>
 
         <module-def name="org.jboss.remote-naming">
@@ -1282,14 +1219,6 @@
 
         <module-def name="org.omg.api" />
 
-        <module-def name="org.osgi.core">
-            <maven-resource group="org.osgi" artifact="org.osgi.core"/>
-        </module-def>
-
-        <module-def name="org.osgi.enterprise">
-            <maven-resource group="org.osgi" artifact="org.osgi.enterprise"/>
-        </module-def>
-
         <module-def name="org.picketlink">
             <maven-resource group="org.picketlink" artifact="picketlink-core" jandex="true"/>
             <maven-resource group="org.picketlink.distribution" artifact="picketlink-jbas7" jandex="true"/>
@@ -1341,24 +1270,8 @@
 
     <target name="bundles">
 
-        <bundle-def name="org.apache.felix.configadmin">
-            <maven-bundle group="org.apache.felix" artifact="org.apache.felix.configadmin"/>
-        </bundle-def>
-
-        <bundle-def name="org.apache.felix.log">
-            <maven-bundle group="org.apache.felix" artifact="org.apache.felix.log"/>
-        </bundle-def>
-
-        <bundle-def name="org.jboss.as.osgi.configadmin">
-            <maven-bundle group="org.jboss.as" artifact="jboss-as-osgi-configadmin"/>
-        </bundle-def>
-
         <bundle-def name="javax.servlet.api" slot="v25">
             <maven-bundle group="org.jboss.spec.javax.servlet" artifact="jboss-servlet-api_2.5_spec"/>
-        </bundle-def>
-
-        <bundle-def name="org.jboss.osgi.logging">
-            <maven-bundle group="org.jboss.osgi.logging" artifact="jboss-osgi-logging"/>
         </bundle-def>
 
         <bundle-def name="org.projectodd.stilts">
