@@ -827,30 +827,6 @@
 
             <dependency>
                 <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-core-model-test</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-core-model-test-framework</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-core-model-test-controller-optional</artifactId>
-                <version>${project.version}</version>
-             </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-core-model-test-controller-7.1.2</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-ee</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -919,12 +895,6 @@
             <dependency>
                 <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-modcluster</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-model-test</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -3454,7 +3424,6 @@
                 <module>clustering</module>
                 <module>config-assembly</module>
                 <module>connector</module>
-                <module>core-model-test</module>
                 <module>deployment-scanner</module>
                 <module>dist</module>
                 <module>ee</module>
@@ -3466,7 +3435,6 @@
                 <module>mail</module>
                 <module>messaging</module>
                 <module>modcluster</module>
-                <module>model-test</module>
                 <module>naming</module>
                 <module>pojo</module>
                 <module>remoting-test</module>
