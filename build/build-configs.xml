@@ -70,10 +70,6 @@
            paramTemplateFile="configuration/standalone/template.xml" 
            paramSubsystemsFile="configuration/examples/subsystems-hornetq-colocated.xml"
            paramOutputFile="${generated.configs.examples}/standalone-hornetq-colocated.xml"/>
-      <generate-server-config 
-           paramTemplateFile="configuration/standalone/template.xml" 
-           paramSubsystemsFile="configuration/examples/subsystems-jts.xml"
-           paramOutputFile="${generated.configs.examples}/standalone-jts.xml"/>
     		
     </target>
 

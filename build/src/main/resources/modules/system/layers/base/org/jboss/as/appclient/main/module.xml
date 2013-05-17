@@ -38,7 +38,6 @@
         <module name="org.jboss.as.server" export="true"/>
         <module name="javax.api"/>
         <module name="org.jboss.dmr"/>
-        <module name="org.jboss.ejb-client"/>
         <module name="org.jboss.invocation"/>
         <module name="org.jboss.modules"/>
         <module name="org.jboss.msc" export="true"/>

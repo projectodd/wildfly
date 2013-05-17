@@ -52,11 +52,9 @@
    <subsystems name="full">
       <!-- Each subsystem to be included relative to the src/main/resources directory -->
       <subsystem>configuration/subsystems/logging.xml</subsystem>
-      <subsystem>configuration/subsystems/cmp.xml</subsystem>
       <subsystem>configuration/subsystems/datasources.xml</subsystem>
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem>configuration/subsystems/infinispan.xml</subsystem>
-      <subsystem>configuration/subsystems/jacorb.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
       <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
@@ -78,11 +76,9 @@
    <subsystems name="full-ha">
       <!-- Each subsystem to be included relative to the src/main/resources directory -->
       <subsystem>configuration/subsystems/logging.xml</subsystem>
-      <subsystem>configuration/subsystems/cmp.xml</subsystem>
       <subsystem>configuration/subsystems/datasources.xml</subsystem>
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/infinispan.xml</subsystem>
-      <subsystem>configuration/subsystems/jacorb.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
       <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem>configuration/subsystems/jgroups.xml</subsystem>

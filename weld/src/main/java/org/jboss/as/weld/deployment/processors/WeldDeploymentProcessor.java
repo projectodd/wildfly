@@ -78,9 +78,9 @@ import org.jboss.msc.service.ServiceBuilder;
 import org.jboss.msc.service.ServiceController;
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceTarget;
-import org.jboss.weld.bootstrap.api.Environments;
+import org.jboss.weld.bootstrap.api.Environment;
+import org.jboss.weld.bootstrap.api.Service;
 import org.jboss.weld.bootstrap.spi.Metadata;
-import org.jboss.weld.ejb.spi.EjbServices;
 import org.jboss.weld.injection.spi.JpaInjectionServices;
 import org.jboss.weld.validation.spi.ValidationServices;
 
@@ -199,7 +199,15 @@ public class WeldDeploymentProcessor implements DeploymentUnitProcessor {
 
         final WeldDeployment deployment = new WeldDeployment(beanDeploymentArchives, extensions, module, subDeploymentLoaders);
 
-        final WeldBootstrapService weldBootstrapService = new WeldBootstrapService(deployment, Environments.EE_INJECT, deploymentUnit.getName());
+        Environment fakeEEInject = new Environment() {
+            public Set<Class<? extends Service>> getRequiredDeploymentServices() {
+                return new HashSet<Class<? extends Service>>();
+            }
+            public Set<Class<? extends Service>> getRequiredBeanDeploymentArchiveServices() {
+                return new HashSet<Class<? extends Service>>();
+            }
+        };
+        final WeldBootstrapService weldBootstrapService = new WeldBootstrapService(deployment, fakeEEInject, deploymentUnit.getName());
         //hook up validation service
         //TODO: we need to change weld so this is a per-BDA service
         final ValidatorFactory factory = deploymentUnit.getAttachment(BeanValidationAttachments.VALIDATOR_FACTORY);

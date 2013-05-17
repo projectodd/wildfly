@@ -24,7 +24,6 @@ package org.jboss.as.txn.subsystem;
 
 import com.arjuna.ats.internal.arjuna.utils.UuidProcessId;
 import com.arjuna.ats.jbossatx.jta.RecoveryManagerService;
-import com.arjuna.ats.jts.common.jtsPropertyManager;
 import org.jboss.as.controller.AbstractBoottimeAddStepHandler;
 import org.jboss.as.controller.AttributeDefinition;
 import org.jboss.as.controller.OperationContext;
@@ -32,7 +31,6 @@ import org.jboss.as.controller.OperationFailedException;
 import org.jboss.as.controller.ServiceVerificationHandler;
 import org.jboss.as.controller.services.path.PathManager;
 import org.jboss.as.controller.services.path.PathManagerService;
-import org.jboss.as.jacorb.service.CorbaNamingService;
 import org.jboss.as.naming.ManagedReferenceFactory;
 import org.jboss.as.naming.ServiceBasedNamingStore;
 import org.jboss.as.naming.ValueManagedReferenceFactory;
@@ -67,7 +65,6 @@ import org.jboss.msc.service.ServiceTarget;
 import org.jboss.msc.value.ImmediateValue;
 import org.jboss.tm.JBossXATerminator;
 import org.jboss.tm.usertx.UserTransactionRegistry;
-import org.omg.CORBA.ORB;
 
 import javax.transaction.TransactionSynchronizationRegistry;
 import java.util.List;
@@ -169,7 +166,7 @@ class TransactionSubsystemAdd extends AbstractBoottimeAddStepHandler {
                                    ServiceVerificationHandler verificationHandler,
                                    List<ServiceController<?>> controllers) throws OperationFailedException {
 
-        boolean jts = model.hasDefined(JTS) && model.get(JTS).asBoolean();
+        boolean jts = false;
 
         //recovery environment
         performRecoveryEnvBoottime(context, operation, model, verificationHandler, controllers, jts);
@@ -183,11 +180,6 @@ class TransactionSubsystemAdd extends AbstractBoottimeAddStepHandler {
         //object store
         performObjectStoreBoottime(context, operation, model, verificationHandler, controllers);
 
-
-        //always propagate the transaction context
-        //TODO: need a better way to do this, but this value gets cached in a static
-        //so we need to make sure we set it before anything tries to read it
-        jtsPropertyManager.getJTSEnvironmentBean().setAlwaysPropagateContext(true);
 
         context.addStep(new AbstractDeploymentChainStep() {
             protected void execute(final DeploymentProcessorTarget processorTarget) {
@@ -375,10 +367,6 @@ class TransactionSubsystemAdd extends AbstractBoottimeAddStepHandler {
         final ArjunaRecoveryManagerService recoveryManagerService = new ArjunaRecoveryManagerService(recoveryListener, jts);
         final ServiceBuilder<RecoveryManagerService> recoveryManagerServiceServiceBuilder = context.getServiceTarget().addService(TxnServices.JBOSS_TXN_ARJUNA_RECOVERY_MANAGER, recoveryManagerService);
 
-        if(jts) {
-            recoveryManagerServiceServiceBuilder.addDependency(ServiceName.JBOSS.append("jacorb", "orb-service"), ORB.class, recoveryManagerService.getOrbInjector());
-        }
-
         controllers.add(recoveryManagerServiceServiceBuilder
                 .addDependency(SocketBinding.JBOSS_BINDING_NAME.append(recoveryBindingName), SocketBinding.class, recoveryManagerService.getRecoveryBindingInjector())
                 .addDependency(SocketBinding.JBOSS_BINDING_NAME.append(recoveryStatusBindingName), SocketBinding.class, recoveryManagerService.getStatusBindingInjector())
@@ -403,12 +391,6 @@ class TransactionSubsystemAdd extends AbstractBoottimeAddStepHandler {
 
         final ArjunaTransactionManagerService transactionManagerService = new ArjunaTransactionManagerService(coordinatorEnableStatistics, coordinatorDefaultTimeout, transactionStatusManagerEnable, jts, nodeIdentifier);
         final ServiceBuilder<com.arjuna.ats.jbossatx.jta.TransactionManagerService> transactionManagerServiceServiceBuilder = context.getServiceTarget().addService(TxnServices.JBOSS_TXN_ARJUNA_TRANSACTION_MANAGER, transactionManagerService);
-
-        //if jts is enabled we need the ORB
-        if (jts) {
-            transactionManagerServiceServiceBuilder.addDependency(ServiceName.JBOSS.append("jacorb", "orb-service"), ORB.class, transactionManagerService.getOrbInjector());
-            transactionManagerServiceServiceBuilder.addDependency(CorbaNamingService.SERVICE_NAME);
-        }
 
         controllers.add(transactionManagerServiceServiceBuilder
                 .addDependency(TxnServices.JBOSS_TXN_XA_TERMINATOR, JBossXATerminator.class, transactionManagerService.getXaTerminatorInjector())

@@ -697,10 +697,6 @@
             <maven-resource group="org.infinispan" artifact="infinispan-client-hotrod" />
         </module-def>
 
-        <module-def name="org.jacorb">
-            <maven-resource group="org.jacorb" artifact="jacorb"/>
-        </module-def>
-
         <module-def name="org.javassist">
             <maven-resource group="org.javassist" artifact="javassist"/>
         </module-def>
@@ -783,10 +779,6 @@
 
         <module-def name="org.jboss.as.host-controller">
             <maven-resource group="org.jboss.as" artifact="jboss-as-host-controller"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.jacorb">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-jacorb"/>
         </module-def>
 
         <module-def name="org.jboss.as.jdr">
@@ -932,11 +924,11 @@
         </module-def>
 
         <module-def name="org.jboss.jts">
-            <maven-resource group="org.jboss.jbossts.jts" artifact="jbossjts-jacorb"/>
+          <maven-resource group="org.jboss.jbossts" artifact="jbossjta"/>
         </module-def>
 
         <module-def name="org.jboss.jts.integration">
-            <maven-resource group="org.jboss.jbossts.jts" artifact="jbossjts-integration"/>
+          <maven-resource group="org.jboss.jbossts" artifact="jbossjta-integration"/>
         </module-def>
 
         <module-def name="org.jboss.metadata">
@@ -1066,8 +1058,6 @@
         <module-def name="org.kohsuke.rngom">
             <maven-resource group="org.kohsuke.rngom" artifact="rngom"/>
         </module-def>
-
-        <module-def name="org.omg.api" />
 
         <module-def name="org.picketlink">
             <maven-resource group="org.picketlink" artifact="picketlink-core" jandex="true"/>

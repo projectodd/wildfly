@@ -36,20 +36,13 @@ import org.jboss.msc.service.StartContext;
 import org.jboss.msc.service.StartException;
 import org.jboss.msc.service.StopContext;
 import org.jboss.msc.value.InjectedValue;
-import org.omg.CORBA.ORB;
 
 import com.arjuna.ats.arjuna.common.RecoveryEnvironmentBean;
 import com.arjuna.ats.arjuna.common.recoveryPropertyManager;
 import com.arjuna.ats.internal.arjuna.recovery.AtomicActionRecoveryModule;
 import com.arjuna.ats.internal.arjuna.recovery.ExpiredTransactionStatusManagerScanner;
-import com.arjuna.ats.internal.jts.recovery.contact.ExpiredContactScanner;
-import com.arjuna.ats.internal.jts.recovery.transactions.ExpiredServerScanner;
-import com.arjuna.ats.internal.jts.recovery.transactions.ExpiredToplevelScanner;
-import com.arjuna.ats.internal.jts.recovery.transactions.ServerTransactionRecoveryModule;
-import com.arjuna.ats.internal.jts.recovery.transactions.TopLevelTransactionRecoveryModule;
 import com.arjuna.ats.internal.txoj.recovery.TORecoveryModule;
 import com.arjuna.ats.jbossatx.jta.RecoveryManagerService;
-import com.arjuna.orbportability.internal.utils.PostInitLoader;
 
 import static org.jboss.as.txn.TransactionMessages.MESSAGES;
 
@@ -63,7 +56,6 @@ public class ArjunaRecoveryManagerService implements Service<RecoveryManagerServ
 
     public static final ServiceName SERVICE_NAME = TxnServices.JBOSS_TXN_ARJUNA_RECOVERY_MANAGER;
 
-    private final InjectedValue<ORB> orbInjector = new InjectedValue<ORB>();
     private final InjectedValue<SocketBinding> recoveryBindingInjector = new InjectedValue<SocketBinding>();
     private final InjectedValue<SocketBinding> statusBindingInjector = new InjectedValue<SocketBinding>();
 
@@ -119,28 +111,6 @@ public class ArjunaRecoveryManagerService implements Service<RecoveryManagerServ
 
             this.recoveryManagerService = recoveryManagerService;
         } else {
-            final ORB orb = orbInjector.getValue();
-            new PostInitLoader(PostInitLoader.generateORBPropertyName("com.arjuna.orbportability.orb"), orb);
-
-            recoveryExtensions.add(TopLevelTransactionRecoveryModule.class.getName());
-            recoveryExtensions.add(ServerTransactionRecoveryModule.class.getName());
-            recoveryExtensions.add(com.arjuna.ats.internal.jta.recovery.jts.XARecoveryModule.class.getName());
-            expiryScanners.add(ExpiredContactScanner.class.getName());
-            expiryScanners.add(ExpiredToplevelScanner.class.getName());
-            expiryScanners.add(ExpiredServerScanner.class.getName());
-            recoveryEnvironmentBean.setRecoveryModuleClassNames(recoveryExtensions);
-            recoveryEnvironmentBean.setExpiryScannerClassNames(expiryScanners);
-            recoveryEnvironmentBean.setRecoveryActivatorClassNames(Collections.singletonList(com.arjuna.ats.internal.jts.orbspecific.recovery.RecoveryEnablement.class.getName()));
-
-
-            try {
-                final RecoveryManagerService recoveryManagerService = new com.arjuna.ats.jbossatx.jts.RecoveryManagerService(orb);
-                recoveryManagerService.create();
-                recoveryManagerService.start();
-                this.recoveryManagerService = recoveryManagerService;
-            } catch (Exception e) {
-                throw MESSAGES.managerStartFailure(e, "Recovery");
-            }
         }
     }
 
@@ -156,10 +126,6 @@ public class ArjunaRecoveryManagerService implements Service<RecoveryManagerServ
 
     public synchronized RecoveryManagerService getValue() throws IllegalStateException, IllegalArgumentException {
         return recoveryManagerService;
-    }
-
-    public Injector<ORB> getOrbInjector() {
-        return orbInjector;
     }
 
     public Injector<SocketBinding> getRecoveryBindingInjector() {

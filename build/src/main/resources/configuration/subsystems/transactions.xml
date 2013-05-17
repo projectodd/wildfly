@@ -11,14 +11,7 @@
        <recovery-environment socket-binding="txn-recovery-environment" status-socket-binding="txn-status-manager"/>
        <coordinator-environment default-timeout="300"/>
 
-       <?JTS?>
-
    </subsystem>
-   <supplement name="jts-example">
-      <replacement placeholder="JTS">
-         <jts/>
-      </replacement>
-   </supplement>
 
    <socket-binding name="txn-recovery-environment" port="4712"/>
    <socket-binding name="txn-status-manager" port="4713"/>

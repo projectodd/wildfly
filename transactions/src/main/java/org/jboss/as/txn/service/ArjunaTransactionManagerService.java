@@ -40,7 +40,6 @@ import org.jboss.tm.JBossXATerminator;
 import org.jboss.tm.LastResource;
 import org.jboss.tm.usertx.UserTransactionRegistry;
 import org.jboss.tm.usertx.client.ServerVMClientUserTransaction;
-import org.omg.CORBA.ORB;
 
 import com.arjuna.ats.arjuna.common.CoordinatorEnvironmentBean;
 import com.arjuna.ats.arjuna.common.arjPropertyManager;
@@ -49,7 +48,6 @@ import com.arjuna.ats.internal.jta.recovery.arjunacore.JTANodeNameXAResourceOrph
 import com.arjuna.ats.internal.jta.recovery.arjunacore.JTATransactionLogXAResourceOrphanFilter;
 import com.arjuna.ats.jta.common.JTAEnvironmentBean;
 import com.arjuna.ats.jta.common.jtaPropertyManager;
-import com.arjuna.orbportability.internal.utils.PostInitLoader;
 
 /**
  * A service for the proprietary Arjuna {@link com.arjuna.ats.jbossatx.jta.TransactionManagerService}
@@ -63,7 +61,6 @@ public final class ArjunaTransactionManagerService implements Service<com.arjuna
     public static final ServiceName SERVICE_NAME = TxnServices.JBOSS_TXN_ARJUNA_TRANSACTION_MANAGER;
 
     private final InjectedValue<JBossXATerminator> xaTerminatorInjector = new InjectedValue<JBossXATerminator>();
-    private final InjectedValue<ORB> orbInjector = new InjectedValue<ORB>();
     private final InjectedValue<UserTransactionRegistry> userTransactionRegistry = new InjectedValue<UserTransactionRegistry>();
 
 
@@ -126,34 +123,6 @@ public final class ArjunaTransactionManagerService implements Service<com.arjuna
             service.start();
             value = service;
         } else {
-            final ORB orb = orbInjector.getValue();
-            new PostInitLoader(PostInitLoader.generateORBPropertyName("com.arjuna.orbportability.orb"), orb);
-
-            // IIOP is enabled, so fire up JTS mode.
-            jtaEnvironmentBean.setTransactionManagerClassName(com.arjuna.ats.jbossatx.jts.TransactionManagerDelegate.class.getName());
-            jtaEnvironmentBean.setTransactionSynchronizationRegistryClassName(com.arjuna.ats.internal.jta.transaction.jts.TransactionSynchronizationRegistryImple.class.getName());
-
-            final com.arjuna.ats.jbossatx.jts.TransactionManagerService service = new com.arjuna.ats.jbossatx.jts.TransactionManagerService();
-            final ServerVMClientUserTransaction userTransaction = new ServerVMClientUserTransaction(service.getTransactionManager());
-            jtaEnvironmentBean.setUserTransaction(userTransaction);
-            userTransactionRegistry.getValue().addProvider(userTransaction);
-            service.setJbossXATerminator(xaTerminatorInjector.getValue());
-            service.setTransactionSynchronizationRegistry(new com.arjuna.ats.internal.jta.transaction.jts.TransactionSynchronizationRegistryImple());
-
-            objStoreBrowserTypes.put("StateManager/BasicAction/TwoPhaseCoordinator/ArjunaTransactionImple",
-                    "com.arjuna.ats.arjuna.tools.osb.mbean.ActionBean");
-
-            try {
-                service.create();
-            } catch (Exception e) {
-                throw MESSAGES.createFailed(e);
-            }
-            try {
-                service.start(orb);
-            } catch (Exception e) {
-                throw MESSAGES.startFailure(e);
-            }
-            value = service;
         }
 
         try {
@@ -179,10 +148,6 @@ public final class ArjunaTransactionManagerService implements Service<com.arjuna
 
     public Injector<JBossXATerminator> getXaTerminatorInjector() {
         return xaTerminatorInjector;
-    }
-
-    public Injector<ORB> getOrbInjector() {
-        return orbInjector;
     }
 
     public InjectedValue<UserTransactionRegistry> getUserTransactionRegistry() {

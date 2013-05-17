@@ -334,11 +334,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.jacorb</groupId>
-                    <artifactId>jacorb</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>javax.activation</groupId>
                     <artifactId>activation</artifactId>
                 </dependency>
@@ -909,11 +904,6 @@
 
                 <dependency>
                     <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-jacorb</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.as</groupId>
                     <artifactId>jboss-as-logging</artifactId>
                 </dependency>
 
@@ -1100,21 +1090,6 @@
                 <dependency>
                     <groupId>org.jboss.ironjacamar</groupId>
                     <artifactId>ironjacamar-validator</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.jbossts.jts</groupId>
-                    <artifactId>jbossjts-jacorb</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.jbossts.jts</groupId>
-                    <artifactId>jbossjts-integration</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.jbossts</groupId>
-                    <artifactId>jbosstxbridge</artifactId>
                 </dependency>
 
                 <dependency>
@@ -2201,10 +2176,6 @@
                                             <packages>org.infinispan.client.hotrod:org.infinispan.client.hotrod.exceptions:org.infinispan.client.hotrod.impl:org.infinispan.client.hotrod.impl.async:org.infinispan.client.hotrod.impl.consistenthash:org.infinispan.client.hotrod.impl.operations:org.infinispan.client.hotrod.impl.protocol:org.infinispan.client.hotrod.impl.transport:org.infinispan.client.hotrod.impl.transport.tcp:org.infinispan.client.hotrod.logging:org.infinispan.client.hotrod.marshall</packages>
                                         </group>
                                         <group>
-                                            <title>Module org.jacorb</title>
-                                            <packages>org.jacorb.concurrency:org.jacorb.config:org.jacorb.dds:org.jacorb.events:org.jacorb.imr:org.jacorb.imr.AdminPackage:org.jacorb.imr.RegistrationPackage:org.jacorb.imr.util:org.jacorb.ir:org.jacorb.ir.gui:org.jacorb.ir.gui.remoteobject:org.jacorb.ir.gui.typesystem:org.jacorb.ir.gui.typesystem.remote:org.jacorb.naming:org.jacorb.naming.namemanager:org.jacorb.notification:org.jacorb.notification.conf:org.jacorb.notification.container:org.jacorb.notification.engine:org.jacorb.notification.filter:org.jacorb.notification.filter.etcl:org.jacorb.notification.filter.impl:org.jacorb.notification.impl:org.jacorb.notification.interfaces:org.jacorb.notification.lifecycle:org.jacorb.notification.queue:org.jacorb.notification.servant:org.jacorb.notification.util:org.jacorb.orb:org.jacorb.orb.dii:org.jacorb.orb.diop:org.jacorb.orb.dsi:org.jacorb.orb.dynany:org.jacorb.orb.etf:org.jacorb.orb.factory:org.jacorb.orb.giop:org.jacorb.orb.iiop:org.jacorb.orb.listener:org.jacorb.orb.policies:org.jacorb.orb.portableInterceptor:org.jacorb.orb.rmi:org.jacorb.orb.standardInterceptors:org.jacorb.orb.util:org.jacorb.poa:org.jacorb.poa.except:org.jacorb.poa.gui:org.jacorb.poa.gui.beans:org.jacorb.poa.gui.pm:org.jacorb.poa.gui.poa:org.jacorb.poa.policy:org.jacorb.poa.util:org.jacorb.sasPolicy:org.jacorb.security.sas:org.jacorb.security.ssl:org.jacorb.security.ssl.sun_jsse:org.jacorb.ssl:org.jacorb.transport:org.jacorb.transport.iiop:org.jacorb.util:org.jacorb.util.threadpool:org.jacorb.util.tracing:org.jacorb.util.tracing.TracingServicePackage:org.omg.ATLAS:org.omg.BiDirPolicy:org.omg.CONV_FRAME:org.omg.CORBA:org.omg.CORBA_2_3:org.omg.CORBA_2_3.portable:org.omg.CORBA_2_5:org.omg.CORBA.ContainedPackage:org.omg.CORBA.ContainerPackage:org.omg.CORBA.InterfaceDefPackage:org.omg.CORBA.ORBPackage:org.omg.CORBA.portable:org.omg.CORBA.TypeCodePackage:org.omg.CORBA.ValueDefPackage:org.omg.CosCollection:org.omg.CosConcurrencyControl:org.omg.CosEventChannelAdmin:org.omg.CosEventComm:org.omg.CosNaming:org.omg.CosNaming.NamingContextExtPackage:org.omg.CosNaming.NamingContextPackage:org.omg.CosNotification:org.omg.CosNotifyChannelAdmin:org.omg.CosNotifyChannelAdminAck:org.omg.CosNotifyComm:org.omg.CosNotifyCommAck:org.omg.CosNotifyFilter:org.omg.CosPropertyService:org.omg.CosTime:org.omg.CosTypedEventChannelAdmin:org.omg.CosTypedEventComm:org.omg.CosTypedNotifyChannelAdmin:org.omg.CosTypedNotifyComm:org.omg.CSI:org.omg.CSIIOP:org.omg.dds:org.omg.Dynamic:org.omg.DynamicAny:org.omg.DynamicAny.DynAnyFactoryPackage:org.omg.DynamicAny.DynAnyPackage:org.omg.ETF:org.omg.GIOP:org.omg.GSSUP:org.omg.IIOP:org.omg.IOP:org.omg.IOP.CodecFactoryPackage:org.omg.IOP.CodecPackage:org.omg.Messaging:org.omg.PortableInterceptor:org.omg.PortableInterceptor.ORBInitInfoPackage:org.omg.PortableServer:org.omg.PortableServer.CurrentPackage:org.omg.PortableServer.POAManagerPackage:org.omg.PortableServer.POAPackage:org.omg.PortableServer.portable:org.omg.PortableServer.ServantLocatorPackage:org.omg.RTCORBA:org.omg.Security:org.omg.SecurityAdmin:org.omg.SecurityLevel1:org.omg.SecurityLevel2:org.omg.SecurityReplaceable:org.omg.SSLIOP:org.omg.TimeBase</packages>
-                                        </group>
-                                        <group>
                                             <title>Module org.javassist</title>
                                             <packages>javassist:javassist.bytecode:javassist.bytecode.analysis:javassist.bytecode.annotation:javassist.bytecode.stackmap:javassist.compiler:javassist.compiler.ast:javassist.convert:javassist.expr:javassist.runtime:javassist.scopedpool:javassist.tools:javassist.tools.reflect:javassist.tools.rmi:javassist.tools.web:javassist.util:javassist.util.proxy</packages>
                                         </group>
@@ -2283,10 +2254,6 @@
                                         <group>
                                             <title>Module org.jboss.as.jsf</title>
                                             <packages>org.jboss.as.jsf.deployment</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.as.jacorb</title>
-                                            <packages>org.jboss.as.jacorb:org.jboss.as.jacorb.csiv2:org.jboss.as.jacorb.csiv2.idl:org.jboss.as.jacorb.deployment:org.jboss.as.jacorb.naming:org.jboss.as.jacorb.naming.jndi:org.jboss.as.jacorb.rmi:org.jboss.as.jacorb.rmi.ir:org.jboss.as.jacorb.rmi.marshal:org.jboss.as.jacorb.rmi.marshal.strategy:org.jboss.as.jacorb.security:org.jboss.as.jacorb.service:org.jboss.as.jacorb.tm</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.as.jdr</title>
@@ -2387,14 +2354,6 @@
                                         <group>
                                             <title>Module org.jboss.jaxbintros</title>
                                             <packages>org.jboss.jaxb.intros:org.jboss.jaxb.intros.configmodel:org.jboss.jaxb.intros.handlers</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.jts</title>
-                                            <packages>com.arjuna.ArjunaOTS:com.arjuna.ats.arjuna:com.arjuna.ats.arjuna.common:com.arjuna.ats.arjuna.coordinator:com.arjuna.ats.arjuna.coordinator.abstractrecord:com.arjuna.ats.arjuna.coordinator.listener:com.arjuna.ats.arjuna.exceptions:com.arjuna.ats.arjuna.logging:com.arjuna.ats.arjuna.objectstore:com.arjuna.ats.arjuna.objectstore.jdbc:com.arjuna.ats.arjuna.recovery:com.arjuna.ats.arjuna.state:com.arjuna.ats.arjuna.tools:com.arjuna.ats.arjuna.tools.log:com.arjuna.ats.arjuna.tools.osb.annotation:com.arjuna.ats.arjuna.tools.osb.api.mbeans:com.arjuna.ats.arjuna.tools.osb.api.proxy:com.arjuna.ats.arjuna.tools.osb.mbean:com.arjuna.ats.arjuna.tools.osb.util:com.arjuna.ats.arjuna.tools.stats:com.arjuna.ats.arjuna.utils:com.arjuna.ats.internal.arjuna:com.arjuna.ats.internal.arjuna.abstractrecords:com.arjuna.ats.internal.arjuna.common:com.arjuna.ats.internal.arjuna.coordinator:com.arjuna.ats.internal.arjuna.objectstore:com.arjuna.ats.internal.arjuna.objectstore.hornetq:com.arjuna.ats.internal.arjuna.objectstore.jdbc:com.arjuna.ats.internal.arjuna.objectstore.jdbc.accessors:com.arjuna.ats.internal.arjuna.recovery:com.arjuna.ats.internal.arjuna.thread:com.arjuna.ats.internal.arjuna.tools.log:com.arjuna.ats.internal.arjuna.utils:com.arjuna.ats.internal.jdbc:com.arjuna.ats.internal.jdbc.drivers:com.arjuna.ats.internal.jdbc.drivers.modifiers:com.arjuna.ats.internal.jdbc.recovery:com.arjuna.ats.internal.jta:com.arjuna.ats.internal.jta.recovery.arjunacore:com.arjuna.ats.internal.jta.recovery.jts:com.arjuna.ats.internal.jta.resources:com.arjuna.ats.internal.jta.resources.arjunacore:com.arjuna.ats.internal.jta.resources.errorhandlers:com.arjuna.ats.internal.jta.resources.jts:com.arjuna.ats.internal.jta.resources.jts.orbspecific:com.arjuna.ats.internal.jta.resources.spi:com.arjuna.ats.internal.jta.tools.osb.mbean.jta:com.arjuna.ats.internal.jta.tools.osb.mbean.jts:com.arjuna.ats.internal.jta.transaction.arjunacore:com.arjuna.ats.internal.jta.transaction.arjunacore.jca:com.arjuna.ats.internal.jta.transaction.arjunacore.subordinate:com.arjuna.ats.internal.jta.transaction.arjunacore.subordinate.jca:com.arjuna.ats.internal.jta.transaction.jts:com.arjuna.ats.internal.jta.transaction.jts.jca:com.arjuna.ats.internal.jta.transaction.jts.subordinate:com.arjuna.ats.internal.jta.transaction.jts.subordinate.jca:com.arjuna.ats.internal.jta.transaction.jts.subordinate.jca.coordinator:com.arjuna.ats.internal.jta.utils:com.arjuna.ats.internal.jta.utils.arjunacore:com.arjuna.ats.internal.jta.utils.jts:com.arjuna.ats.internal.jta.xa:com.arjuna.ats.internal.jts:com.arjuna.ats.internal.jts.context:com.arjuna.ats.internal.jts.coordinator:com.arjuna.ats.internal.jts.interposition:com.arjuna.ats.internal.jts.interposition.resources.arjuna:com.arjuna.ats.internal.jts.interposition.resources.osi:com.arjuna.ats.internal.jts.interposition.resources.restricted:com.arjuna.ats.internal.jts.interposition.resources.strict:com.arjuna.ats.internal.jts.lifecycle:com.arjuna.ats.internal.jts.orbspecific:com.arjuna.ats.internal.jts.orbspecific.coordinator:com.arjuna.ats.internal.jts.orbspecific.interposition:com.arjuna.ats.internal.jts.orbspecific.interposition.coordinator:com.arjuna.ats.internal.jts.orbspecific.interposition.resources:com.arjuna.ats.internal.jts.orbspecific.interposition.resources.arjuna:com.arjuna.ats.internal.jts.orbspecific.interposition.resources.osi:com.arjuna.ats.internal.jts.orbspecific.interposition.resources.restricted:com.arjuna.ats.internal.jts.orbspecific.interposition.resources.strict:com.arjuna.ats.internal.jts.orbspecific.jacorb.recoverycoordinators:com.arjuna.ats.internal.jts.orbspecific.recovery:com.arjuna.ats.internal.jts.orbspecific.recovery.recoverycoordinators:com.arjuna.ats.internal.jts.recovery:com.arjuna.ats.internal.jts.recovery.contact:com.arjuna.ats.internal.jts.recovery.recoverycoordinators:com.arjuna.ats.internal.jts.recovery.transactions:com.arjuna.ats.internal.jts.resources:com.arjuna.ats.internal.jts.utils:com.arjuna.ats.internal.txoj:com.arjuna.ats.internal.txoj.abstractrecords:com.arjuna.ats.internal.txoj.lockstore:com.arjuna.ats.internal.txoj.recovery:com.arjuna.ats.jdbc:com.arjuna.ats.jdbc.common:com.arjuna.ats.jdbc.logging:com.arjuna.ats.jta:com.arjuna.ats.jta.common:com.arjuna.ats.jta.exceptions:com.arjuna.ats.jta.logging:com.arjuna.ats.jta.recovery:com.arjuna.ats.jta.resources:com.arjuna.ats.jta.transaction:com.arjuna.ats.jta.utils:com.arjuna.ats.jta.xa:com.arjuna.ats.jts:com.arjuna.ats.jts.common:com.arjuna.ats.jts.exceptions:com.arjuna.ats.jts.extensions:com.arjuna.ats.jts.logging:com.arjuna.ats.jts.orbspecific.jacorb.interceptors.context:com.arjuna.ats.jts.orbspecific.jacorb.interceptors.interposition:com.arjuna.ats.jts.orbspecific.javaidl.interceptors.context:com.arjuna.ats.jts.orbspecific.javaidl.interceptors.interposition:com.arjuna.ats.jts.recovery:com.arjuna.ats.jts.services.transactionserver:com.arjuna.ats.jts.thread:com.arjuna.ats.jts.tx:com.arjuna.ats.jts.utils:com.arjuna.ats.txoj:com.arjuna.ats.txoj.common:com.arjuna.ats.txoj.exceptions:com.arjuna.ats.txoj.lockstore:com.arjuna.ats.txoj.logging:com.arjuna.common.internal.util.propertyservice:com.arjuna.common.util:com.arjuna.common.util.propertyservice:com.arjuna.orbportability:com.arjuna.orbportability.common:com.arjuna.orbportability.common.ant:com.arjuna.orbportability.debug:com.arjuna.orbportability.event:com.arjuna.orbportability.exceptions:com.arjuna.orbportability.internal.orbspecific.jacorb.oa.implementations:com.arjuna.orbportability.internal.orbspecific.jacorb.orb.implementations:com.arjuna.orbportability.internal.orbspecific.javaidl.oa.implementations:com.arjuna.orbportability.internal.orbspecific.javaidl.orb.implementations:com.arjuna.orbportability.internal.orbspecific.oa.implementations:com.arjuna.orbportability.internal.orbspecific.orb.implementations:com.arjuna.orbportability.internal.orbspecific.versions:com.arjuna.orbportability.internal.utils:com.arjuna.orbportability.logging:com.arjuna.orbportability.oa:com.arjuna.orbportability.oa.core:com.arjuna.orbportability.orb:com.arjuna.orbportability.orb.core:com.arjuna.orbportability.utils:org.omg.CosTransactions:org.omg.XA</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.jts.integration</title>
-                                            <packages>com.arjuna.ats.internal.jbossatx.jta:com.arjuna.ats.internal.jbossatx.jta.jca:com.arjuna.ats.internal.jbossatx.jts:com.arjuna.ats.internal.jbossatx.jts.jca:com.arjuna.ats.jbossatx:com.arjuna.ats.jbossatx.jta:com.arjuna.ats.jbossatx.jts:com.arjuna.ats.jbossatx.logging</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.metadata</title>

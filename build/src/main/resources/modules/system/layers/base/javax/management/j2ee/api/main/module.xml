@@ -28,8 +28,6 @@
     </resources>
     
     <dependencies>
-        <module name="javax.ejb.api"/>
-        <module name="org.jboss.ejb-client"/>
     </dependencies>
 
 </module>

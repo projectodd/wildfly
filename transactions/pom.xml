@@ -47,24 +47,16 @@
             <artifactId>jboss-as-ee</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.jboss.as</groupId>
-            <artifactId>jboss-as-jacorb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jacorb</groupId>
-            <artifactId>jacorb</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.jboss</groupId>
             <artifactId>jboss-transaction-spi</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.jboss.jbossts.jts</groupId>
-            <artifactId>jbossjts-jacorb</artifactId>
+          <groupId>org.jboss.jbossts</groupId>
+          <artifactId>jbossjta</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.jboss.jbossts.jts</groupId>
-            <artifactId>jbossjts-integration</artifactId>
+          <groupId>org.jboss.jbossts</groupId>
+          <artifactId>jbossjta-integration</artifactId>
         </dependency>
 
         <dependency>

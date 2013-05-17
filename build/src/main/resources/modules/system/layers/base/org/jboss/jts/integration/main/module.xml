@@ -32,7 +32,6 @@
     </resources>
 
     <dependencies>
-        <module name="org.omg.api" />
         <module name="org.jboss.jboss-transaction-spi"/>
         <module name="org.jboss.jts"/>
         <module name="org.apache.commons.logging"/>
@@ -41,9 +40,6 @@
         <module name="javax.transaction.api"/>
         <module name="javax.resource.api"/>
         <module name="org.jboss.as.transactions">
-            <imports>
-                <include path="org.jboss.iiop.tm"/>
-            </imports>
         </module>
     </dependencies>
 </module>

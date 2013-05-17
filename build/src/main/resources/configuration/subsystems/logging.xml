@@ -41,12 +41,6 @@
 	      <logger category="sun.rmi">
 	          <level name="WARN"/>
 	      </logger>
-	      <logger category="jacorb">
-	          <level name="WARN"/>
-	      </logger>
-	      <logger category="jacorb.config">
-	          <level name="ERROR"/>
-	      </logger>
       </replacement>
    </supplement>
    <supplement name="osgi">
