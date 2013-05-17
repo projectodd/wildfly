@@ -1330,67 +1330,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.jboss.ws</groupId>
-                    <artifactId>jbossws-api</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws</groupId>
-                    <artifactId>jbossws-common</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws</groupId>
-                    <artifactId>jbossws-common-tools</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws</groupId>
-                    <artifactId>jbossws-spi</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws.projects</groupId>
-                    <artifactId>jaxws-jboss-httpserver-httpspi</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws.cxf</groupId>
-                    <artifactId>jbossws-cxf-client</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws.cxf</groupId>
-                    <artifactId>jbossws-cxf-factories</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws.cxf</groupId>
-                    <artifactId>jbossws-cxf-resources</artifactId>
-                    <classifier>jboss711</classifier>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws.cxf</groupId>
-                    <artifactId>jbossws-cxf-server</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws.cxf</groupId>
-                    <artifactId>jbossws-cxf-transports-httpserver</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws.native</groupId>
-                    <artifactId>jbossws-native-core</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.ws.native</groupId>
-                    <artifactId>jbossws-native-services</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.jboss.xnio</groupId>
                     <artifactId>xnio-api</artifactId>
                 </dependency>
@@ -1667,9 +1606,6 @@
 
                                         <include>org.jboss.threads:jboss-threads</include>
                                         <include>org.jboss.weld:weld-api</include>
-                                        <include>org.jboss.ws.cxf:jbossws-cxf-client</include>
-                                        <include>org.jboss.ws.cxf:jbossws-cxf-transports-httpserver</include>
-                                        <include>org.jboss.ws:jbossws-api</include>
                                         <include>org.jboss.xnio:xnio-api</include>
                                         <include>org.jdom:jdom</include>
                                         <include>org.jgroups:jgroups</include>
@@ -2405,42 +2341,6 @@
                                         <group>
                                             <title>Module org.jboss.weld.spi</title>
                                             <packages>org.jboss.weld.bootstrap.api:org.jboss.weld.bootstrap.api.helpers:org.jboss.weld.bootstrap.spi:org.jboss.weld.bootstrap.spi.helpers:org.jboss.weld.context.api:org.jboss.weld.ejb.api:org.jboss.weld.ejb.spi:org.jboss.weld.ejb.spi.helpers:org.jboss.weld.injection.spi:org.jboss.weld.injection.spi.helpers:org.jboss.weld.manager.api:org.jboss.weld.resources.spi:org.jboss.weld.resources.spi.helpers:org.jboss.weld.security.spi:org.jboss.weld.serialization.spi:org.jboss.weld.serialization.spi.helpers:org.jboss.weld.servlet.api:org.jboss.weld.servlet.api.helpers:org.jboss.weld.transaction.spi:org.jboss.weld.validation.spi</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.common</title>
-                                            <packages>org.jboss.ws.common:org.jboss.ws.common.concurrent:org.jboss.ws.common.deployment:org.jboss.ws.common.injection:org.jboss.ws.common.injection.finders:org.jboss.ws.common.injection.resolvers:org.jboss.ws.common.integration:org.jboss.ws.common.invocation:org.jboss.ws.common.io:org.jboss.ws.common.management:org.jboss.ws.common.monitoring:org.jboss.ws.common.reflection:org.jboss.ws.common.security:org.jboss.ws.common.serviceref:org.jboss.ws.common.servlet:org.jboss.ws.common.sort:org.jboss.ws.common.spi:org.jboss.ws.common.utils</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.cxf.jbossws-cxf-server</title>
-                                            <packages>org.jboss.wsf.stack.cxf:org.jboss.wsf.stack.cxf.config:org.jboss.wsf.stack.cxf.configuration:org.jboss.wsf.stack.cxf.deployment:org.jboss.wsf.stack.cxf.deployment.aspect:org.jboss.wsf.stack.cxf.interceptor:org.jboss.wsf.stack.cxf.management:org.jboss.wsf.stack.cxf.metadata:org.jboss.wsf.stack.cxf.metadata.services:org.jboss.wsf.stack.cxf.resolver:org.jboss.wsf.stack.cxf.security.authentication:org.jboss.wsf.stack.cxf.security.authentication.callback:org.jboss.wsf.stack.cxf.security.nonce:org.jboss.wsf.stack.cxf.spring.handler:org.jboss.wsf.stack.cxf.spring.parser:org.jboss.wsf.stack.cxf.transport</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.cxf.jbossws-cxf-transports-httpserver</title>
-                                            <packages>org.jboss.wsf.stack.cxf.addons.transports.httpserver</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.jaxws-client</title>
-                                            <packages>org.jboss.wsf.stack.cxf.client:org.jboss.wsf.stack.cxf.client.configuration:org.jboss.wsf.stack.cxf.client.serviceref:org.jboss.wsf.stack.cxf.client.util:org.jboss.wsf.stack.cxf.extensions.addressing.map:org.jboss.wsf.stack.cxf.extensions.security:org.jboss.wsf.stack.cxf.saaj:org.jboss.wsf.stack.cxf.tools</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.jaxws-jboss-httpserver-httpspi</title>
-                                            <packages>org.jboss.ws.httpserver_httpspi</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.native.jbossws-native-core</title>
-                                            <packages>org.jboss.ws:org.jboss.ws.core:org.jboss.ws.core.binding:org.jboss.ws.core.client:org.jboss.ws.core.client.ssl:org.jboss.ws.core.client.transport:org.jboss.ws.core.jaxrpc:org.jboss.ws.core.jaxrpc.binding:org.jboss.ws.core.jaxrpc.binding.jbossxb:org.jboss.ws.core.jaxrpc.client:org.jboss.ws.core.jaxrpc.client.serviceref:org.jboss.ws.core.jaxrpc.handler:org.jboss.ws.core.server:org.jboss.ws.core.soap:org.jboss.ws.core.soap.attachment:org.jboss.ws.core.soap.utils:org.jboss.ws.core.utils:org.jboss.wsf.stack.jbws:org.jboss.ws.jaxrpc:org.jboss.ws.metadata.accessor:org.jboss.ws.metadata.builder:org.jboss.ws.metadata.builder.jaxrpc:org.jboss.ws.metadata.jaxrpcmapping:org.jboss.ws.metadata.umdm:org.jboss.ws.metadata.wsdl:org.jboss.ws.metadata.wsdl.xmlschema:org.jboss.ws.metadata.wsdl.xsd:org.jboss.ws.tools:org.jboss.ws.tools.helpers:org.jboss.ws.tools.interfaces:org.jboss.ws.tools.schema:org.jboss.ws.tools.wsdl:org.jboss.ws.util.xml</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.api</title>
-                                            <packages>org.jboss.ws.api.addressing:org.jboss.ws.api.annotation:org.jboss.ws.api.binding:org.jboss.ws.api.handler:org.jboss.ws.api.monitoring:org.jboss.ws.api.tools:org.jboss.ws.api.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.spi</title>
-                                            <packages>org.jboss.wsf.spi:org.jboss.wsf.spi.classloading:org.jboss.wsf.spi.classloading.:org.jboss.wsf.spi.deployer:org.jboss.wsf.spi.deployment:org.jboss.wsf.spi.invocation:org.jboss.wsf.spi.invocation.integration:org.jboss.wsf.spi.management:org.jboss.wsf.spi.metadata:org.jboss.wsf.spi.metadata.config:org.jboss.wsf.spi.metadata.j2ee:org.jboss.wsf.spi.metadata.j2ee.serviceref:org.jboss.wsf.spi.metadata.jms:org.jboss.wsf.spi.metadata.webservices:org.jboss.wsf.spi.publish:org.jboss.wsf.spi.security:org.jboss.wsf.spi.serviceref:org.jboss.wsf.spi.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.ws.tools.common</title>
-                                            <packages>org.jboss.ws.tools.ant:org.jboss.ws.tools.cmd</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.xb</title>
