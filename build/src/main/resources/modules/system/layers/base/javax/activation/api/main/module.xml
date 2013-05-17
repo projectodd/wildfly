@@ -29,7 +29,6 @@
             <imports><include path="META-INF"/></imports>
         </module>
         <module name="com.sun.xml.messaging.saaj" optional="true"/>
-        <module name="org.apache.cxf" optional="true"/>
     </dependencies>
 
     <resources>
