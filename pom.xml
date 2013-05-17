@@ -287,7 +287,6 @@
         <module>protocol</module>
         <module>remoting</module>
         <module>server</module>
-        <module>subsystem-test</module>
         <module>threads</module>
         <module>version</module>
     </modules>
@@ -986,12 +985,6 @@
             <dependency>
                 <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-sos</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-subsystem-test</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

@@ -660,10 +660,6 @@
 
         <module-def name="org.jboss.as.aggregate" />
 
-        <module-def name="org.jboss.as.console">
-            <maven-resource-with-classifier group="org.jboss.as" artifact="jboss-as-console" classifier="resources"/>
-        </module-def>
-
         <module-def name="org.jboss.as.cli">
             <maven-resource group="org.jboss.as" artifact="jboss-as-cli"/>
         </module-def>
