@@ -3437,7 +3437,6 @@
                 <module>modcluster</module>
                 <module>naming</module>
                 <module>pojo</module>
-                <module>remoting-test</module>
                 <module>system-jmx</module>
                 <module>security</module>
                 <module>spec-api</module>
