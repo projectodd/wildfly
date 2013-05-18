@@ -258,11 +258,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>com.sun.xml.messaging.saaj</groupId>
-                    <artifactId>saaj-impl</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>com.sun.xml.txw2</groupId>
                     <artifactId>txw2</artifactId>
                 </dependency>
@@ -378,53 +373,8 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>httpclient</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>httpcore</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>httpmime</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.apache.james</groupId>
-                    <artifactId>apache-mime4j</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.apache.santuario</groupId>
-                    <artifactId>xmlsec</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.apache.velocity</groupId>
                     <artifactId>velocity</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.codehaus.jackson</groupId>
-                    <artifactId>jackson-core-asl</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.codehaus.jackson</groupId>
-                    <artifactId>jackson-mapper-asl</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.codehaus.jackson</groupId>
-                    <artifactId>jackson-xc</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.codehaus.jettison</groupId>
-                    <artifactId>jettison</artifactId>
                 </dependency>
 
                 <dependency>
@@ -1064,16 +1014,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.picketlink</groupId>
-                    <artifactId>picketlink-core</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.picketlink.distribution</groupId>
-                    <artifactId>picketlink-jbas7</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.projectodd.stilts</groupId>
                     <artifactId>stilts-stomplet-server-bundle</artifactId>
                 </dependency>
@@ -1310,8 +1250,6 @@
                                         <include>org.picketbox:picketbox-commons</include>
                                         -->
                                         <include>org.picketbox:picketbox-infinispan</include>
-                                        <include>org.picketlink.distribution:picketlink-jbas7</include>
-                                        <include>org.picketlink:picketlink-core</include>
                                         <include>org.slf4j:jcl-over-slf4j</include>
                                         <include>org.slf4j:slf4j-api</include>
                                         <include>org.slf4j:slf4j-ext</include>
@@ -1507,10 +1445,6 @@
                                             <packages>com.sun.tools.jxc:com.sun.tools.jxc.ap:com.sun.tools.jxc.gen.config:com.sun.tools.jxc.model.nav:com.sun.tools.xjc:com.sun.tools.xjc.addon.accessors:com.sun.tools.xjc.addon.at_generated:com.sun.tools.xjc.addon.code_injector:com.sun.tools.xjc.addon.episode:com.sun.tools.xjc.addon.locator:com.sun.tools.xjc.addon.sync:com.sun.tools.xjc.api:com.sun.tools.xjc.api.impl.j2s:com.sun.tools.xjc.api.impl.s2j:com.sun.tools.xjc.api.util:com.sun.tools.xjc.generator:com.sun.tools.xjc.generator.annotation.ri:com.sun.tools.xjc.generator.annotation.spec:com.sun.tools.xjc.generator.bean:com.sun.tools.xjc.generator.bean.field:com.sun.tools.xjc.generator.util:com.sun.tools.xjc.model:com.sun.tools.xjc.model.nav:com.sun.tools.xjc.outline:com.sun.tools.xjc.reader:com.sun.tools.xjc.reader.dtd:com.sun.tools.xjc.reader.dtd.bindinfo:com.sun.tools.xjc.reader.gbind:com.sun.tools.xjc.reader.internalizer:com.sun.tools.xjc.reader.relaxng:com.sun.tools.xjc.reader.xmlschema:com.sun.tools.xjc.reader.xmlschema.bindinfo:com.sun.tools.xjc.reader.xmlschema.ct:com.sun.tools.xjc.reader.xmlschema.parser:com.sun.tools.xjc.runtime:com.sun.tools.xjc.util:com.sun.tools.xjc.writer:com.sun.xml.bind:com.sun.xml.bind.annotation:com.sun.xml.bind.api:com.sun.xml.bind.api.impl:com.sun.xml.bind.marshaller:com.sun.xml.bind.unmarshaller:com.sun.xml.bind.util:com.sun.xml.bind.v2:com.sun.xml.bind.v2.bytecode:com.sun.xml.bind.v2.model.annotation:com.sun.xml.bind.v2.model.core:com.sun.xml.bind.v2.model.impl:com.sun.xml.bind.v2.model.nav:com.sun.xml.bind.v2.model.runtime:com.sun.xml.bind.v2.runtime:com.sun.xml.bind.v2.runtime.output:com.sun.xml.bind.v2.runtime.property:com.sun.xml.bind.v2.runtime.reflect:com.sun.xml.bind.v2.runtime.reflect.opt:com.sun.xml.bind.v2.runtime.unmarshaller:com.sun.xml.bind.v2.schemagen:com.sun.xml.bind.v2.schemagen.episode:com.sun.xml.bind.v2.schemagen.xmlschema:com.sun.xml.bind.v2.util</packages>
                                         </group>
                                         <group>
-                                            <title>Module com.sun.xml.messaging.saaj</title>
-                                            <packages>com.sun.xml.messaging.saaj:com.sun.xml.messaging.saaj.client.p2p:com.sun.xml.messaging.saaj.packaging.mime:com.sun.xml.messaging.saaj.packaging.mime.internet:com.sun.xml.messaging.saaj.packaging.mime.util:com.sun.xml.messaging.saaj.soap:com.sun.xml.messaging.saaj.soap.dynamic:com.sun.xml.messaging.saaj.soap.impl:com.sun.xml.messaging.saaj.soap.name:com.sun.xml.messaging.saaj.soap.ver1_1:com.sun.xml.messaging.saaj.soap.ver1_2:com.sun.xml.messaging.saaj.util:com.sun.xml.messaging.saaj.util.transform</packages>
-                                        </group>
-                                        <group>
                                             <title>Module com.sun.xml.txw2</title>
                                             <packages>com.sun.xml.txw2:com.sun.xml.txw2.annotation:com.sun.xml.txw2.output</packages>
                                         </group>
@@ -1623,14 +1557,6 @@
                                             <packages>javax.xml.registry:javax.xml.registry.infomodel</packages>
                                         </group>
                                         <group>
-                                            <title>Module javax.xml.rpc.api</title>
-                                            <packages>javax.xml.rpc:javax.xml.rpc.encoding:javax.xml.rpc.handler:javax.xml.rpc.handler.soap:javax.xml.rpc.holders:javax.xml.rpc.server:javax.xml.rpc.soap</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module javax.xml.soap.api</title>
-                                            <packages>javax.xml.soap</packages>
-                                        </group>
-                                        <group>
                                             <title>Module javax.xml.ws.api</title>
                                             <packages>javax.xml.ws:javax.xml.ws.handler:javax.xml.ws.handler.soap:javax.xml.ws.http:javax.xml.ws.soap:javax.xml.ws.spi:javax.xml.ws.spi.http:javax.xml.ws.wsaddressing</packages>
                                         </group>
@@ -1675,18 +1601,6 @@
                                             <packages>org.apache.commons.pool:org.apache.commons.pool.impl</packages>
                                         </group>
                                         <group>
-                                            <title>Module org.apache.httpcomponents</title>
-                                            <packages>org.apache.http.entity.mime:org.apache.http.entity.mime.content:org.apache.http:org.apache.http.entity:org.apache.http.impl:org.apache.http.impl.entity:org.apache.http.impl.io:org.apache.http.io:org.apache.http.message:org.apache.http.params:org.apache.http.protocol:org.apache.http.util:org.apache.http.annotation:org.apache.http.auth:org.apache.http.auth.params:org.apache.http.client:org.apache.http.client.entity:org.apache.http.client.methods:org.apache.http.client.params:org.apache.http.client.protocol:org.apache.http.client.utils:org.apache.http.conn:org.apache.http.conn.params:org.apache.http.conn.routing:org.apache.http.conn.scheme:org.apache.http.conn.ssl:org.apache.http.conn.util:org.apache.http.cookie:org.apache.http.cookie.params:org.apache.http.impl.auth:org.apache.http.impl.client:org.apache.http.impl.conn:org.apache.http.impl.conn.tsccm:org.apache.http.impl.cookie</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.apache.james.mime4j</title>
-                                            <packages>org.apache.james.mime4j:org.apache.james.mime4j.codec:org.apache.james.mime4j.descriptor:org.apache.james.mime4j.field:org.apache.james.mime4j.field.address:org.apache.james.mime4j.field.address.parser:org.apache.james.mime4j.field.contentdisposition.parser:org.apache.james.mime4j.field.contenttype.parser:org.apache.james.mime4j.field.datetime:org.apache.james.mime4j.field.datetime.parser:org.apache.james.mime4j.field.language.parser:org.apache.james.mime4j.field.mimeversion.parser:org.apache.james.mime4j.field.structured.parser:org.apache.james.mime4j.io:org.apache.james.mime4j.message:org.apache.james.mime4j.parser:org.apache.james.mime4j.storage:org.apache.james.mime4j.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.apache.santuario.xmlsec</title>
-                                            <packages>javax.xml.crypto:javax.xml.crypto.dom:javax.xml.crypto.dsig:javax.xml.crypto.dsig.dom:javax.xml.crypto.dsig.keyinfo:javax.xml.crypto.dsig.spec:org.apache.jcp.xml.dsig.internal:org.apache.jcp.xml.dsig.internal.dom:org.apache.xml.security:org.apache.xml.security.algorithms:org.apache.xml.security.algorithms.implementations:org.apache.xml.security.c14n:org.apache.xml.security.c14n.helper:org.apache.xml.security.c14n.implementations:org.apache.xml.security.encryption:org.apache.xml.security.exceptions:org.apache.xml.security.keys:org.apache.xml.security.keys.content:org.apache.xml.security.keys.content.keyvalues:org.apache.xml.security.keys.content.x509:org.apache.xml.security.keys.keyresolver:org.apache.xml.security.keys.keyresolver.implementations:org.apache.xml.security.keys.storage:org.apache.xml.security.keys.storage.implementations:org.apache.xml.security.signature:org.apache.xml.security.signature.reference:org.apache.xml.security.transforms:org.apache.xml.security.transforms.implementations:org.apache.xml.security.transforms.params:org.apache.xml.security.utils:org.apache.xml.security.utils.resolver:org.apache.xml.security.utils.resolver.implementations</packages>
-                                        </group>
-                                        <group>
                                             <title>Module org.apache.velocity</title>
                                             <packages>org.apache.velocity:org.apache.velocity.anakia:org.apache.velocity.app:org.apache.velocity.app.event:org.apache.velocity.app.event.implement:org.apache.velocity.app.tools:org.apache.velocity.context:org.apache.velocity.convert:org.apache.velocity.exception:org.apache.velocity.io:org.apache.velocity.runtime:org.apache.velocity.runtime.directive:org.apache.velocity.runtime.log:org.apache.velocity.runtime.parser:org.apache.velocity.runtime.parser.node:org.apache.velocity.runtime.resource:org.apache.velocity.runtime.resource.loader:org.apache.velocity.runtime.resource.util:org.apache.velocity.runtime.visitor:org.apache.velocity.servlet:org.apache.velocity.texen:org.apache.velocity.texen.ant:org.apache.velocity.texen.util:org.apache.velocity.util:org.apache.velocity.util.introspection</packages>
                                         </group>
@@ -1705,22 +1619,6 @@
                                         <group>
                                             <title>Module org.codehaus.woodstox</title>
                                             <packages>org.codehaus.stax2:org.codehaus.stax2.evt:org.codehaus.stax2.io:org.codehaus.stax2.osgi:org.codehaus.stax2.ri:org.codehaus.stax2.ri.dom:org.codehaus.stax2.ri.evt:org.codehaus.stax2.ri.typed:org.codehaus.stax2.typed:org.codehaus.stax2.util:org.codehaus.stax2.validation:com.ctc.wstx.api:com.ctc.wstx.cfg:com.ctc.wstx.compat:com.ctc.wstx.dom:com.ctc.wstx.dtd:com.ctc.wstx.ent:com.ctc.wstx.evt:com.ctc.wstx.exc:com.ctc.wstx.io:com.ctc.wstx.msv:com.ctc.wstx.osgi:com.ctc.wstx.sax:com.ctc.wstx.sr:com.ctc.wstx.stax:com.ctc.wstx.sw:com.ctc.wstx.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.codehaus.jackson.jackson-core-asl</title>
-                                            <packages>org.codehaus.jackson:org.codehaus.jackson.annotate:org.codehaus.jackson.format:org.codehaus.jackson.impl:org.codehaus.jackson.io:org.codehaus.jackson.sym:org.codehaus.jackson.type:org.codehaus.jackson.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.codehaus.jackson.jackson-mapper-asl</title>
-                                            <packages>org.codehaus.jackson.map:org.codehaus.jackson.map.annotate:org.codehaus.jackson.map.deser:org.codehaus.jackson.map.deser.impl:org.codehaus.jackson.map.deser.std:org.codehaus.jackson.map.exc:org.codehaus.jackson.map.ext:org.codehaus.jackson.map.introspect:org.codehaus.jackson.map.jsontype:org.codehaus.jackson.map.jsontype.impl:org.codehaus.jackson.map.module:org.codehaus.jackson.map.ser:org.codehaus.jackson.map.ser.impl:org.codehaus.jackson.map.ser.std:org.codehaus.jackson.map.type:org.codehaus.jackson.map.util:org.codehaus.jackson.node:org.codehaus.jackson.schema</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.codehaus.jackson.jackson-xc</title>
-                                            <packages>org.codehaus.jackson.xc</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.codehaus.jettison</title>
-                                            <packages>org.codehaus.jettison:org.codehaus.jettison.badgerfish:org.codehaus.jettison.json:org.codehaus.jettison.mapped:org.codehaus.jettison.util</packages>
                                         </group>
                                         <group>
                                             <title>Module org.hibernate</title>
@@ -1980,10 +1878,6 @@
                                             <packages>org.kohsuke.rngom.ast.builder:org.kohsuke.rngom.ast.om:org.kohsuke.rngom.ast.util:org.kohsuke.rngom.binary:org.kohsuke.rngom.binary.visitor:org.kohsuke.rngom.digested:org.kohsuke.rngom.dt:org.kohsuke.rngom.dt.builtin:org.kohsuke.rngom.nc:org.kohsuke.rngom.parse:org.kohsuke.rngom.parse.compact:org.kohsuke.rngom.parse.host:org.kohsuke.rngom.parse.xml:org.kohsuke.rngom.util:org.kohsuke.rngom.xml.sax:org.kohsuke.rngom.xml.util</packages>
                                         </group>
                                         -->
-                                        <group>
-                                            <title>Module org.picketlink</title>
-                                            <packages>org.picketlink.identity.federation:org.picketlink.identity.federation.api.saml.v2.metadata:org.picketlink.identity.federation.api.saml.v2.request:org.picketlink.identity.federation.api.saml.v2.response:org.picketlink.identity.federation.api.saml.v2.sig:org.picketlink.identity.federation.api.soap:org.picketlink.identity.federation.api.util:org.picketlink.identity.federation.api.w3.xmldsig:org.picketlink.identity.federation.api.wstrust:org.picketlink.identity.federation.core:org.picketlink.identity.federation.core.audit:org.picketlink.identity.federation.core.config:org.picketlink.identity.federation.core.constants:org.picketlink.identity.federation.core.exceptions:org.picketlink.identity.federation.core.factories:org.picketlink.identity.federation.core.handler.config:org.picketlink.identity.federation.core.impl:org.picketlink.identity.federation.core.interfaces:org.picketlink.identity.federation.core.parsers:org.picketlink.identity.federation.core.parsers.config:org.picketlink.identity.federation.core.parsers.saml:org.picketlink.identity.federation.core.parsers.saml.metadata:org.picketlink.identity.federation.core.parsers.saml.xacml:org.picketlink.identity.federation.core.parsers.sts:org.picketlink.identity.federation.core.parsers.util:org.picketlink.identity.federation.core.parsers.wsa:org.picketlink.identity.federation.core.parsers.wsp:org.picketlink.identity.federation.core.parsers.wsse:org.picketlink.identity.federation.core.parsers.wst:org.picketlink.identity.federation.core.pdp:org.picketlink.identity.federation.core.saml.md.providers:org.picketlink.identity.federation.core.saml.v1:org.picketlink.identity.federation.core.saml.v1.providers:org.picketlink.identity.federation.core.saml.v1.writers:org.picketlink.identity.federation.core.saml.v2.common:org.picketlink.identity.federation.core.saml.v2.constants:org.picketlink.identity.federation.core.saml.v2.exceptions:org.picketlink.identity.federation.core.saml.v2.factories:org.picketlink.identity.federation.core.saml.v2.holders:org.picketlink.identity.federation.core.saml.v2.impl:org.picketlink.identity.federation.core.saml.v2.interfaces:org.picketlink.identity.federation.core.saml.v2.metadata.store:org.picketlink.identity.federation.core.saml.v2.providers:org.picketlink.identity.federation.core.saml.v2.util:org.picketlink.identity.federation.core.saml.v2.writers:org.picketlink.identity.federation.core.sts:org.picketlink.identity.federation.core.sts.registry:org.picketlink.identity.federation.core.transfer:org.picketlink.identity.federation.core.util:org.picketlink.identity.federation.core.wsa:org.picketlink.identity.federation.core.wspolicy:org.picketlink.identity.federation.core.wsse:org.picketlink.identity.federation.core.wstrust:org.picketlink.identity.federation.core.wstrust.auth:org.picketlink.identity.federation.core.wstrust.exceptions:org.picketlink.identity.federation.core.wstrust.handlers:org.picketlink.identity.federation.core.wstrust.plugins.saml:org.picketlink.identity.federation.core.wstrust.wrappers:org.picketlink.identity.federation.core.wstrust.writers:org.picketlink.identity.federation.saml.common:org.picketlink.identity.federation.saml.v1.assertion:org.picketlink.identity.federation.saml.v1.protocol:org.picketlink.identity.federation.saml.v2:org.picketlink.identity.federation.saml.v2.ac:org.picketlink.identity.federation.saml.v2.ac.classes:org.picketlink.identity.federation.saml.v2.ac.classes.:org.picketlink.identity.federation.saml.v2.assertion:org.picketlink.identity.federation.saml.v2.metadata:org.picketlink.identity.federation.saml.v2.profiles.attribute.dce:org.picketlink.identity.federation.saml.v2.profiles.sso.ecp:org.picketlink.identity.federation.saml.v2.profiles.xacml.assertion:org.picketlink.identity.federation.saml.v2.protocol:org.picketlink.identity.federation.web.config:org.picketlink.identity.federation.web.constants:org.picketlink.identity.federation.web.core:org.picketlink.identity.federation.web.filters:org.picketlink.identity.federation.web.handlers:org.picketlink.identity.federation.web.handlers.saml2:org.picketlink.identity.federation.web.interfaces:org.picketlink.identity.federation.web.listeners:org.picketlink.identity.federation.web.managers:org.picketlink.identity.federation.web.process:org.picketlink.identity.federation.web.roles:org.picketlink.identity.federation.web.servlets:org.picketlink.identity.federation.web.servlets.saml:org.picketlink.identity.federation.web.util:org.picketlink.identity.federation.ws.addressing:org.picketlink.identity.federation.ws.policy:org.picketlink.identity.federation.ws.trust:org.picketlink.identity.federation.ws.wss.secext:org.picketlink.identity.federation.ws.wss.utility:org.picketlink.identity.xmlsec.w3.xmldsig:org.picketlink.identity.xmlsec.w3.xmlenc:org.picketlink.identity.federation.bindings.jboss.attribute:org.picketlink.identity.federation.bindings.jboss.auth:org.picketlink.identity.federation.bindings.jboss.auth.mapping:org.picketlink.identity.federation.bindings.jboss.subject:org.picketlink.identity.federation.bindings.servlets:org.picketlink.identity.federation.bindings.tomcat:org.picketlink.identity.federation.bindings.tomcat.idp:org.picketlink.identity.federation.bindings.tomcat.sp:org.picketlink.identity.federation.bindings.tomcat.sp.holder:org.picketlink.identity.federation.bindings.util</packages>
-                                        </group>
                                         <group>
                                             <title>Module org.picketbox</title>
                                             <packages>org.jboss.crypto:org.jboss.crypto.digest:org.jboss.security:org.jboss.security.acl:org.jboss.security.acl.config:org.jboss.security.annotation:org.jboss.security.audit:org.jboss.security.audit.config:org.jboss.security.audit.providers:org.jboss.security.auth.callback:org.jboss.security.auth.certs:org.jboss.security.auth.container.config:org.jboss.security.auth.container.modules:org.jboss.security.auth.login:org.jboss.security.auth.message:org.jboss.security.auth.message.config:org.jboss.security.authorization:org.jboss.security.authorization.config:org.jboss.security.authorization.modules:org.jboss.security.authorization.modules.ejb:org.jboss.security.authorization.modules.web:org.jboss.security.authorization.resources:org.jboss.security.authorization.util:org.jboss.security.auth.spi:org.jboss.security.auth.spi.otp:org.jboss.security.cache:org.jboss.security.callbacks:org.jboss.security.client:org.jboss.security.config:org.jboss.security.config.parser:org.jboss.security.factories:org.jboss.security.identity:org.jboss.security.identity.extensions:org.jboss.security.identity.fed:org.jboss.security.identity.plugins:org.jboss.security.identitytrust:org.jboss.security.identitytrust.config:org.jboss.security.identitytrust.modules:org.jboss.security.jacc:org.jboss.security.javaee:org.jboss.security.javaee.exceptions:org.jboss.security.mapping:org.jboss.security.mapping.config:org.jboss.security.mapping.providers:org.jboss.security.mapping.providers.attribute:org.jboss.security.mapping.providers.principal:org.jboss.security.mapping.providers.role:org.jboss.security.otp:org.jboss.security.plugins:org.jboss.security.plugins.audit:org.jboss.security.plugins.auth:org.jboss.security.plugins.authorization:org.jboss.security.plugins.identitytrust:org.jboss.security.plugins.javaee:org.jboss.security.plugins.mapping:org.jboss.security.util:org.jboss.security.util.state:org.jboss.security.util.state.xml:org.jboss.security.util.xml:org.jboss.security.vault:org.picketbox:org.picketbox.config:org.picketbox.core.authorization.resources:org.picketbox.datasource.security:org.picketbox.exceptions:org.picketbox.factories:org.picketbox.handlers:org.picketbox.plugins:org.picketbox.plugins.authorization:org.picketbox.plugins.vault:org.picketbox.util:org.jboss.security.authentication:org.picketbox.commons.cipher:org.picketbox.commons.ssl</packages>

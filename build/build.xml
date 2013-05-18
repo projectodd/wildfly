@@ -357,10 +357,6 @@
             <maven-resource group="com.sun.xml.bind" artifact="jaxb-xjc"/>
         </module-def>
 
-        <module-def name="com.sun.xml.messaging.saaj">
-            <maven-resource group="com.sun.xml.messaging.saaj" artifact="saaj-impl"/>
-        </module-def>
-
         <module-def name="com.sun.xml.txw2">
             <maven-resource group="com.sun.xml.txw2" artifact="txw2"/>
         </module-def>
@@ -469,14 +465,6 @@
 
         <module-def name="javax.xml.jaxp-provider"/>
 
-        <module-def name="javax.xml.soap.api">
-            <maven-resource group="org.jboss.spec.javax.xml.soap" artifact="jboss-saaj-api_1.3_spec"/>
-        </module-def>
-
-        <module-def name="javax.xml.ws.api">
-            <maven-resource group="org.jboss.spec.javax.xml.ws" artifact="jboss-jaxws-api_2.2_spec"/>
-        </module-def>
-
         <module-def name="org.jboss.aesh">
             <maven-resource group="org.jboss.aesh" artifact="aesh"/>
         </module-def>
@@ -523,21 +511,6 @@
             <maven-resource group="commons-pool" artifact="commons-pool"/>
         </module-def>
 
-        <module-def name="org.apache.httpcomponents">
-            <!-- These probably do not need to be split up but we can revisit later -->
-            <maven-resource group="org.apache.httpcomponents" artifact="httpclient"/>
-            <maven-resource group="org.apache.httpcomponents" artifact="httpcore"/>
-            <maven-resource group="org.apache.httpcomponents" artifact="httpmime"/>
-        </module-def>
-
-        <module-def name="org.apache.james.mime4j">
-            <maven-resource group="org.apache.james" artifact="apache-mime4j"/>
-        </module-def>
-
-        <module-def name="org.apache.santuario.xmlsec">
-            <maven-resource group="org.apache.santuario" artifact="xmlsec"/>
-        </module-def>
-
         <module-def name="org.apache.velocity">
             <maven-resource group="org.apache.velocity" artifact="velocity" />
         </module-def>
@@ -558,22 +531,6 @@
         <module-def name="org.codehaus.woodstox">
             <maven-resource group="org.codehaus.woodstox" artifact="woodstox-core-asl" />
             <maven-resource group="org.codehaus.woodstox" artifact="stax2-api" />
-        </module-def>
-
-        <module-def name="org.codehaus.jackson.jackson-core-asl">
-            <maven-resource group="org.codehaus.jackson" artifact="jackson-core-asl" />
-        </module-def>
-
-        <module-def name="org.codehaus.jackson.jackson-mapper-asl">
-            <maven-resource group="org.codehaus.jackson" artifact="jackson-mapper-asl" />
-        </module-def>
-
-        <module-def name="org.codehaus.jackson.jackson-xc">
-            <maven-resource group="org.codehaus.jackson" artifact="jackson-xc" />
-        </module-def>
-
-        <module-def name="org.codehaus.jettison">
-            <maven-resource group="org.codehaus.jettison" artifact="jettison" />
         </module-def>
 
         <module-def name="org.hibernate">
@@ -853,11 +810,6 @@
 
         <module-def name="org.kohsuke.rngom">
             <maven-resource group="org.kohsuke.rngom" artifact="rngom"/>
-        </module-def>
-
-        <module-def name="org.picketlink">
-            <maven-resource group="org.picketlink" artifact="picketlink-core" jandex="true"/>
-            <maven-resource group="org.picketlink.distribution" artifact="picketlink-jbas7" jandex="true"/>
         </module-def>
 
         <module-def name="org.picketbox">

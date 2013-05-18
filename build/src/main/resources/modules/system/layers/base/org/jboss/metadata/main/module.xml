@@ -41,7 +41,6 @@
         <module name="javax.servlet.api" optional="true"/>
         <module name="javax.servlet.jsp.api" optional="true"/>
         <module name="javax.xml.bind.api" optional="true"/>
-        <module name="javax.xml.ws.api" optional="true"/>
         <module name="org.jboss.ejb3" optional="true"/>
         <module name="org.jboss.staxmapper"/>
         <module name="org.jboss.logging"/>
