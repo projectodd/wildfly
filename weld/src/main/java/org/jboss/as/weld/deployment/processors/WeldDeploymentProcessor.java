@@ -32,7 +32,6 @@ import java.util.Set;
 import javax.enterprise.inject.spi.Extension;
 import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
-import javax.validation.ValidatorFactory;
 
 import org.jboss.as.ee.beanvalidation.BeanValidationAttachments;
 import org.jboss.as.ee.component.EEApplicationDescription;
@@ -208,10 +207,6 @@ public class WeldDeploymentProcessor implements DeploymentUnitProcessor {
             }
         };
         final WeldBootstrapService weldBootstrapService = new WeldBootstrapService(deployment, fakeEEInject, deploymentUnit.getName());
-        //hook up validation service
-        //TODO: we need to change weld so this is a per-BDA service
-        final ValidatorFactory factory = deploymentUnit.getAttachment(BeanValidationAttachments.VALIDATOR_FACTORY);
-        weldBootstrapService.addWeldService(ValidationServices.class, new WeldValidationServices(factory));
 
 
         final JpaInjectionServices rootJpaInjectionServices = new WeldJpaInjectionServices(deploymentUnit, deploymentUnit.getServiceRegistry());

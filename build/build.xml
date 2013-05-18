@@ -534,28 +534,12 @@
             <maven-resource group="org.apache.james" artifact="apache-mime4j"/>
         </module-def>
 
-        <module-def name="org.apache.juddi.juddi-client">
-            <maven-resource group="org.apache.juddi" artifact="juddi-client"/>
-        </module-def>
-
-        <module-def name="org.apache.juddi.uddi-ws">
-            <maven-resource group="org.apache.juddi" artifact="uddi-ws"/>
-        </module-def>
-
-        <module-def name="org.apache.neethi">
-            <maven-resource group="org.apache.neethi" artifact="neethi"/>
-        </module-def>
-
         <module-def name="org.apache.santuario.xmlsec">
             <maven-resource group="org.apache.santuario" artifact="xmlsec"/>
         </module-def>
 
         <module-def name="org.apache.velocity">
             <maven-resource group="org.apache.velocity" artifact="velocity" />
-        </module-def>
-
-        <module-def name="org.apache.juddi.scout">
-            <maven-resource group="org.apache.juddi.scout" artifact="scout"/>
         </module-def>
 
         <module-def name="org.apache.xalan">
@@ -569,14 +553,6 @@
 
         <module-def name="org.apache.xml-resolver">
             <maven-resource group="xml-resolver" artifact="xml-resolver"/>
-        </module-def>
-
-    	<module-def name="org.apache.ws.xmlschema">
-            <maven-resource group="org.apache.ws.xmlschema" artifact="xmlschema-core"/>
-        </module-def>
-
-    	<module-def name="org.apache.ws.security">
-            <maven-resource group="org.apache.ws.security" artifact="wss4j"/>
         </module-def>
 
         <module-def name="org.codehaus.woodstox">
@@ -848,10 +824,6 @@
             <maven-resource group="org.jboss.ironjacamar" artifact="ironjacamar-jdbc"/>
         </module-def>
 
-        <module-def name="org.jboss.jaxbintros">
-            <maven-resource group="jboss.jaxbintros" artifact="jboss-jaxb-intros"/>
-        </module-def>
-
         <module-def name="org.jboss.jts">
           <maven-resource group="org.jboss.jbossts" artifact="jbossjta"/>
         </module-def>
@@ -903,12 +875,6 @@
 
         <module-def name="org.jboss.weld.spi">
             <maven-resource group="org.jboss.weld" artifact="weld-spi"/>
-        </module-def>
-
-        <module-def name="org.opensaml">
-            <maven-resource group="org.opensaml" artifact="opensaml"/>
-            <maven-resource group="org.opensaml" artifact="openws"/>
-            <maven-resource group="org.opensaml" artifact="xmltooling"/>
         </module-def>
 
         <module-def name="org.jboss.xb">
