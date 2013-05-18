@@ -2713,12 +2713,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.eclipse.jdt.core.compiler</groupId>
-                <artifactId>ecj</artifactId>
-                <version>${version.org.eclipse.jdt.core.compiler.ecj}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.jboss.web</groupId>
                 <artifactId>jbossweb</artifactId>
                 <version>${version.org.jboss.web}</version>
