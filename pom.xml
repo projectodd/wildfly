@@ -845,12 +845,6 @@
 
             <dependency>
                 <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-jdr</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-jmx</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -907,12 +901,6 @@
             <dependency>
                 <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-network</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-pojo</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -3177,14 +3165,12 @@
                 <module>ee</module>
                 <module>ee-deployment</module>
                 <module>host-controller</module>
-                <module>jdr</module>
                 <module>jpa</module>
                 <module>logging</module>
                 <module>mail</module>
                 <module>messaging</module>
                 <module>modcluster</module>
                 <module>naming</module>
-                <module>pojo</module>
                 <module>system-jmx</module>
                 <module>security</module>
                 <module>spec-api</module>

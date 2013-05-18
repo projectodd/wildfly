@@ -8,12 +8,10 @@
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem>configuration/subsystems/infinispan.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
-      <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
       <subsystem>configuration/subsystems/jpa.xml</subsystem>
       <subsystem>configuration/subsystems/mail.xml</subsystem>
       <subsystem>configuration/subsystems/naming.xml</subsystem>
-      <subsystem>configuration/subsystems/pojo.xml</subsystem>
       <subsystem>configuration/subsystems/remoting.xml</subsystem>
       <subsystem>configuration/subsystems/resource-adapters.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/security.xml</subsystem>
@@ -29,14 +27,12 @@
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/infinispan.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
-      <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem>configuration/subsystems/jgroups.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
       <subsystem>configuration/subsystems/jpa.xml</subsystem>
       <subsystem>configuration/subsystems/mail.xml</subsystem>
       <subsystem>configuration/subsystems/modcluster.xml</subsystem>
       <subsystem>configuration/subsystems/naming.xml</subsystem>
-      <subsystem>configuration/subsystems/pojo.xml</subsystem>
       <subsystem>configuration/subsystems/remoting.xml</subsystem>
       <subsystem>configuration/subsystems/resource-adapters.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/security.xml</subsystem>
@@ -52,13 +48,11 @@
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem>configuration/subsystems/infinispan.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
-      <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
       <subsystem>configuration/subsystems/jpa.xml</subsystem>
       <subsystem>configuration/subsystems/mail.xml</subsystem>
       <subsystem>configuration/subsystems/messaging.xml</subsystem>
       <subsystem>configuration/subsystems/naming.xml</subsystem>
-      <subsystem>configuration/subsystems/pojo.xml</subsystem>
       <subsystem>configuration/subsystems/remoting.xml</subsystem>
       <subsystem>configuration/subsystems/resource-adapters.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/security.xml</subsystem>
@@ -74,7 +68,6 @@
       <subsystem>configuration/subsystems/ee.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/infinispan.xml</subsystem>
       <subsystem>configuration/subsystems/jca.xml</subsystem>
-      <subsystem>configuration/subsystems/jdr.xml</subsystem>
       <subsystem>configuration/subsystems/jgroups.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/jmx.xml</subsystem>
       <subsystem>configuration/subsystems/jpa.xml</subsystem>
@@ -82,7 +75,6 @@
       <subsystem supplement="ha">configuration/subsystems/messaging.xml</subsystem>
       <subsystem>configuration/subsystems/modcluster.xml</subsystem>
       <subsystem>configuration/subsystems/naming.xml</subsystem>
-      <subsystem>configuration/subsystems/pojo.xml</subsystem>
       <subsystem>configuration/subsystems/remoting.xml</subsystem>
       <subsystem>configuration/subsystems/resource-adapters.xml</subsystem>
       <subsystem supplement="domain">configuration/subsystems/security.xml</subsystem>
