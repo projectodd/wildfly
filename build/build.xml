@@ -335,10 +335,6 @@
             <maven-resource group="com.github.relaxng" artifact="relaxngDatatype" />
         </module-def>
 
-        <module-def name="com.google.guava">
-            <maven-resource group="com.google.guava" artifact="guava" />
-        </module-def>
-
         <module-def name="com.h2database.h2">
             <maven-resource group="com.h2database" artifact="h2"/>
         </module-def>
@@ -354,7 +350,6 @@
 
         <module-def name="com.sun.xml.bind">
             <maven-resource group="com.sun.xml.bind" artifact="jaxb-impl"/>
-            <maven-resource group="com.sun.xml.bind" artifact="jaxb-xjc"/>
         </module-def>
 
         <module-def name="com.sun.xml.txw2">
@@ -533,19 +528,6 @@
             <maven-resource group="org.codehaus.woodstox" artifact="stax2-api" />
         </module-def>
 
-        <module-def name="org.hibernate">
-            <maven-resource group="org.hibernate" artifact="hibernate-core" />
-            <maven-resource group="org.hibernate" artifact="hibernate-entitymanager" />
-            <maven-resource group="org.hibernate" artifact="hibernate-infinispan"/>
-        </module-def>
-
-        <module-def name="org.hibernate.commons-annotations">
-            <maven-resource group="org.hibernate.common" artifact="hibernate-commons-annotations"/>
-        </module-def>
-
-        <module-def name="org.hibernate.envers">
-            <maven-resource group="org.hibernate" artifact="hibernate-envers"/>
-        </module-def>
         <module-def name="org.hibernate.validator">
             <maven-resource group="org.hibernate" artifact="hibernate-validator"/>
         </module-def>
