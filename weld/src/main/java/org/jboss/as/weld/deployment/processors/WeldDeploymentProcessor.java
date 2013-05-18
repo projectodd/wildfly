@@ -37,10 +37,6 @@ import org.jboss.as.ee.beanvalidation.BeanValidationAttachments;
 import org.jboss.as.ee.component.EEApplicationDescription;
 import org.jboss.as.ee.component.EEModuleDescription;
 import org.jboss.as.ee.naming.JavaNamespaceSetup;
-import org.jboss.as.jpa.config.Configuration;
-import org.jboss.as.jpa.config.PersistenceUnitMetadataHolder;
-import org.jboss.as.jpa.service.PersistenceUnitServiceImpl;
-import org.jboss.as.jpa.spi.PersistenceUnitMetadata;
 import org.jboss.as.naming.deployment.JndiNamingDependencyProcessor;
 import org.jboss.as.security.service.SimpleSecurityManager;
 import org.jboss.as.security.service.SimpleSecurityManagerService;
@@ -66,7 +62,6 @@ import org.jboss.as.weld.deployment.CdiAnnotationMarker;
 import org.jboss.as.weld.deployment.WeldAttachments;
 import org.jboss.as.weld.deployment.WeldDeployment;
 import org.jboss.as.weld.services.TCCLSingletonService;
-import org.jboss.as.weld.services.bootstrap.WeldJpaInjectionServices;
 import org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices;
 import org.jboss.as.weld.services.bootstrap.WeldSecurityServices;
 import org.jboss.as.weld.services.bootstrap.WeldTransactionServices;
@@ -80,7 +75,6 @@ import org.jboss.msc.service.ServiceTarget;
 import org.jboss.weld.bootstrap.api.Environment;
 import org.jboss.weld.bootstrap.api.Service;
 import org.jboss.weld.bootstrap.spi.Metadata;
-import org.jboss.weld.injection.spi.JpaInjectionServices;
 import org.jboss.weld.validation.spi.ValidationServices;
 
 /**
@@ -209,9 +203,6 @@ public class WeldDeploymentProcessor implements DeploymentUnitProcessor {
         final WeldBootstrapService weldBootstrapService = new WeldBootstrapService(deployment, fakeEEInject, deploymentUnit.getName());
 
 
-        final JpaInjectionServices rootJpaInjectionServices = new WeldJpaInjectionServices(deploymentUnit, deploymentUnit.getServiceRegistry());
-        weldBootstrapService.addWeldService(JpaInjectionServices.class, rootJpaInjectionServices);
-
         // add the weld service
         final ServiceBuilder<WeldBootstrapService> weldBootstrapServiceBuilder = serviceTarget.addService(weldBootstrapServiceName, weldBootstrapService);
 
@@ -241,21 +232,6 @@ public class WeldDeploymentProcessor implements DeploymentUnitProcessor {
     }
 
     private void getJpaDependencies(final DeploymentUnit deploymentUnit, final Set<ServiceName> jpaServices) {
-        for (ResourceRoot root : DeploymentUtils.allResourceRoots(deploymentUnit)) {
-
-            final PersistenceUnitMetadataHolder persistenceUnits = root.getAttachment(PersistenceUnitMetadataHolder.PERSISTENCE_UNITS);
-            if (persistenceUnits != null && persistenceUnits.getPersistenceUnits() != null) {
-                for (final PersistenceUnitMetadata pu : persistenceUnits.getPersistenceUnits()) {
-                    final Properties properties = pu.getProperties();
-                    final String jpaContainerManaged = properties.getProperty(Configuration.JPA_CONTAINER_MANAGED);
-                    final boolean deployPU = (jpaContainerManaged == null || Boolean.parseBoolean(jpaContainerManaged));
-                    if (deployPU) {
-                        final ServiceName serviceName = PersistenceUnitServiceImpl.getPUServiceName(pu);
-                        jpaServices.add(serviceName);
-                    }
-                }
-            }
-        }
     }
 
 

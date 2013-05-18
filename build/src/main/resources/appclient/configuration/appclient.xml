@@ -25,7 +25,6 @@
     <extensions>
         <extension module="org.jboss.as.connector"/>
         <extension module="org.jboss.as.ee"/>
-        <extension module="org.jboss.as.jpa"/>
         <extension module="org.jboss.as.logging"/>
         <extension module="org.jboss.as.naming"/>
         <extension module="org.jboss.as.security"/>
@@ -88,9 +87,6 @@
         <subsystem xmlns="urn:jboss:domain:ee:1.1">
             <spec-descriptor-property-replacement>false</spec-descriptor-property-replacement>
             <jboss-descriptor-property-replacement>false</jboss-descriptor-property-replacement>
-        </subsystem>
-        <subsystem xmlns="urn:jboss:domain:jpa:1.0">
-            <jpa default-datasource=""/>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jca:1.1">
             <archive-validation enabled="false" />

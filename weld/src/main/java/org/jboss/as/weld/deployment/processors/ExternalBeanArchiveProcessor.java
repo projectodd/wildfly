@@ -49,11 +49,9 @@ import org.jboss.as.weld.deployment.BeansXmlParser;
 import org.jboss.as.weld.deployment.UrlScanner;
 import org.jboss.as.weld.deployment.WeldAttachments;
 import org.jboss.as.weld.deployment.WeldDeploymentMetadata;
-import org.jboss.as.weld.services.bootstrap.WeldJpaInjectionServices;
 import org.jboss.modules.Module;
 import org.jboss.vfs.VirtualFile;
 import org.jboss.weld.bootstrap.spi.BeansXml;
-import org.jboss.weld.injection.spi.JpaInjectionServices;
 
 /**
  * Deployment processor that builds bean archives from external deployments.
@@ -159,8 +157,6 @@ public class ExternalBeanArchiveProcessor implements DeploymentUnitProcessor {
             final BeanDeploymentArchiveImpl bda = new BeanDeploymentArchiveImpl(new HashSet<String>(discoveredClasses), beansXml, module, beanArchiveIdPrefix + entry.getKey().toExternalForm());
 
             final BeanDeploymentModule bdm = new BeanDeploymentModule(Collections.singleton(bda));
-            final JpaInjectionServices jpaInjectionServices = new WeldJpaInjectionServices(deploymentUnit, deploymentUnit.getServiceRegistry());
-            bdm.addService(JpaInjectionServices.class, jpaInjectionServices);
             deploymentUnit.addToAttachmentList(WeldAttachments.ADDITIONAL_BEAN_DEPLOYMENT_MODULES, bdm);
             for (DeploymentUnit du : entry.getValue()) {
                 du.addToAttachmentList(WeldAttachments.VISIBLE_ADDITIONAL_BEAN_DEPLOYMENT_MODULE, bdm);
