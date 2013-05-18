@@ -1049,11 +1049,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.jboss</groupId>
-                    <artifactId>jbossxb</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.jdom</groupId>
                     <artifactId>jdom</artifactId>
                 </dependency>

@@ -843,10 +843,6 @@
             <maven-resource group="org.jboss.weld" artifact="weld-spi"/>
         </module-def>
 
-        <module-def name="org.jboss.xb">
-            <maven-resource group="org.jboss" artifact="jbossxb"/>
-        </module-def>
-
         <module-def name="org.jgroups">
             <maven-resource group="org.jgroups" artifact="jgroups"/>
         </module-def>

@@ -2651,54 +2651,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.jboss</groupId>
-                <artifactId>jbossxb</artifactId>
-                <version>${version.org.jboss.xb}</version>
-                <exclusions>
-                     <exclusion>
-                        <groupId>apache-xerces</groupId>
-                        <artifactId>xml-apis</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>apache-xerces</groupId>
-                        <artifactId>xercesImpl</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>com.wutka</groupId>
-                        <artifactId>dtdparser</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>jboss</groupId>
-                        <artifactId>jboss-common-core</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>org.jboss</groupId>
-                        <artifactId>jboss-reflect</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>org.jboss.logging</groupId>
-                        <artifactId>jboss-logging-spi</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>org.jboss.logging</groupId>
-                        <artifactId>jboss-logging-log4j</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>sun-jaxb</groupId>
-                        <artifactId>jaxb-api</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>xml-apis</groupId>
-                        <artifactId>xml-apis</artifactId>
-                     </exclusion>
-                     <exclusion>
-                        <groupId>wutka-dtdparser</groupId>
-                        <artifactId>dtdparser121</artifactId>
-                     </exclusion>
-               </exclusions>
-            </dependency>
-
-            <dependency>
                 <groupId>org.jboss.xnio</groupId>
                 <artifactId>xnio-api</artifactId>
                 <version>${version.org.jboss.xnio.xnio-api}</version>
