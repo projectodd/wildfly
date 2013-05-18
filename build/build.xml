@@ -664,9 +664,6 @@
             <maven-resource group="org.jboss.web" artifact="jbossweb"/>
         </module-def>
 
-        <module-def name="org.jboss.as.weld">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-weld"/>
-        </module-def>
 
         <module-def name="org.jboss.classfilewriter">
             <maven-resource group="org.jboss.classfilewriter" artifact="jboss-classfilewriter"/>
@@ -740,18 +737,6 @@
 
         <module-def name="org.jboss.security.xacml">
             <maven-resource group="org.jboss.security" artifact="jbossxacml"/>
-        </module-def>
-
-        <module-def name="org.jboss.weld.core">
-            <maven-resource group="org.jboss.weld" artifact="weld-core"/>
-        </module-def>
-
-        <module-def name="org.jboss.weld.api">
-            <maven-resource group="org.jboss.weld" artifact="weld-api"/>
-        </module-def>
-
-        <module-def name="org.jboss.weld.spi">
-            <maven-resource group="org.jboss.weld" artifact="weld-spi"/>
         </module-def>
 
         <module-def name="org.jgroups">

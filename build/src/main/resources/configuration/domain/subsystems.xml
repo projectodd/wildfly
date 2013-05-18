@@ -17,7 +17,6 @@
       <subsystem>configuration/subsystems/threads.xml</subsystem>
       <subsystem>configuration/subsystems/transactions.xml</subsystem>
       <subsystem>configuration/subsystems/web.xml</subsystem>
-      <subsystem>configuration/subsystems/weld.xml</subsystem>
    </subsystems>
    <subsystems name="ha">
       <!-- Each subsystem to be included relative to the src/main/resources directory -->
@@ -37,7 +36,6 @@
       <subsystem>configuration/subsystems/threads.xml</subsystem>
       <subsystem>configuration/subsystems/transactions.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/web.xml</subsystem>
-      <subsystem>configuration/subsystems/weld.xml</subsystem>
    </subsystems>
    <subsystems name="full">
       <!-- Each subsystem to be included relative to the src/main/resources directory -->
@@ -56,7 +54,6 @@
       <subsystem>configuration/subsystems/threads.xml</subsystem>
       <subsystem>configuration/subsystems/transactions.xml</subsystem>
       <subsystem>configuration/subsystems/web.xml</subsystem>
-      <subsystem>configuration/subsystems/weld.xml</subsystem>
    </subsystems>
    <subsystems name="full-ha">
       <!-- Each subsystem to be included relative to the src/main/resources directory -->
@@ -77,6 +74,5 @@
       <subsystem>configuration/subsystems/threads.xml</subsystem>
       <subsystem>configuration/subsystems/transactions.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/web.xml</subsystem>
-      <subsystem>configuration/subsystems/weld.xml</subsystem>
    </subsystems>
 </config>

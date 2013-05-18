@@ -18,6 +18,5 @@
       <subsystem>configuration/subsystems/threads.xml</subsystem>
       <subsystem>configuration/subsystems/transactions.xml</subsystem>
       <subsystem>configuration/subsystems/web.xml</subsystem>
-      <subsystem>configuration/subsystems/weld.xml</subsystem>
    </subsystems>
 </config>

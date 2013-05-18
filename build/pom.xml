@@ -637,11 +637,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.jboss.as</groupId>
-                    <artifactId>jboss-as-weld</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.jboss.classfilewriter</groupId>
                     <artifactId>jboss-classfilewriter</artifactId>
                 </dependency>
@@ -904,21 +899,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>org.jboss.weld</groupId>
-                    <artifactId>weld-api</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.weld</groupId>
-                    <artifactId>weld-core</artifactId>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.jboss.weld</groupId>
-                    <artifactId>weld-spi</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>org.jboss.xnio</groupId>
                     <artifactId>xnio-api</artifactId>
                 </dependency>
@@ -1165,7 +1145,6 @@
                                         <include>org.jboss.spec.javax.xml.ws:jboss-jaxws-api_2.2_spec</include>
 
                                         <include>org.jboss.threads:jboss-threads</include>
-                                        <include>org.jboss.weld:weld-api</include>
                                         <include>org.jboss.xnio:xnio-api</include>
                                         <include>org.jdom:jdom</include>
                                         <include>org.jgroups:jgroups</include>
@@ -1661,10 +1640,6 @@
                                             <packages>org.jboss.as.web:org.jboss.as.web.deployment:org.jboss.as.web.deployment.component:org.jboss.as.web.deployment.helpers:org.jboss.as.web.deployment.jsf:org.jboss.as.web.deployment.mock:org.jboss.as.web.ext:org.jboss.as.web.security:org.jboss.as.web.security.jaspi:org.jboss.as.web.security.jaspi.modules:org.jboss.as.web.session:org.jboss.as.web.session.notification:org.jboss.as.web.sso:org.eclipse.jdt.core.compiler:org.eclipse.jdt.core.compiler.batch:org.eclipse.jdt.internal.compiler:org.eclipse.jdt.internal.compiler.ast:org.eclipse.jdt.internal.compiler.batch:org.eclipse.jdt.internal.compiler.classfmt:org.eclipse.jdt.internal.compiler.classfmt.:org.eclipse.jdt.internal.compiler.codegen:org.eclipse.jdt.internal.compiler.env:org.eclipse.jdt.internal.compiler.flow:org.eclipse.jdt.internal.compiler.impl:org.eclipse.jdt.internal.compiler.lookup:org.eclipse.jdt.internal.compiler.parser:org.eclipse.jdt.internal.compiler.parser.diagnose:org.eclipse.jdt.internal.compiler.problem:org.eclipse.jdt.internal.compiler.util:org.eclipse.jdt.internal.core.util:org.apache.catalina:org.apache.catalina.authenticator:org.apache.catalina.connector:org.apache.catalina.core:org.apache.catalina.deploy:org.apache.catalina.deploy.jsp:org.apache.catalina.filters:org.apache.catalina.ha.backend:org.apache.catalina.manager:org.apache.catalina.realm:org.apache.catalina.security:org.apache.catalina.servlets:org.apache.catalina.session:org.apache.catalina.ssi:org.apache.catalina.startup:org.apache.catalina.util:org.apache.catalina.valves:org.apache.cometd.bayeux:org.apache.coyote:org.apache.coyote.ajp:org.apache.coyote.http11:org.apache.coyote.http11.filters:org.apache.coyote.memory:org.apache.el:org.apache.el.lang:org.apache.el.parser:org.apache.el.util:org.apache.jasper:org.apache.jasper.compiler:org.apache.jasper.compiler.tagplugin:org.apache.jasper.el:org.apache.jasper.runtime:org.apache.jasper.security:org.apache.jasper.servlet:org.apache.jasper.tagplugins.jstl:org.apache.jasper.tagplugins.jstl.core:org.apache.jasper.util:org.apache.jasper.xmlparser:org.apache.naming:org.apache.naming.resources:org.apache.naming.resources.jndi:org.apache.tomcat:org.apache.tomcat.bayeux:org.apache.tomcat.bayeux.request:org.apache.tomcat.jni:org.apache.tomcat.util:org.apache.tomcat.util.buf:org.apache.tomcat.util.http:org.apache.tomcat.util.http.fileupload:org.apache.tomcat.util.http.fileupload.disk:org.apache.tomcat.util.http.fileupload.servlet:org.apache.tomcat.util.http.fileupload.util:org.apache.tomcat.util.http.mapper:org.apache.tomcat.util.json:org.apache.tomcat.util.modeler:org.apache.tomcat.util.modeler.modules:org.apache.tomcat.util.net:org.apache.tomcat.util.net.jsse:org.apache.tomcat.util.res:org.jboss.servlet.http:org.jboss.web.php:org.jboss.web.rewrite</packages>
                                         </group>
                                         <group>
-                                            <title>Module org.jboss.as.weld</title>
-                                            <packages>org.jboss.as.weld:org.jboss.as.weld.arquillian:org.jboss.as.weld.deployment:org.jboss.as.weld.deployment.processors:org.jboss.as.weld.ejb:org.jboss.as.weld.injection:org.jboss.as.weld.services:org.jboss.as.weld.services.bootstrap:org.jboss.as.weld.util:org.jboss.as.weld.webtier.jsf:org.jboss.as.weld.webtier.jsp</packages>
-                                        </group>
-                                        <group>
                                             <title>Module org.jboss.classfilewriter</title>
                                             <packages>META-INF.mavenfilewriter.:META-INF.mavenfilewriter.jboss-classfilewriter.:META-INF.mavenfilewriter.jboss-classfilewriter.pom.properties:META-INF.mavenfilewriter.jboss-classfilewriter.pom.xml:org.jboss.classfilewriter:org.jboss.classfilewriter.:org.jboss.classfilewriter.annotations:org.jboss.classfilewriter.annotations.:org.jboss.classfilewriter.attributes:org.jboss.classfilewriter.attributes.:org.jboss.classfilewriter.code:org.jboss.classfilewriter.code.:org.jboss.classfilewriter.constpool:org.jboss.classfilewriter.constpool.:org.jboss.classfilewriter.util:org.jboss.classfilewriter.util.</packages>
                                         </group>
@@ -1739,14 +1714,6 @@
                                         <group>
                                             <title>Module org.jboss.security.xacml</title>
                                             <packages>org.jboss.security.xacml.bridge:org.jboss.security.xacml.core:org.jboss.security.xacml.core.ext:org.jboss.security.xacml.core.model.context:org.jboss.security.xacml.core.model.policy:org.jboss.security.xacml.factories:org.jboss.security.xacml.interfaces:org.jboss.security.xacml.jaxb:org.jboss.security.xacml.locators:org.jboss.security.xacml.locators.attrib:org.jboss.security.xacml.locators.cache:org.jboss.security.xacml.locators.policy:org.jboss.security.xacml.sunxacml:org.jboss.security.xacml.sunxacml.attr:org.jboss.security.xacml.sunxacml.attr.proxy:org.jboss.security.xacml.sunxacml.combine:org.jboss.security.xacml.sunxacml.cond:org.jboss.security.xacml.sunxacml.cond.cluster:org.jboss.security.xacml.sunxacml.ctx:org.jboss.security.xacml.sunxacml.finder:org.jboss.security.xacml.sunxacml.finder.impl:org.jboss.security.xacml.sunxacml.support:org.jboss.security.xacml.sunxacml.support.finder:org.jboss.security.xacml.util</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.weld.core</title>
-                                            <packages>org.jboss.weld:org.jboss.weld.bean:org.jboss.weld.bean.builtin:org.jboss.weld.bean.builtin.ee:org.jboss.weld.bean.interceptor:org.jboss.weld.bean.proxy:org.jboss.weld.bean.proxy.util:org.jboss.weld.bootstrap:org.jboss.weld.bootstrap.events:org.jboss.weld.context:org.jboss.weld.context.beanstore:org.jboss.weld.context.beanstore.ejb:org.jboss.weld.context.beanstore.http:org.jboss.weld.context.bound:org.jboss.weld.context.cache:org.jboss.weld.context.conversation:org.jboss.weld.context.ejb:org.jboss.weld.context.http:org.jboss.weld.context.unbound:org.jboss.weld.ejb:org.jboss.weld.el:org.jboss.weld.event:org.jboss.weld.exceptions:org.jboss.weld.injection:org.jboss.weld.interceptor:org.jboss.weld.interceptor.builder:org.jboss.weld.interceptor.proxy:org.jboss.weld.interceptor.reader:org.jboss.weld.interceptor.reader.cache:org.jboss.weld.interceptor.spi.context:org.jboss.weld.interceptor.spi.instance:org.jboss.weld.interceptor.spi.metadata:org.jboss.weld.interceptor.spi.model:org.jboss.weld.interceptor.util:org.jboss.weld.interceptor.util.proxy:org.jboss.weld.introspector:org.jboss.weld.introspector.jlr:org.jboss.weld.jsf:org.jboss.weld.literal:org.jboss.weld.logging:org.jboss.weld.logging.messages:org.jboss.weld.manager:org.jboss.weld.metadata:org.jboss.weld.metadata.cache:org.jboss.weld.persistence:org.jboss.weld.resolution:org.jboss.weld.resources:org.jboss.weld.serialization:org.jboss.weld.servlet:org.jboss.weld.util:org.jboss.weld.util.bytecode:org.jboss.weld.util.collections:org.jboss.weld.util.dom:org.jboss.weld.util.el:org.jboss.weld.util.reflection:org.jboss.weld.util.reflection.instantiation:org.jboss.weld.ws:org.jboss.weld.xml</packages>
-                                        </group>
-                                        <group>
-                                            <title>Module org.jboss.weld.spi</title>
-                                            <packages>org.jboss.weld.bootstrap.api:org.jboss.weld.bootstrap.api.helpers:org.jboss.weld.bootstrap.spi:org.jboss.weld.bootstrap.spi.helpers:org.jboss.weld.context.api:org.jboss.weld.ejb.api:org.jboss.weld.ejb.spi:org.jboss.weld.ejb.spi.helpers:org.jboss.weld.injection.spi:org.jboss.weld.injection.spi.helpers:org.jboss.weld.manager.api:org.jboss.weld.resources.spi:org.jboss.weld.resources.spi.helpers:org.jboss.weld.security.spi:org.jboss.weld.serialization.spi:org.jboss.weld.serialization.spi.helpers:org.jboss.weld.servlet.api:org.jboss.weld.servlet.api.helpers:org.jboss.weld.transaction.spi:org.jboss.weld.validation.spi</packages>
                                         </group>
                                         <group>
                                             <title>Module org.jboss.xb</title>
