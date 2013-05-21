@@ -472,14 +472,42 @@
             <maven-resource group="net.jcip" artifact="jcip-annotations"/>
         </module-def>
 
+        <module-def name="org.apache.commons.beanutils">
+            <maven-resource group="commons-beanutils" artifact="commons-beanutils"/>
+        </module-def>
+
         <module-def name="org.apache.commons.cli">
             <maven-resource group="commons-cli" artifact="commons-cli"/>
+        </module-def>
+
+        <module-def name="org.apache.commons.codec">
+            <maven-resource group="commons-codec" artifact="commons-codec"/>
+        </module-def>
+
+        <module-def name="org.apache.commons.collections">
+            <maven-resource group="commons-collections" artifact="commons-collections" />
+        </module-def>
+
+      <module-def name="org.apache.commons.configuration">
+          <maven-resource group="commons-configuration" artifact="commons-configuration" />
+      </module-def>
+
+        <module-def name="org.apache.commons.io">
+            <maven-resource group="commons-io" artifact="commons-io"/>
+        </module-def>
+
+        <module-def name="org.apache.commons.lang">
+            <maven-resource group="commons-lang" artifact="commons-lang"/>
         </module-def>
 
         <module-def name="org.apache.commons.logging"/>
 
         <module-def name="org.apache.commons.pool">
             <maven-resource group="commons-pool" artifact="commons-pool"/>
+        </module-def>
+
+        <module-def name="org.apache.velocity">
+            <maven-resource group="org.apache.velocity" artifact="velocity" />
         </module-def>
 
         <module-def name="org.apache.xalan">

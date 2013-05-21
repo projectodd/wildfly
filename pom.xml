@@ -1116,9 +1116,65 @@
             </dependency>
 
             <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${version.commons-beanutils}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
                 <groupId>commons-cli</groupId>
                 <artifactId>commons-cli</artifactId>
                 <version>${version.commons-cli}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${version.commons-codec}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-configuration</groupId>
+                <artifactId>commons-configuration</artifactId>
+                <version>${version.commons-configuration}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-beanutils</groupId>
+                        <artifactId>commons-beanutils-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-digester</groupId>
+                        <artifactId>commons-digester</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${version.commons-collections}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${version.commons-io}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${version.commons-lang}</version>
             </dependency>
 
             <dependency>
@@ -1313,6 +1369,18 @@
                 <groupId>net.jcip</groupId>
                 <artifactId>jcip-annotations</artifactId>
                 <version>${version.net.jcip}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>${version.org.apache.velocity}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>oro</groupId>
+                        <artifactId>oro</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
