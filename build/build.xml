@@ -319,24 +319,8 @@
           ~ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
           -->
 
-        <module-def name="org.antlr">
-            <maven-resource group="antlr" artifact="antlr" />
-        </module-def>
-
-        <module-def name="asm.asm">
-            <maven-resource group="asm" artifact="asm" />
-        </module-def>
-
-        <module-def name="ch.qos.cal10n">
-            <maven-resource group="ch.qos.cal10n" artifact="cal10n-api"/>
-        </module-def>
-
         <module-def name="com.github.relaxng">
             <maven-resource group="com.github.relaxng" artifact="relaxngDatatype" />
-        </module-def>
-
-        <module-def name="com.google.guava">
-            <maven-resource group="com.google.guava" artifact="guava" />
         </module-def>
 
         <module-def name="com.h2database.h2">
@@ -363,14 +347,6 @@
 
         <module-def name="com.sun.xsom">
             <maven-resource group="com.sun.xsom" artifact="xsom"/>
-        </module-def>
-
-        <module-def name="org.dom4j">
-            <maven-resource group="dom4j" artifact="dom4j" />
-        </module-def>
-
-        <module-def name="gnu.getopt">
-            <maven-resource group="gnu-getopt" artifact="getopt" />
         </module-def>
 
         <module-def name="javaee.api"/>
@@ -427,10 +403,6 @@
             <maven-resource group="org.jboss.spec.javax.resource" artifact="jboss-connector-api_1.6_spec"/>
         </module-def>
 
-        <module-def name="javax.rmi.api">
-            <maven-resource group="org.jboss.spec.javax.rmi" artifact="jboss-rmi-api_1.0_spec"/>
-        </module-def>
-
         <module-def name="javax.security.auth.message.api">
             <maven-resource group="org.jboss.spec.javax.security.auth.message" artifact="jboss-jaspi-api_1.0_spec"/>
         </module-def>
@@ -477,10 +449,6 @@
             <maven-resource group="net.jcip" artifact="jcip-annotations"/>
         </module-def>
 
-        <module-def name="org.apache.commons.beanutils">
-            <maven-resource group="commons-beanutils" artifact="commons-beanutils"/>
-        </module-def>
-
         <module-def name="org.apache.commons.cli">
             <maven-resource group="commons-cli" artifact="commons-cli"/>
         </module-def>
@@ -489,17 +457,9 @@
             <maven-resource group="commons-codec" artifact="commons-codec"/>
         </module-def>
 
-        <module-def name="org.apache.commons.collections">
-            <maven-resource group="commons-collections" artifact="commons-collections" />
-        </module-def>
-
       <module-def name="org.apache.commons.configuration">
           <maven-resource group="commons-configuration" artifact="commons-configuration" />
       </module-def>
-
-        <module-def name="org.apache.commons.io">
-            <maven-resource group="commons-io" artifact="commons-io"/>
-        </module-def>
 
         <module-def name="org.apache.commons.lang">
             <maven-resource group="commons-lang" artifact="commons-lang"/>
@@ -511,10 +471,6 @@
             <maven-resource group="commons-pool" artifact="commons-pool"/>
         </module-def>
 
-        <module-def name="org.apache.velocity">
-            <maven-resource group="org.apache.velocity" artifact="velocity" />
-        </module-def>
-
         <module-def name="org.apache.xalan">
             <maven-resource group="xalan" artifact="serializer"/>
             <maven-resource group="xalan" artifact="xalan"/>
@@ -524,28 +480,6 @@
             <maven-resource group="xerces" artifact="xercesImpl"/>
         </module-def>
 
-        <module-def name="org.apache.xml-resolver">
-            <maven-resource group="xml-resolver" artifact="xml-resolver"/>
-        </module-def>
-
-        <module-def name="org.codehaus.woodstox">
-            <maven-resource group="org.codehaus.woodstox" artifact="woodstox-core-asl" />
-            <maven-resource group="org.codehaus.woodstox" artifact="stax2-api" />
-        </module-def>
-
-        <module-def name="org.hibernate">
-            <maven-resource group="org.hibernate" artifact="hibernate-core" />
-            <maven-resource group="org.hibernate" artifact="hibernate-entitymanager" />
-            <maven-resource group="org.hibernate" artifact="hibernate-infinispan"/>
-        </module-def>
-
-        <module-def name="org.hibernate.commons-annotations">
-            <maven-resource group="org.hibernate.common" artifact="hibernate-commons-annotations"/>
-        </module-def>
-
-        <module-def name="org.hibernate.envers">
-            <maven-resource group="org.hibernate" artifact="hibernate-envers"/>
-        </module-def>
         <module-def name="org.hibernate.validator">
             <maven-resource group="org.hibernate" artifact="hibernate-validator"/>
         </module-def>
@@ -579,19 +513,9 @@
             <maven-resource group="org.infinispan" artifact="infinispan-client-hotrod" />
         </module-def>
 
-        <module-def name="org.javassist">
-            <maven-resource group="org.javassist" artifact="javassist"/>
-        </module-def>
-
         <module-def name="org.jaxen">
             <maven-resource group="jaxen" artifact="jaxen"/>
         </module-def>
-
-        <module-def name="org.jdom">
-            <maven-resource group="org.jdom" artifact="jdom"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.aggregate" />
 
         <module-def name="org.jboss.as.cli">
             <maven-resource group="org.jboss.as" artifact="jboss-as-cli"/>
@@ -625,10 +549,6 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-clustering-service"/>
         </module-def>
 
-        <module-def name="org.jboss.as.clustering.singleton">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-clustering-singleton"/>
-        </module-def>
-
         <module-def name="org.jboss.as.clustering.web.infinispan">
             <maven-resource group="org.jboss.as" artifact="jboss-as-clustering-web-infinispan"/>
         </module-def>
@@ -651,20 +571,12 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-ee"/>
         </module-def>
 
-        <module-def name="org.jboss.as.ee.deployment">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-ee-deployment"/>
-        </module-def>
-
         <module-def name="org.jboss.as.host-controller">
             <maven-resource group="org.jboss.as" artifact="jboss-as-host-controller"/>
         </module-def>
 
         <module-def name="org.jboss.as.logging">
             <maven-resource group="org.jboss.as" artifact="jboss-as-logging"/>
-        </module-def>
-
-        <module-def name="org.jboss.as.mail">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-mail"/>
         </module-def>
 
         <module-def name="org.jboss.as.management-client-content">
@@ -691,10 +603,6 @@
             <maven-resource group="org.jboss.as" artifact="jboss-as-security"/>
         </module-def>
 
-    	<module-def name="org.jboss.as.system-jmx">
-            <maven-resource group="org.jboss.as" artifact="jboss-as-system-jmx"/>
-        </module-def>
-
         <module-def name="org.jboss.as.transactions">
             <maven-resource group="org.jboss.as" artifact="jboss-as-transactions"/>
         </module-def>
@@ -715,16 +623,8 @@
             <maven-resource group="org.jboss.classfilewriter" artifact="jboss-classfilewriter"/>
         </module-def>
 
-        <module-def name="org.jboss.integration.ext-content">
-            <!-- Bundling external content into deployments -->
-        </module-def>
-
         <module-def name="org.jboss.jboss-transaction-spi">
             <maven-resource group="org.jboss" artifact="jboss-transaction-spi"/>
-        </module-def>
-
-        <module-def name="org.jboss.iiop-client">
-            <maven-resource group="org.jboss" artifact="jboss-iiop-client"/>
         </module-def>
 
         <module-def name="org.jboss.ironjacamar.api">
@@ -807,10 +707,6 @@
             <maven-resource group="org.slf4j" artifact="jcl-over-slf4j"/>
         </module-def>
 
-        <module-def name="org.scannotation.scannotation">
-            <maven-resource group="org.scannotation" artifact="scannotation"/>
-        </module-def>
-
         <module-def name="org.slf4j">
             <maven-resource group="org.slf4j" artifact="slf4j-api"/>
         </module-def>
@@ -821,18 +717,6 @@
 
         <module-def name="org.slf4j.ext">
             <maven-resource group="org.slf4j" artifact="slf4j-ext"/>
-        </module-def>
-
-        <module-def name="org.yaml.snakeyaml">
-            <maven-resource group="org.yaml" artifact="snakeyaml"/>
-        </module-def>
-
-        <module-def name="javax.wsdl4j.api">
-            <maven-resource group="wsdl4j" artifact="wsdl4j"/>
-        </module-def>
-
-        <module-def name="nu.xom">
-            <maven-resource group="xom" artifact="xom"/>
         </module-def>
 
         <module-def name="sun.jdk"/>
