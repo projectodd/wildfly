@@ -10,14 +10,12 @@
       <subsystem>configuration/subsystems/jca.xml</subsystem>
       <subsystem>configuration/subsystems/jgroups.xml</subsystem>
       <subsystem>configuration/subsystems/jmx.xml</subsystem>
-      <subsystem>configuration/subsystems/mail.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/messaging.xml</subsystem>
       <subsystem>configuration/subsystems/modcluster.xml</subsystem>
       <subsystem>configuration/subsystems/naming.xml</subsystem>
       <subsystem>configuration/subsystems/remoting.xml</subsystem>
       <subsystem>configuration/subsystems/resource-adapters.xml</subsystem>
       <subsystem supplement="standalone">configuration/subsystems/security.xml</subsystem>
-      <subsystem>configuration/subsystems/threads.xml</subsystem>
       <subsystem>configuration/subsystems/transactions.xml</subsystem>
       <subsystem supplement="ha">configuration/subsystems/web.xml</subsystem>
    </subsystems>
