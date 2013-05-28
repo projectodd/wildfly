@@ -596,10 +596,6 @@
         	<maven-resource group="org.jboss.security" artifact="jboss-negotiation-spnego"/>
         </module-def>
 
-        <module-def name="org.jboss.security.xacml">
-            <maven-resource group="org.jboss.security" artifact="jbossxacml"/>
-        </module-def>
-
         <module-def name="org.jgroups">
             <maven-resource group="org.jgroups" artifact="jgroups"/>
         </module-def>

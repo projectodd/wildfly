@@ -38,6 +38,5 @@
         <module name="javax.xml.stream.api"/>
         <module name="org.jboss.logging"/>
         <module name="org.infinispan"/>
-        <module name="org.jboss.security.xacml"/>
     </dependencies>
 </module>
