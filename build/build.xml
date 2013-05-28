@@ -34,13 +34,10 @@
                 <include name="LICENSE.txt"/>
                 <include name="README.txt"/>
                 <include name="copyright.txt"/>
-                <include name="appclient/**"/>
                 <include name="bin/**"/>
-                <include name="docs/**"/>
                 <include name="domain/**"/>
                 <include name="standalone/configuration/**.properties"/>
                 <include name="standalone/deployments/**"/>
-                <include name="welcome-content/**"/>
             </fileset>
         	   <fileset dir="${generated.configs}">
         	   	 <include name="domain/**"/>
@@ -87,51 +84,6 @@
          <!-- This is directory is used by the SASL transparent auth mechanism to validate local user access -->
         <chmod perm="700" dir="${output.dir}/domain/tmp/auth"/>
         <chmod perm="700" dir="${output.dir}/standalone/tmp/auth"/>
-    </target>
-
-    <target name="create-ext-content">
-        <mkdir dir="${output.dir}/modules/system/layers/base/org/jboss/integration/ext-content/main/bundled"/>
-        <copy file="${org.jboss.seam.integration:jboss-seam-int-jbossas:jar}" tofile="${output.dir}/modules/system/layers/base/org/jboss/integration/ext-content/main/bundled/jboss-seam-int.jar"/>
-
-        <!-- Copy the jboss-metadata-ear specific schemas to the JBOSS_HOME/docs/schema folder -->
-        <unzip src="${org.jboss.metadata:jboss-metadata-ear:jar}" dest="${output.dir}/docs/schema/">
-            <patternset>
-                <include name="dtd/*.dtd"/>
-                <include name="schema/*.xsd"/>
-                <exclude name="schema/jboss-app_6_0.xsd"/>
-            </patternset>
-            <mapper type="flatten"/>
-        </unzip>
-
-        <!-- Copy the jboss-metadata-common specific schemas to the JBOSS_HOME/docs/schema folder -->
-        <unzip src="${org.jboss.metadata:jboss-metadata-common:jar}" dest="${output.dir}/docs/schema/">
-            <patternset>
-                <include name="dtd/*.dtd"/>
-                <include name="schema/*.xsd"/>
-                <exclude name="dtd/XMLSchema.dtd"/>
-                <exclude name="dtd/datatypes.dtd"/>
-                <exclude name="schema/xml.xsd"/>
-            </patternset>
-            <mapper type="flatten"/>
-        </unzip>
-
-        <!-- Copy the jboss-metadata-web specific schemas to the JBOSS_HOME/docs/schema folder -->
-        <unzip src="${org.jboss.metadata:jboss-metadata-web:jar}" dest="${output.dir}/docs/schema/">
-            <patternset>
-                <include name="dtd/*.dtd"/>
-                <include name="schema/*.xsd"/>
-            </patternset>
-            <mapper type="flatten"/>
-        </unzip>
-
-        <!-- Copy the JBoss Modules specific schemas to the JBOSS_HOME/docs/schema folder -->
-        <unzip src="${org.jboss.modules:jboss-modules:jar}" dest="${output.dir}/docs/schema/">
-            <patternset>
-                <include name="schema/*.xsd"/>
-            </patternset>
-            <mapper type="flatten"/>
-        </unzip>
-
     </target>
 
     <target name="copy-client">
@@ -746,5 +698,5 @@
         <delete file="maven-ant-tasks.jar"/>
     </target>
 
-    <target name="all" depends="base, copy-standalone, modules, bundles, create-ext-content, copy-client"/>
+    <target name="all" depends="base, copy-standalone, modules, bundles, copy-client"/>
 </project>
