@@ -140,6 +140,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.eclipse.jdt.core.compiler</groupId>
+            <artifactId>ecj</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.jboss.web</groupId>
             <artifactId>jbossweb</artifactId>
         </dependency>
