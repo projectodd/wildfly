@@ -287,11 +287,6 @@
             <maven-resource group="com.sun.istack" artifact="istack-commons-tools"/>
         </module-def>
 
-        <module-def name="com.sun.xml.bind">
-            <maven-resource group="com.sun.xml.bind" artifact="jaxb-impl"/>
-            <maven-resource group="com.sun.xml.bind" artifact="jaxb-xjc"/>
-        </module-def>
-
         <module-def name="com.sun.xml.txw2">
             <maven-resource group="com.sun.xml.txw2" artifact="txw2"/>
         </module-def>
@@ -380,10 +375,6 @@
 
         <module-def name="javax.validation.api">
             <maven-resource group="javax.validation" artifact="validation-api"/>
-        </module-def>
-
-        <module-def name="javax.xml.bind.api">
-            <maven-resource group="org.jboss.spec.javax.xml.bind" artifact="jboss-jaxb-api_2.2_spec"/>
         </module-def>
 
         <module-def name="javax.xml.jaxp-provider"/>

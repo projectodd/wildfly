@@ -24,6 +24,5 @@
     <dependencies>
         <module name="org.apache.xalan" services="import"/>
         <module name="org.apache.xerces" services="import"/>
-        <module name="org.codehaus.woodstox" services="import"/>
     </dependencies>
 </module>

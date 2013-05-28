@@ -34,13 +34,11 @@
     <dependencies>
         <module name="javax.annotation.api"/>
         <module name="javax.api"/>
-        <module name="javax.ejb.api" optional="true"/>
         <module name="javax.interceptor.api" optional="true"/>
         <module name="javax.jws.api" optional="true"/>
         <module name="javax.persistence.api" optional="true"/>
         <module name="javax.servlet.api" optional="true"/>
         <module name="javax.servlet.jsp.api" optional="true"/>
-        <module name="javax.xml.bind.api" optional="true"/>
         <module name="org.jboss.ejb3" optional="true"/>
         <module name="org.jboss.staxmapper"/>
         <module name="org.jboss.logging"/>
