@@ -876,12 +876,6 @@
 
             <dependency>
                 <groupId>org.jboss.as</groupId>
-                <artifactId>jboss-as-mail</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.as</groupId>
                 <artifactId>jboss-as-messaging</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -2808,7 +2802,6 @@
                 <module>ee-deployment</module>
                 <module>host-controller</module>
                 <module>logging</module>
-                <module>mail</module>
                 <module>messaging</module>
                 <module>modcluster</module>
                 <module>naming</module>
