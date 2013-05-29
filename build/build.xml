@@ -624,17 +624,6 @@
 
     </target>
 
-    <target name="bundles">
-
-        <bundle-def name="javax.servlet.api" slot="v25">
-            <maven-bundle group="org.jboss.spec.javax.servlet" artifact="jboss-servlet-api_2.5_spec"/>
-        </bundle-def>
-
-        <bundle-def name="org.projectodd.stilts">
-            <maven-bundle group="org.projectodd.stilts" artifact="stilts-stomplet-server-bundle"/>
-        </bundle-def>
-    </target>
-
     <target name="clean-target">
         <delete dir="${output.dir}"/>
     </target>
@@ -643,5 +632,5 @@
         <delete file="maven-ant-tasks.jar"/>
     </target>
 
-    <target name="all" depends="base, copy-standalone, modules, bundles, copy-client"/>
+    <target name="all" depends="base, copy-standalone, modules, copy-client"/>
 </project>
