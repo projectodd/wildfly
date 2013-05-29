@@ -135,17 +135,6 @@ class WebVirtualHostAdd extends AbstractAddStepHandler {
 
         serviceBuilder.addListener(verificationHandler);
         newControllers.add(serviceBuilder.install());
-
-        if (welcome) {
-            final WelcomeContextService welcomeService = new WelcomeContextService(HOME_DIR);
-            newControllers.add(context.getServiceTarget().addService(WebSubsystemServices.JBOSS_WEB.append(name).append("welcome"), welcomeService)
-                    .addDependency(PathManagerService.SERVICE_NAME, PathManager.class, welcomeService.getPathManagerInjector())
-                    .addDependency(WebSubsystemServices.JBOSS_WEB_HOST.append(name), VirtualHost.class, welcomeService.getHostInjector())
-                    .addDependency(ServiceBuilder.DependencyType.OPTIONAL, HttpManagementService.SERVICE_NAME, HttpManagement.class, welcomeService.getHttpManagementInjector())
-                    .addListener(verificationHandler)
-                    .setInitialMode(ServiceController.Mode.ACTIVE)
-                    .install());
-        }
     }
 
     static String[] aliases(final ModelNode node) {
