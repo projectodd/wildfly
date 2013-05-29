@@ -31,7 +31,6 @@ import org.jboss.as.connector.metadata.deployment.ResourceAdapterDeployment;
 import org.jboss.as.connector.services.resourceadapters.deployment.registry.ResourceAdapterDeploymentRegistry;
 import org.jboss.as.connector.services.resourceadapters.ConnectionFactoryReferenceFactoryService;
 import org.jboss.as.connector.subsystems.jca.JcaSubsystemConfiguration;
-import org.jboss.as.connector.util.JCAValidatorFactory;
 import org.jboss.as.connector.util.Injection;
 import org.jboss.as.naming.ManagedReferenceFactory;
 import org.jboss.as.naming.ServiceBasedNamingStore;
@@ -506,7 +505,7 @@ public abstract class AbstractResourceAdapterDeploymentService {
 
         @Override
         protected BeanValidation getBeanValidation() {
-            return new BeanValidation(new JCAValidatorFactory(cl));
+            return null;
         }
     }
 

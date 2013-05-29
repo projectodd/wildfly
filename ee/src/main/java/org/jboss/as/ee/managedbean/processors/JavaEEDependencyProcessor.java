@@ -47,8 +47,6 @@ public class JavaEEDependencyProcessor implements DeploymentUnitProcessor {
 
     private static ModuleIdentifier JAVAEE_API_ID = ModuleIdentifier.create("javaee.api");
 
-    private static ModuleIdentifier HIBERNATE_VALIDATOR_ID = ModuleIdentifier.create("org.hibernate.validator");
-
     private static ModuleIdentifier JBOSS_INVOCATION_ID = ModuleIdentifier.create("org.jboss.invocation");
     private static ModuleIdentifier JBOSS_AS_EE = ModuleIdentifier.create("org.jboss.as.ee");
 
@@ -66,8 +64,6 @@ public class JavaEEDependencyProcessor implements DeploymentUnitProcessor {
 
         final ModuleLoader moduleLoader = Module.getBootModuleLoader();
         moduleSpecification.addSystemDependency(new ModuleDependency(moduleLoader, JAVAEE_API_ID, false, false, true, false));
-        // TODO: Post 7.0, we have to rethink this whole hibernate dependencies that we add to user deployments
-        moduleSpecification.addSystemDependency(new ModuleDependency(moduleLoader, HIBERNATE_VALIDATOR_ID, false, false, true, false));
 
         //add jboss-invocation classes needed by the proxies
         ModuleDependency invocation = new ModuleDependency(moduleLoader, JBOSS_INVOCATION_ID, false, false, false, false);
