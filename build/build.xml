@@ -592,10 +592,6 @@
             <maven-resource group="org.jgroups" artifact="jgroups"/>
         </module-def>
 
-        <module-def name="org.joda.time">
-            <maven-resource group="joda-time" artifact="joda-time"/>
-        </module-def>
-
         <module-def name="org.picketbox">
             <maven-resource group="org.picketbox" artifact="picketbox"/>
             <maven-resource group="org.picketbox" artifact="picketbox-infinispan"/>
