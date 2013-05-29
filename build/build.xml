@@ -374,10 +374,6 @@
             <maven-resource group="commons-codec" artifact="commons-codec"/>
         </module-def>
 
-      <module-def name="org.apache.commons.configuration">
-          <maven-resource group="commons-configuration" artifact="commons-configuration" />
-      </module-def>
-
         <module-def name="org.apache.commons.lang">
             <maven-resource group="commons-lang" artifact="commons-lang"/>
         </module-def>
