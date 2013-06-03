@@ -270,10 +270,6 @@
           ~ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
           -->
 
-        <module-def name="com.h2database.h2">
-            <maven-resource group="com.h2database" artifact="h2"/>
-        </module-def>
-
         <module-def name="javaee.api"/>
 
         <module-def name="javax.activation.api">
