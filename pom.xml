@@ -26,7 +26,7 @@
     <parent>
       <groupId>org.jboss</groupId>
       <artifactId>jboss-parent</artifactId>
-      <version>10</version>
+      <version>11</version>
     </parent>
 
     <groupId>org.jboss.as</groupId>
@@ -59,8 +59,11 @@
         <jboss.as.scm.url>https://github.com/projectodd/wildfly</jboss.as.scm.url>
         <jboss.as.scm.connection>git@github.com:projectodd/wildfly.git</jboss.as.scm.connection>
 
-        <!-- Build configuration -->
-        <version.surefire.plugin>2.11</version.surefire.plugin>
+        <!-- 
+            Build configuration.  Override JBoss Parent settings as necessary.
+            For example: <version.surefire.plugin>2.11</version.surefire.plugin>
+          -->
+
         <!--
             Dependency versions. Please keep alphabetical.
 
