@@ -100,6 +100,12 @@
                 <path name="javax/swing/undo"/>
                 <path name="javax/tools"/>
                 <path name="javax/xml"/>
+                <path name="javax/xml/bind"/>
+                <path name="javax/xml/bind/annotation"/>
+                <path name="javax/xml/bind/annotation/adapters"/>
+                <path name="javax/xml/bind/attachment"/>
+                <path name="javax/xml/bind/helpers"/>
+                <path name="javax/xml/bind/util"/>
                 <path name="javax/xml/crypto"/>
                 <path name="javax/xml/crypto/dom"/>
                 <path name="javax/xml/crypto/dsig"/>
@@ -109,6 +115,7 @@
                 <path name="javax/xml/datatype"/>
                 <path name="javax/xml/namespace"/>
                 <path name="javax/xml/parsers"/>
+                <path name="javax/xml/soap"/>
                 <path name="javax/xml/stream"/>
                 <path name="javax/xml/stream/events"/>
                 <path name="javax/xml/stream/util"/>
@@ -118,6 +125,14 @@
                 <path name="javax/xml/transform/stax"/>
                 <path name="javax/xml/transform/stream"/>
                 <path name="javax/xml/validation"/>
+                <path name="javax/xml/ws"/>
+                <path name="javax/xml/ws/handler"/>
+                <path name="javax/xml/ws/handler/soap"/>
+                <path name="javax/xml/ws/http"/>
+                <path name="javax/xml/ws/soap"/>
+                <path name="javax/xml/ws/spi"/>
+                <path name="javax/xml/ws/spi/http"/>
+                <path name="javax/xml/ws/wsaddressing"/>
                 <path name="javax/xml/xpath"/>
                 <path name="org/ietf/jgss"/>
                 <path name="org/w3c/dom"/>
