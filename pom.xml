@@ -56,8 +56,8 @@
          <!-- Release Info -->
         <jboss.as.release.version>${project.version}</jboss.as.release.version>
         <jboss.as.release.codename>Janus</jboss.as.release.codename>
-        <jboss.as.scm.url>https://github.com/jbossas/jboss-as</jboss.as.scm.url>
-        <jboss.as.scm.connection>git@github.com:jbossas/jboss-as.git</jboss.as.scm.connection>
+        <jboss.as.scm.url>https://github.com/projectodd/wildfly</jboss.as.scm.url>
+        <jboss.as.scm.connection>git@github.com:projectodd/wildfly.git</jboss.as.scm.connection>
 
         <!-- Build configuration -->
         <version.surefire.plugin>2.11</version.surefire.plugin>
