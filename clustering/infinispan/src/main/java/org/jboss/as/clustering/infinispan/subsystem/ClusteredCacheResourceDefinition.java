@@ -42,7 +42,7 @@ import org.jboss.dmr.ModelType;
  *
  * @author Richard Achmatowicz (c) 2011 Red Hat Inc.
  */
-public class ClusteredCacheResource extends CacheResource  {
+public class ClusteredCacheResourceDefinition extends CacheResourceDefinition {
 
     // attributes
     static final SimpleAttributeDefinition ASYNC_MARSHALLING =
@@ -91,7 +91,7 @@ public class ClusteredCacheResource extends CacheResource  {
     static final AttributeDefinition[] CLUSTERED_CACHE_ATTRIBUTES = { ASYNC_MARSHALLING, MODE, QUEUE_SIZE, QUEUE_FLUSH_INTERVAL, REMOTE_TIMEOUT};
 
 
-    public ClusteredCacheResource(PathElement pathElement, ResourceDescriptionResolver descriptionResolver, AbstractAddStepHandler addHandler, OperationStepHandler removeHandler, ResolvePathHandler resolvePathHandler) {
+    public ClusteredCacheResourceDefinition(PathElement pathElement, ResourceDescriptionResolver descriptionResolver, AbstractAddStepHandler addHandler, OperationStepHandler removeHandler, ResolvePathHandler resolvePathHandler) {
         super(pathElement, descriptionResolver, addHandler, removeHandler, resolvePathHandler);
     }
 

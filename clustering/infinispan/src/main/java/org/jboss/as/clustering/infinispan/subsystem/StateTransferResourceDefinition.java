@@ -22,52 +22,63 @@
 
 package org.jboss.as.clustering.infinispan.subsystem;
 
-import static org.jboss.as.controller.descriptions.ModelDescriptionConstants.ADD;
-
 import org.jboss.as.controller.AttributeDefinition;
-import org.jboss.as.controller.OperationDefinition;
 import org.jboss.as.controller.OperationStepHandler;
 import org.jboss.as.controller.PathElement;
 import org.jboss.as.controller.ReloadRequiredRemoveStepHandler;
 import org.jboss.as.controller.ReloadRequiredWriteAttributeHandler;
 import org.jboss.as.controller.SimpleAttributeDefinition;
 import org.jboss.as.controller.SimpleAttributeDefinitionBuilder;
-import org.jboss.as.controller.SimpleOperationDefinitionBuilder;
+import org.jboss.as.controller.SimpleResourceDefinition;
+import org.jboss.as.controller.client.helpers.MeasurementUnit;
 import org.jboss.as.controller.registry.AttributeAccess;
 import org.jboss.as.controller.registry.ManagementResourceRegistration;
-import org.jboss.as.controller.registry.OperationEntry;
+import org.jboss.dmr.ModelNode;
 import org.jboss.dmr.ModelType;
 
 /**
- * Resource description for the addressable resource /subsystem=infinispan/cache-container=X/cache=Y/store=STORE
+ * Resource description for the addressable resource /subsystem=infinispan/cache-container=X/cache=Y/state-transfer=STATE_TRANSFER
  *
  * @author Richard Achmatowicz (c) 2011 Red Hat Inc.
  */
-public class StoreResource extends BaseStoreResource {
+public class StateTransferResourceDefinition extends SimpleResourceDefinition {
 
-    public static final PathElement STORE_PATH = PathElement.pathElement(ModelKeys.STORE, ModelKeys.STORE_NAME);
+    public static final PathElement STATE_TRANSFER_PATH = PathElement.pathElement(ModelKeys.STATE_TRANSFER, ModelKeys.STATE_TRANSFER_NAME);
 
     // attributes
-    static final SimpleAttributeDefinition CLASS =
-            new SimpleAttributeDefinitionBuilder(ModelKeys.CLASS, ModelType.STRING, false)
-                    .setXmlName(Attribute.CLASS.getLocalName())
+    static final SimpleAttributeDefinition CHUNK_SIZE =
+            new SimpleAttributeDefinitionBuilder(ModelKeys.CHUNK_SIZE, ModelType.INT, true)
+                    .setXmlName(Attribute.CHUNK_SIZE.getLocalName())
                     .setAllowExpression(true)
                     .setFlags(AttributeAccess.Flag.RESTART_ALL_SERVICES)
+                    .setDefaultValue(new ModelNode().set(10000))
                     .build();
 
-    static final AttributeDefinition[] STORE_ATTRIBUTES = {CLASS};
+    // enabled (used in state transfer, rehashing)
+    static final SimpleAttributeDefinition ENABLED =
+            new SimpleAttributeDefinitionBuilder(ModelKeys.ENABLED, ModelType.BOOLEAN, true)
+                    .setXmlName(Attribute.ENABLED.getLocalName())
+                    .setAllowExpression(true)
+                    .setFlags(AttributeAccess.Flag.RESTART_ALL_SERVICES)
+                    .setDefaultValue(new ModelNode().set(true))
+                    .build();
 
-    // operations
-    private static final OperationDefinition STORE_ADD_DEFINITION = new SimpleOperationDefinitionBuilder(ADD, InfinispanExtension.getResourceDescriptionResolver(ModelKeys.STORE))
-        .setParameters(COMMON_STORE_PARAMETERS)
-        .addParameter(CLASS)
-        .setAttributeResolver(InfinispanExtension.getResourceDescriptionResolver(ModelKeys.STORE))
-        .build();
+    // timeout (used in state transfer, rehashing)
+    static final SimpleAttributeDefinition TIMEOUT =
+            new SimpleAttributeDefinitionBuilder(ModelKeys.TIMEOUT, ModelType.LONG, true)
+                    .setXmlName(Attribute.TIMEOUT.getLocalName())
+                    .setMeasurementUnit(MeasurementUnit.MILLISECONDS)
+                    .setAllowExpression(true)
+                    .setFlags(AttributeAccess.Flag.RESTART_ALL_SERVICES)
+                    .setDefaultValue(new ModelNode().set(60000))
+                    .build();
 
-    public StoreResource() {
-        super(STORE_PATH,
-                InfinispanExtension.getResourceDescriptionResolver(ModelKeys.STORE),
-                CacheConfigOperationHandlers.STORE_ADD,
+    static final AttributeDefinition[] STATE_TRANSFER_ATTRIBUTES = {ENABLED, TIMEOUT, CHUNK_SIZE};
+
+    public StateTransferResourceDefinition() {
+        super(STATE_TRANSFER_PATH,
+                InfinispanExtension.getResourceDescriptionResolver(ModelKeys.STATE_TRANSFER),
+                CacheConfigOperationHandlers.STATE_TRANSFER_ADD,
                 ReloadRequiredRemoveStepHandler.INSTANCE);
     }
 
@@ -76,8 +87,8 @@ public class StoreResource extends BaseStoreResource {
         super.registerAttributes(resourceRegistration);
 
         // check that we don't need a special handler here?
-        final OperationStepHandler writeHandler = new ReloadRequiredWriteAttributeHandler(STORE_ATTRIBUTES);
-        for (AttributeDefinition attr : STORE_ATTRIBUTES) {
+        final OperationStepHandler writeHandler = new ReloadRequiredWriteAttributeHandler(STATE_TRANSFER_ATTRIBUTES);
+        for (AttributeDefinition attr : STATE_TRANSFER_ATTRIBUTES) {
             resourceRegistration.registerReadWriteAttribute(attr, null, writeHandler);
         }
     }
@@ -85,11 +96,5 @@ public class StoreResource extends BaseStoreResource {
     @Override
     public void registerOperations(ManagementResourceRegistration resourceRegistration) {
         super.registerOperations(resourceRegistration);
-    }
-
-    // override the add operation to provide a custom definition (for the optional PROPERTIES parameter to add())
-    @Override
-    protected void registerAddOperation(final ManagementResourceRegistration registration, final OperationStepHandler handler, OperationEntry.Flag... flags) {
-        registration.registerOperationHandler(STORE_ADD_DEFINITION, handler);
     }
 }

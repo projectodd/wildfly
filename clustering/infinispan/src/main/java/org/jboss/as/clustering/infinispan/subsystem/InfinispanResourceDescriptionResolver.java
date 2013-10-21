@@ -93,38 +93,38 @@ public class InfinispanResourceDescriptionResolver extends StandardResourceDescr
 
     private void initMap() {
         // shared cache attributes
-        sharedAttributeResolver.put(CacheResource.BATCHING.getName(), "cache");
-        sharedAttributeResolver.put(CacheResource.CACHE_MODULE.getName(), "cache");
-        sharedAttributeResolver.put(CacheResource.INDEXING.getName(), "cache");
-        sharedAttributeResolver.put(CacheResource.INDEXING_PROPERTIES.getName(), "cache");
-        sharedAttributeResolver.put(CacheResource.JNDI_NAME.getName(), "cache");
-        sharedAttributeResolver.put(CacheResource.NAME.getName(), "cache");
-        sharedAttributeResolver.put(CacheResource.START.getName(), "cache");
+        sharedAttributeResolver.put(CacheResourceDefinition.BATCHING.getName(), "cache");
+        sharedAttributeResolver.put(CacheResourceDefinition.CACHE_MODULE.getName(), "cache");
+        sharedAttributeResolver.put(CacheResourceDefinition.INDEXING.getName(), "cache");
+        sharedAttributeResolver.put(CacheResourceDefinition.INDEXING_PROPERTIES.getName(), "cache");
+        sharedAttributeResolver.put(CacheResourceDefinition.JNDI_NAME.getName(), "cache");
+        sharedAttributeResolver.put(CacheResourceDefinition.NAME.getName(), "cache");
+        sharedAttributeResolver.put(CacheResourceDefinition.START.getName(), "cache");
 
-        sharedAttributeResolver.put(ClusteredCacheResource.ASYNC_MARSHALLING.getName(), "clustered-cache");
-        sharedAttributeResolver.put(ClusteredCacheResource.MODE.getName(), "clustered-cache");
-        sharedAttributeResolver.put(ClusteredCacheResource.QUEUE_FLUSH_INTERVAL.getName(), "clustered-cache");
-        sharedAttributeResolver.put(ClusteredCacheResource.QUEUE_SIZE.getName(), "clustered-cache");
-        sharedAttributeResolver.put(ClusteredCacheResource.REMOTE_TIMEOUT.getName(), "clustered-cache");
+        sharedAttributeResolver.put(ClusteredCacheResourceDefinition.ASYNC_MARSHALLING.getName(), "clustered-cache");
+        sharedAttributeResolver.put(ClusteredCacheResourceDefinition.MODE.getName(), "clustered-cache");
+        sharedAttributeResolver.put(ClusteredCacheResourceDefinition.QUEUE_FLUSH_INTERVAL.getName(), "clustered-cache");
+        sharedAttributeResolver.put(ClusteredCacheResourceDefinition.QUEUE_SIZE.getName(), "clustered-cache");
+        sharedAttributeResolver.put(ClusteredCacheResourceDefinition.REMOTE_TIMEOUT.getName(), "clustered-cache");
 
-        sharedAttributeResolver.put(BaseStoreResource.FETCH_STATE.getName(), "store");
-        sharedAttributeResolver.put(BaseStoreResource.PASSIVATION.getName(), "store");
-        sharedAttributeResolver.put(BaseStoreResource.PRELOAD.getName(), "store");
-        sharedAttributeResolver.put(BaseStoreResource.PURGE.getName(), "store");
-        sharedAttributeResolver.put(BaseStoreResource.SHARED.getName(), "store");
-        sharedAttributeResolver.put(BaseStoreResource.SINGLETON.getName(), "store");
-        sharedAttributeResolver.put(BaseStoreResource.PROPERTY.getName(), "store");
-        sharedAttributeResolver.put(BaseStoreResource.PROPERTIES.getName(), "store");
+        sharedAttributeResolver.put(BaseStoreResourceDefinition.FETCH_STATE.getName(), "store");
+        sharedAttributeResolver.put(BaseStoreResourceDefinition.PASSIVATION.getName(), "store");
+        sharedAttributeResolver.put(BaseStoreResourceDefinition.PRELOAD.getName(), "store");
+        sharedAttributeResolver.put(BaseStoreResourceDefinition.PURGE.getName(), "store");
+        sharedAttributeResolver.put(BaseStoreResourceDefinition.SHARED.getName(), "store");
+        sharedAttributeResolver.put(BaseStoreResourceDefinition.SINGLETON.getName(), "store");
+        sharedAttributeResolver.put(BaseStoreResourceDefinition.PROPERTY.getName(), "store");
+        sharedAttributeResolver.put(BaseStoreResourceDefinition.PROPERTIES.getName(), "store");
 
-        sharedAttributeResolver.put(BaseJDBCStoreResource.DATA_SOURCE.getName(), "jdbc-store");
-        sharedAttributeResolver.put(BaseJDBCStoreResource.BATCH_SIZE.getName(), "jdbc-store");
-        sharedAttributeResolver.put(BaseJDBCStoreResource.FETCH_SIZE.getName(), "jdbc-store");
-        sharedAttributeResolver.put(BaseJDBCStoreResource.PREFIX.getName(), "jdbc-store");
-        sharedAttributeResolver.put(BaseJDBCStoreResource.ID_COLUMN.getName() + ".column", "jdbc-store");
-        sharedAttributeResolver.put(BaseJDBCStoreResource.DATA_COLUMN.getName() + ".column", "jdbc-store");
-        sharedAttributeResolver.put(BaseJDBCStoreResource.TIMESTAMP_COLUMN.getName() + ".column", "jdbc-store");
-        sharedAttributeResolver.put(BaseJDBCStoreResource.ENTRY_TABLE.getName() + "table", "jdbc-store");
-        sharedAttributeResolver.put(BaseJDBCStoreResource.BUCKET_TABLE.getName() + "table", "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.DATA_SOURCE.getName(), "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.BATCH_SIZE.getName(), "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.FETCH_SIZE.getName(), "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.PREFIX.getName(), "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.ID_COLUMN.getName() + ".column", "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.DATA_COLUMN.getName() + ".column", "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.TIMESTAMP_COLUMN.getName() + ".column", "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.ENTRY_TABLE.getName() + "table", "jdbc-store");
+        sharedAttributeResolver.put(BaseJDBCStoreResourceDefinition.BUCKET_TABLE.getName() + "table", "jdbc-store");
 
         // shared children - this avoids having to describe the children for each parent resource
         sharedAttributeResolver.put(ModelKeys.TRANSPORT, null);
