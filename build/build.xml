@@ -270,6 +270,10 @@
           ~ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
           -->
 
+        <module-def name="com.google.protobuf">
+            <maven-resource group="com.google.protobuf" artifact="protobuf-java" />
+        </module-def>
+
         <module-def name="javaee.api"/>
 
         <module-def name="javax.activation.api">
@@ -406,6 +410,10 @@
             <maven-resource group="org.infinispan" artifact="infinispan-core"/>
         </module-def>
 
+        <module-def name="org.infinispan.commons">
+            <maven-resource group="org.infinispan" artifact="infinispan-commons"/>
+        </module-def>
+
         <module-def name="org.infinispan.cachestore.jdbc">
             <maven-resource group="org.infinispan" artifact="infinispan-cachestore-jdbc" />
         </module-def>
@@ -415,7 +423,10 @@
         </module-def>
 
         <module-def name="org.infinispan.client.hotrod">
-            <maven-resource group="org.infinispan" artifact="infinispan-client-hotrod" />
+            <maven-resource group="org.infinispan" artifact="infinispan-client-hotrod"/>
+            <maven-resource group="org.infinispan" artifact="infinispan-query-dsl"/>
+            <maven-resource group="org.infinispan" artifact="infinispan-remote-query-client"/>
+            <maven-resource group="org.infinispan.protostream" artifact="protostream"/>
         </module-def>
 
         <module-def name="org.jboss.as.cli">

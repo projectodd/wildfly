@@ -218,11 +218,6 @@
                 </dependency>
 
                 <dependency>
-                    <groupId>com.h2database</groupId>
-                    <artifactId>h2</artifactId>
-                </dependency>
-
-                <dependency>
                     <groupId>com.github.relaxng</groupId>
                     <artifactId>relaxngDatatype</artifactId>
                 </dependency>
@@ -230,6 +225,16 @@
                 <dependency>
                     <groupId>com.google.guava</groupId>
                     <artifactId>guava</artifactId>
+                </dependency>
+
+                <dependency>
+                    <groupId>com.google.protobuf</groupId>
+                    <artifactId>protobuf-java</artifactId>
+                </dependency>
+
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
                 </dependency>
 
                 <dependency>
@@ -464,7 +469,27 @@
 
                 <dependency>
                     <groupId>org.infinispan</groupId>
+                    <artifactId>infinispan-commons</artifactId>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.infinispan</groupId>
                     <artifactId>infinispan-core</artifactId>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.infinispan</groupId>
+                    <artifactId>infinispan-query-dsl</artifactId>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.infinispan</groupId>
+                    <artifactId>infinispan-remote-query-client</artifactId>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.infinispan.protostream</groupId>
+                    <artifactId>protostream</artifactId>
                 </dependency>
 
                 <dependency>
