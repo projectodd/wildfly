@@ -73,7 +73,7 @@ public class ChannelProvider implements JGroupsChannelLookup {
      * @see org.infinispan.remoting.transport.jgroups.JGroupsChannelLookup#shouldStartAndConnect()
      */
     @Override
-    public boolean shouldStartAndConnect() {
+    public boolean shouldConnect() {
         return true;
     }
 
@@ -82,7 +82,17 @@ public class ChannelProvider implements JGroupsChannelLookup {
      * @see org.infinispan.remoting.transport.jgroups.JGroupsChannelLookup#shouldStopAndDisconnect()
      */
     @Override
-    public boolean shouldStopAndDisconnect() {
+    public boolean shouldDisconnect() {
         return true;
     }
+
+    /**
+     * {@inheritDoc}
+     * @see org.infinispan.remoting.transport.jgroups.JGroupsChannelLookup#shouldClose()
+     */
+    @Override
+    public boolean shouldClose() {
+        return true;
+    }
+
 }
