@@ -304,7 +304,7 @@ public interface ServerLogger extends BasicLogger {
      *
      * @param prettyVersion  the server version.
      */
-    @LogMessage(level = INFO)
+    @LogMessage(level = Logger.Level.DEBUG)
     @Message(id = 15899, value = "%s starting")
     void serverStarting(String prettyVersion);
 

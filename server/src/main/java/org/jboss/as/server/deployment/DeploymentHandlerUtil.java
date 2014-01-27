@@ -129,12 +129,12 @@ public class DeploymentHandlerUtil {
                                         context.removeService(controller.getName());
                                     }
                                     if (context.hasFailureDescription()) {
-                                        ServerLogger.ROOT_LOGGER.deploymentRolledBack(deploymentUnitName, getFormattedFailureDescription(context));
+                                        ServerLogger.DEPLOYMENT_LOGGER.deploymentRolledBack(deploymentUnitName, getFormattedFailureDescription(context));
                                     } else {
-                                        ServerLogger.ROOT_LOGGER.deploymentRolledBackWithNoMessage(deploymentUnitName);
+                                        ServerLogger.DEPLOYMENT_LOGGER.deploymentRolledBackWithNoMessage(deploymentUnitName);
                                     }
                                 } else {
-                                    ServerLogger.ROOT_LOGGER.deploymentDeployed(managementName, deploymentUnitName);
+                                    ServerLogger.DEPLOYMENT_LOGGER.deploymentDeployed(managementName, deploymentUnitName);
                                 }
                             }
                         });
@@ -213,14 +213,14 @@ public class DeploymentHandlerUtil {
                                 public void handleResult(OperationContext.ResultAction resultAction, OperationContext context, ModelNode operation) {
                                     if (resultAction == OperationContext.ResultAction.ROLLBACK) {
                                         if (context.hasFailureDescription()) {
-                                            ServerLogger.ROOT_LOGGER.redeployRolledBack(deploymentUnitName, getFormattedFailureDescription(context));
+                                            ServerLogger.DEPLOYMENT_LOGGER.redeployRolledBack(deploymentUnitName, getFormattedFailureDescription(context));
                                             logged.set(true);
                                         } else {
-                                            ServerLogger.ROOT_LOGGER.redeployRolledBackWithNoMessage(deploymentUnitName);
+                                            ServerLogger.DEPLOYMENT_LOGGER.redeployRolledBackWithNoMessage(deploymentUnitName);
                                             logged.set(true);
                                         }
                                     } else {
-                                        ServerLogger.ROOT_LOGGER.deploymentRedeployed(deploymentUnitName);
+                                        ServerLogger.DEPLOYMENT_LOGGER.deploymentRedeployed(deploymentUnitName);
                                     }
                                 }
                             });
@@ -234,9 +234,9 @@ public class DeploymentHandlerUtil {
                             doDeploy(context, deploymentUnitName, managementName, verificationHandler, deployment, registration, mutableRegistration, vaultReader, contents);
                             if (!logged.get()) {
                                 if (context.hasFailureDescription()) {
-                                    ServerLogger.ROOT_LOGGER.undeploymentRolledBack(deploymentUnitName, context.getFailureDescription().asString());
+                                    ServerLogger.DEPLOYMENT_LOGGER.undeploymentRolledBack(deploymentUnitName, context.getFailureDescription().asString());
                                 } else {
-                                    ServerLogger.ROOT_LOGGER.undeploymentRolledBackWithNoMessage(deploymentUnitName);
+                                    ServerLogger.DEPLOYMENT_LOGGER.undeploymentRolledBackWithNoMessage(deploymentUnitName);
                                 }
                             }
                         }
@@ -286,12 +286,12 @@ public class DeploymentHandlerUtil {
                                 doDeploy(context, runtimeName, name, svh, deployment, registration, mutableRegistration, vaultReader, contents);
 
                                 if (context.hasFailureDescription()) {
-                                    ServerLogger.ROOT_LOGGER.replaceRolledBack(replacedDeploymentUnitName, deploymentUnitName, getFormattedFailureDescription(context));
+                                    ServerLogger.DEPLOYMENT_LOGGER.replaceRolledBack(replacedDeploymentUnitName, deploymentUnitName, getFormattedFailureDescription(context));
                                 } else {
-                                    ServerLogger.ROOT_LOGGER.replaceRolledBackWithNoMessage(replacedDeploymentUnitName, deploymentUnitName);
+                                    ServerLogger.DEPLOYMENT_LOGGER.replaceRolledBackWithNoMessage(replacedDeploymentUnitName, deploymentUnitName);
                                 }
                             } else {
-                                ServerLogger.ROOT_LOGGER.deploymentReplaced(replacedDeploymentUnitName, deploymentUnitName);
+                                ServerLogger.DEPLOYMENT_LOGGER.deploymentReplaced(replacedDeploymentUnitName, deploymentUnitName);
                             }
                         }
                     });
@@ -326,12 +326,12 @@ public class DeploymentHandlerUtil {
                                 doDeploy(context, runtimeName, name, verificationHandler, deployment, registration, mutableRegistration, vaultReader, contents);
 
                                 if (context.hasFailureDescription()) {
-                                    ServerLogger.ROOT_LOGGER.undeploymentRolledBack(deploymentUnitName, getFormattedFailureDescription(context));
+                                    ServerLogger.DEPLOYMENT_LOGGER.undeploymentRolledBack(deploymentUnitName, getFormattedFailureDescription(context));
                                 } else {
-                                    ServerLogger.ROOT_LOGGER.undeploymentRolledBackWithNoMessage(deploymentUnitName);
+                                    ServerLogger.DEPLOYMENT_LOGGER.undeploymentRolledBackWithNoMessage(deploymentUnitName);
                                 }
                             } else {
-                                ServerLogger.ROOT_LOGGER.deploymentUndeployed(managementName, deploymentUnitName);
+                                ServerLogger.DEPLOYMENT_LOGGER.deploymentUndeployed(managementName, deploymentUnitName);
                             }
                         }
                     });

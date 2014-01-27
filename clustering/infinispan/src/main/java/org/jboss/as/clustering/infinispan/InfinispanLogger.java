@@ -52,7 +52,7 @@ public interface InfinispanLogger extends BasicLogger {
     /**
      * Logs an informational message indicating the Infinispan subsystem is being activated.
      */
-    @LogMessage(level = INFO)
+    @LogMessage(level = DEBUG)
     @Message(id = 10280, value = "Activating Infinispan subsystem.")
     void activatingSubsystem();
 

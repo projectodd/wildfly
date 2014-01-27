@@ -53,7 +53,7 @@ public interface JGroupsLogger extends BasicLogger {
     /**
      * Logs an informational message indicating the JGroups subsystem is being activated.
      */
-    @LogMessage(level = INFO)
+    @LogMessage(level = Logger.Level.DEBUG)
     @Message(id = 10260, value = "Activating JGroups subsystem.")
     void activatingSubsystem();
 
