@@ -36,7 +36,7 @@ import org.jboss.marshalling.Unmarshaller;
 public class SimpleClassTable implements ClassTable {
 
     private final Class<?>[] classes;
-    private final Map<Class<?>, Writer> writers = new IdentityHashMap<>();
+    private final Map<Class<?>, Writer> writers = new IdentityHashMap<Class<?>, Writer>();
 
     public SimpleClassTable(Class<?>... classes) {
         this.classes = classes;

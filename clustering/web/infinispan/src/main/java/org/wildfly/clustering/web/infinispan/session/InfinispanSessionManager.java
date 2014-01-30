@@ -84,7 +84,7 @@ public class InfinispanSessionManager<V, L> implements SessionManager<L>, KeyGen
     private final KeyAffinityService<String> affinity;
     private final Registry<String, Void> registry;
     private final NodeFactory<Address> nodeFactory;
-    private final List<Scheduler<ImmutableSession>> schedulers = new CopyOnWriteArrayList<>();
+    private final List<Scheduler<ImmutableSession>> schedulers = new CopyOnWriteArrayList<Scheduler<ImmutableSession>>();
     private final int maxActiveSessions;
     private volatile Time defaultMaxInactiveInterval = new Time(30, TimeUnit.MINUTES);
 
@@ -103,7 +103,7 @@ public class InfinispanSessionManager<V, L> implements SessionManager<L>, KeyGen
     public void start() {
         this.cache.addListener(this, this);
         this.affinity.start();
-        this.schedulers.add(new SessionExpirationScheduler(this, new ExpiredSessionRemover<>(this.factory)));
+        this.schedulers.add(new SessionExpirationScheduler(this, new ExpiredSessionRemover(this.factory)));
         if (this.maxActiveSessions > 0) {
             this.schedulers.add(new SessionEvictionScheduler(this, this.factory, this.maxActiveSessions));
         }
@@ -213,7 +213,7 @@ public class InfinispanSessionManager<V, L> implements SessionManager<L>, KeyGen
         for (Scheduler<ImmutableSession> scheduler: this.schedulers) {
             scheduler.cancel(session);
         }
-        return new SchedulableSession<>(session, this.schedulers);
+        return new SchedulableSession<L>(session, this.schedulers);
     }
 
     @Override
@@ -221,7 +221,7 @@ public class InfinispanSessionManager<V, L> implements SessionManager<L>, KeyGen
         Session<L> session = this.factory.createSession(id, this.factory.createValue(id));
         final Time time = this.defaultMaxInactiveInterval;
         session.getMetaData().setMaxInactiveInterval(time.getValue(), time.getUnit());
-        return new SchedulableSession<>(session, this.schedulers);
+        return new SchedulableSession<L>(session, this.schedulers);
     }
 
     @Override
@@ -243,7 +243,7 @@ public class InfinispanSessionManager<V, L> implements SessionManager<L>, KeyGen
     }
 
     private Set<String> getSessions(Flag... flags) {
-        Set<String> result = new HashSet<>();
+        Set<String> result = new HashSet<String>();
         for (Object key: this.cache.getAdvancedCache().withFlags(flags).keySet()) {
             if (key instanceof String) {
                 result.add((String) key);
@@ -326,7 +326,7 @@ public class InfinispanSessionManager<V, L> implements SessionManager<L>, KeyGen
         Address localAddress = cache.getCacheManager().getAddress();
         ConsistentHash oldHash = event.getConsistentHashAtStart();
         ConsistentHash newHash = event.getConsistentHashAtEnd();
-        Set<Address> oldAddresses = new HashSet<>(oldHash.getMembers());
+        Set<Address> oldAddresses = new HashSet<Address>(oldHash.getMembers());
         // Find members that left this cache view
         oldAddresses.removeAll(newHash.getMembers());
         if (!oldAddresses.isEmpty()) {

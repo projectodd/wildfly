@@ -130,10 +130,16 @@ public abstract class CacheAdd extends AbstractAddStepHandler {
         URL url = find(resource, CacheAdd.class.getClassLoader());
         log.debugf("Loading Infinispan defaults from %s", url.toString());
         ParserRegistry parser = new ParserRegistry(ParserRegistry.class.getClassLoader());
-        try (InputStream input = url.openStream()) {
+        InputStream input = null;
+        try {
+            input = url.openStream();
             return parser.parse(input);
         } catch (IOException e) {
             throw new IllegalStateException(String.format("Failed to parse %s", url), e);
+        } finally {
+            try {
+                if (input != null) input.close();
+            } catch (IOException ffs) {}
         }
     }
 
