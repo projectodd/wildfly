@@ -40,7 +40,7 @@
                 <path name="com/sun/imageio/plugins/wbmp"/>
                 <path name="com/sun/imageio/spi"/>
                 <path name="com/sun/imageio/stream"/>
-                <path name="com/sun/javadoc" />
+                <path name="com/sun/javadoc"/>
                 <path name="com/sun/jndi/dns"/>
                 <path name="com/sun/jndi/ldap"/>
                 <path name="com/sun/jndi/url"/>
@@ -48,9 +48,11 @@
                 <path name="com/sun/crypto/provider"/>
                 <path name="com/sun/net/httpserver"/>
                 <path name="com/sun/net/httpserver/spi"/>
-                <path name="com/sun/source/tree" />
-                <path name="com/sun/tools/javac/util" />
-                <path name="com/sun/tools/javadoc" />
+                <path name="com/sun/source/tree"/>
+                <path name="com/sun/tools/javac/main"/>
+                <path name="com/sun/tools/javac/tree"/>
+                <path name="com/sun/tools/javac/util"/>
+                <path name="com/sun/tools/javadoc"/>
                 <path name="com/sun/xml/internal/bind"/>
                 <path name="com/sun/xml/internal/bind/api"/>
                 <path name="com/sun/xml/internal/bind/marshaller"/>
